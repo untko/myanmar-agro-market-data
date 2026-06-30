@@ -23,10 +23,18 @@
 <text x="62" y="203.0" text-anchor="end" class="axis">560,980</text>
 <line x1="70" y1="240.0" x2="770" y2="240.0" class="grid"/>
 <text x="62" y="243.0" text-anchor="end" class="axis">206,150</text>
-<path d="M 70.0,238.43868894963785 L 770.0,50.63044274723106" class="line-max"/>
+<path d="M 70.0,238.77687906884987 L 536.6666666666666,238.77687906884987 L 770.0,50.63044274723106 L 536.6666666666666,238.43868894963785 L 303.3333333333333,50.63044274723106 L 70.0,238.43868894963785 Z" class="area"/>
+<path d="M 70.0,238.77687906884987 L 536.6666666666666,238.77687906884987" class="line-min"/>
+<circle cx="70.0" cy="238.77687906884987" r="3" class="dot" stroke="#2196F3"/>
+<circle cx="536.6666666666666" cy="238.77687906884987" r="3" class="dot" stroke="#2196F3"/>
+<path d="M 70.0,238.43868894963785 L 303.3333333333333,50.63044274723106 L 536.6666666666666,238.43868894963785 L 770.0,50.63044274723106" class="line-max"/>
 <circle cx="70.0" cy="238.43868894963785" r="3" class="dot" stroke="#FF5722"/>
+<circle cx="303.3333333333333" cy="50.63044274723106" r="3" class="dot" stroke="#FF5722"/>
+<circle cx="536.6666666666666" cy="238.43868894963785" r="3" class="dot" stroke="#FF5722"/>
 <circle cx="770.0" cy="50.63044274723106" r="3" class="dot" stroke="#FF5722"/>
 <text x="70.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 70.0, 290)">2026-06-30</text>
+<text x="303.3333333333333" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 303.3333333333333, 290)">2026-06-30</text>
+<text x="536.6666666666666" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 536.6666666666666, 290)">2026-06-30</text>
 <text x="770.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 770.0, 290)">2026-06-30</text>
 <line x1="70" y1="265" x2="90" y2="265" class="line-min"/>
 <text x="95" y="269" class="axis">Min</text>
