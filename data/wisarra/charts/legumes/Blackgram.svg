@@ -23,13 +23,16 @@
 <text x="62" y="203.0" text-anchor="end" class="axis">74,690</text>
 <line x1="70" y1="240.0" x2="770" y2="240.0" class="grid"/>
 <text x="62" y="243.0" text-anchor="end" class="axis">73,150</text>
-<path d="M 303.3333333333333,140.0 L 770.0,140.0" class="line-max"/>
-<circle cx="303.3333333333333" cy="140.0" r="3" class="dot" stroke="#FF5722"/>
+<path d="M 210.0,140.0 L 490.0,140.0 L 770.0,140.0" class="line-max"/>
+<circle cx="210.0" cy="140.0" r="3" class="dot" stroke="#FF5722"/>
+<circle cx="490.0" cy="140.0" r="3" class="dot" stroke="#FF5722"/>
 <circle cx="770.0" cy="140.0" r="3" class="dot" stroke="#FF5722"/>
 <text x="70.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 70.0, 290)">2026-06-30</text>
-<text x="303.3333333333333" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 303.3333333333333, 290)">2026-06-30</text>
-<text x="536.6666666666666" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 536.6666666666666, 290)">2026-06-30</text>
-<text x="770.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 770.0, 290)">2026-06-30</text>
+<text x="210.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 210.0, 290)">2026-06-30</text>
+<text x="350.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 350.0, 290)">2026-06-30</text>
+<text x="490.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 490.0, 290)">2026-06-30</text>
+<text x="630.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 630.0, 290)">2026-07-06</text>
+<text x="770.0" y="290" text-anchor="middle" class="axis" transform="rotate(-30, 770.0, 290)">2026-07-06</text>
 <line x1="70" y1="265" x2="90" y2="265" class="line-min"/>
 <text x="95" y="269" class="axis">Min</text>
 <line x1="140" y1="265" x2="160" y2="265" class="line-max"/>
