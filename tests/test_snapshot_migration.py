@@ -8,6 +8,16 @@ from scripts.migrate_snapshot_schema import migrate_snapshot
 
 
 class SnapshotSchemaMigrationTests(unittest.TestCase):
+    def test_corrected_july_collection_keeps_publication_and_collection_dates_separate(self):
+        project_root = Path(__file__).resolve().parent.parent
+        snapshot = project_root / "data/wisarra/snapshots/2026/2026-07-13T09-43-41Z.csv"
+        with snapshot.open(newline="", encoding="utf-8") as handle:
+            rows = list(csv.DictReader(handle))
+
+        self.assertEqual(len(rows), 160)
+        self.assertEqual({row["observed_at"] for row in rows}, {"2026-07-08T00:00:00Z"})
+        self.assertEqual({row["collected_at"] for row in rows}, {"2026-07-13T09:43:41Z"})
+
     def test_legacy_wisarra_snapshot_is_upgraded_once_without_changing_values(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             snapshot = Path(temp_dir) / "2026" / "2026-06-30T07-14-10Z.csv"

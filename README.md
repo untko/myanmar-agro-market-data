@@ -2,7 +2,7 @@
 
 A small, auditable collector and weekly reporter for Myanmar agricultural market prices. [Wisarra](https://wisarra.com/en/market-price) is the first source; additional sources must use the same provenance-aware observation contract.
 
-Every scheduled run records one immutable CSV snapshot. Reports and charts are rebuilt from those snapshots and committed alongside them, while the transparent snapshots remain the canonical source instead of a changing binary database.
+Every newly published batch records one immutable CSV snapshot. Reports and charts are rebuilt from those snapshots and committed alongside them, while the transparent snapshots remain the canonical source instead of a changing binary database.
 
 ## Repository structure
 
@@ -58,7 +58,9 @@ Generated charts are flat, stable per-series SVG files. `artifacts/charts/index.
 
 ## Automation
 
-GitHub Actions runs every Monday at 09:00 UTC. It currently collects Wisarra, then commits any new snapshots under configured source directories together with the regenerated report and charts. It also uploads the generated outputs as a convenient workflow download. Analysis databases are never committed.
+GitHub Actions checks Wisarra at 03:00 UTC on Saturday, Sunday, and Monday (09:30 Myanmar / 10:00 Bangkok), after the expected Friday update. Each run first reads the publication date displayed on the market-price page. The full multi-page scrape runs only when that date is newer than the latest stored Wisarra observation, so retry checks are lightweight and unchanged data creates no snapshot or commit.
+
+When a new date appears, the workflow commits the immutable snapshot together with regenerated reports and charts, and uploads the generated outputs as a convenient workflow download. Analysis databases are never committed.
 
 ## Adding another source
 

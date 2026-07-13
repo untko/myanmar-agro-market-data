@@ -2,8 +2,9 @@ name: Scrape & Analyze Market Prices
 
 on:
   schedule:
-    # Every Monday at 09:00 UTC
-    - cron: '0 9 * * 1'
+    # Check after the expected Friday update: 09:30 Myanmar / 10:00 Bangkok.
+    # Saturday is the primary run; Sunday and Monday retry delayed updates.
+    - cron: '0 3 * * 6,0,1'
   workflow_dispatch:
 
 jobs:

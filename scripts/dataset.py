@@ -7,7 +7,7 @@ import hashlib
 import io
 import re
 from dataclasses import dataclass, fields
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Iterable, Mapping
@@ -239,3 +239,12 @@ class PriceDataset:
             history = sorted(by_series_week[key].values(), key=lambda item: (item.observed_at, item.collected_at))
             result[key] = history[-limit:]
         return result
+
+    def latest_observed_date(self, source: str) -> date | None:
+        """Return the latest published calendar date stored for one source."""
+        dates = [
+            observation.observed_at.date()
+            for observation in self.load()
+            if observation.series.source == source
+        ]
+        return max(dates, default=None)

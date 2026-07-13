@@ -1,161 +1,161 @@
 source,source_record_id,name,location,marketplace,market_chain_level,min_price,max_price,modal_price,currency,quantity,unit,observed_at,collected_at,source_url
-wisarra,,Rice (Pyapon Paw San) (New),Yangon,War Tan,unspecified,155000,165000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (MyaungMya Pathein Paw San) (New),Yangon,War Tan,unspecified,150000,156000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Paw San Nae Sone) (New),Yangon,War Tan,unspecified,133000,142000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Nga Sein) (New),Yangon,War Tan,unspecified,65000,69000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Shwebo Paw San),Yangon,War Tan,unspecified,200000,215000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata 25%),Yangon,War Tan,unspecified,68000,72000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (90 Day Thit Shal),Yangon,War Tan,unspecified,,105000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Thee Htet Shal),Yangon,War Tan,unspecified,65000,69000,,MMK,1.5,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"Blackgram (SQ, RC) (2023)",Yangon,Bayint Naung,unspecified,,3305000,,MMK,1,ton,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Pigeon Pea (RC) (2021),Yangon,Bayint Naung,unspecified,,3650000,,MMK,1,ton,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Phyu Lone),Yangon,Bayint Naung,unspecified,,3125000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Phyu Lone Gyi),Yangon,Bayint Naung,unspecified,,3770,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Green pea,Yangon,Bayint Naung,unspecified,4120,4300,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Sultani Sultapya,Yangon,Bayint Naung,unspecified,10500,11170,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Butter Bean,Yangon,Bayint Naung,unspecified,,4865,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Shwe Kyun),Yangon,Bayint Naung,unspecified,,4210,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Kone),Yangon,Bayint Naung,unspecified,15040,11335,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean (Khayan Shwe Wah),Yangon,Bayint Naung,unspecified,13040,13220,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean(Bego Shwe Wah),Yangon,Bayint Naung,unspecified,,5500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean (Wakema),Yangon,Bayint Naung,unspecified,,5500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Corn,Yangon,Bayint Naung,unspecified,5000,6520,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Bocate,Yangon,Bayint Naung,unspecified,1750,1770,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Half Chickpea,Yangon,Bayint Naung,unspecified,3165,3335,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Soya Bean (Delta),Yangon,Bayint Naung,unspecified,5350,5600,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Soya Bean (Delta) (High Yield),Yangon,Bayint Naung,unspecified,7665,7835,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Sake Phyu Shal),Yangon,Bayint Naung,unspecified,7500,7670,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Sake Phyu Lat Gyi),Yangon,Bayint Naung,unspecified,,4600,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Sake Phyu Lat Thant),Yangon,Bayint Naung,unspecified,,4500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Sake Phyu Lat Chaw),Yangon,Bayint Naung,unspecified,,4300,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Monywa Shal) (New),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Aung Pan Htoo 3),Yangon,Bayint Naung,unspecified,,4500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Aung Pan Htoo 4),Yangon,Bayint Naung,unspecified,,5700,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Aung Pan Htoo 5),Yangon,Bayint Naung,unspecified,,7000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chili (Pwa) (Sin Phyu Kyun),Yangon,Bayint Naung,unspecified,,8500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chili (Pwa) (MyintWaKyunPaw),Yangon,Bayint Naung,unspecified,35000,36000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chili (Moe Htaung) (Myint Wa),Yangon,Bayint Naung,unspecified,33000,34000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chili (Shay) (India),Yangon,Bayint Naung,unspecified,18000,21000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chili (Shay) (Pantanaw),Yangon,Bayint Naung,unspecified,17000,18000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Jaggery (Yesakyo) (Chaw),Yangon,Bayint Naung,unspecified,4000,4200,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Tamarind (Kyaukpadaung),Yangon,Bayint Naung,unspecified,,6000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Tamarind (Pwintkat) (New),Yangon,Bayint Naung,unspecified,6000,7200,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Tamarind (Darzinn) (New),Yangon,Bayint Naung,unspecified,4300,4500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Potato (OK) (Aung Pan),Yangon,Bayint Naung,unspecified,,3000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"Potato (S1,2) (Aung Pan)",Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Potato (S3) (Aung Pan),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Potato (OK) (Heho),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"Potato (S1,2) (Heho)",Yangon,Bayint Naung,unspecified,,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Water Melon,Yangon,Thiri Mingalar Zay,unspecified,,,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Pomelo,Yangon,Thiri Mingalar Zay,unspecified,3000,12000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Avocado,Yangon,Thiri Mingalar Zay,unspecified,2000,5000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Peasant Banana,Yangon,Thiri Mingalar Zay,unspecified,1500,3000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Shwe Banana,Yangon,Thiri Mingalar Zay,unspecified,4000,7000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rakhaine Banana,Yangon,Thiri Mingalar Zay,unspecified,7000,12000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Banana (PheGyan),Yangon,Thiri Mingalar Zay,unspecified,4000,6000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Stawberry,Yangon,Thiri Mingalar Zay,unspecified,4000,7000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chayote,Yangon,Thiri Mingalar Zay,unspecified,1500,5000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Capsicum,Yangon,Thiri Mingalar Zay,unspecified,300,500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Yard Long Bean,Yangon,Thiri Mingalar Zay,unspecified,3000,8000,,MMK,1,bundle,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Tomato,Yangon,Thiri Mingalar Zay,unspecified,1500,2500,,MMK,1,box,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Snake Gourd,Yangon,Thiri Mingalar Zay,unspecified,25000,50000,,MMK,1,bundle,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Radish,Yangon,Thiri Mingalar Zay,unspecified,5000,6000,,MMK,1,bundle,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"Wheat (Myinmu, Myaung) (New)",Mandalay,Mandalay,unspecified,210000,220000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Wheat (Kalay) (New),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Wheat (Monywa) (New),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Wheat (Shan),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Taiwan) (New),Mandalay,Mandalay,unspecified,175000,190000,,MMK,56,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (929) (New),Mandalay,Mandalay,unspecified,210000,212000,,MMK,56,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,White Chick Pea (V2) (New),Mandalay,Mandalay,unspecified,,220000,,MMK,57,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,White Chick Pea (V7) (New),Mandalay,Mandalay,unspecified,217000,218000,,MMK,57,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blackgram (New),Mandalay,Mandalay,unspecified,218000,220000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Red Pigeon Pea (New),Mandalay,Mandalay,unspecified,298000,300000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Green pea,Mandalay,Mandalay,unspecified,292000,293000,,MMK,59.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blue Cow Pea (New),Mandalay,Mandalay,unspecified,500000,650000,,MMK,54.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,White Cow Pea (New),Mandalay,Mandalay,unspecified,,175000,,MMK,60,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean,Mandalay,Mandalay,unspecified,240000,250000,,MMK,56.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lentil,Mandalay,Mandalay,unspecified,210000,240000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Ka),Mandalay,Mandalay,unspecified,,12200,,MMK,55.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (La),Mandalay,Mandalay,unspecified,770000,780000,,MMK,55.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Ta),Mandalay,Mandalay,unspecified,730000,750000,,MMK,55.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Butter Bean (Gyi),Mandalay,Mandalay,unspecified,690000,700000,,MMK,56.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Butter Bean (Lat),Mandalay,Mandalay,unspecified,,320000,,MMK,56.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Soya Bean (Shan),Mandalay,Mandalay,unspecified,,210000,,MMK,53.25,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"White Sesame (New) (1,2,3)",Mandalay,Mandalay,unspecified,370000,375000,,MMK,45,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Sesame (Winter),Mandalay,Mandalay,unspecified,365000,380000,,MMK,45,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Brown Sesame (Old),Mandalay,Mandalay,unspecified,490000,570000,,MMK,45,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Niger Flower (New),Mandalay,Mandalay,unspecified,360000,370000,,MMK,45,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (New) (John Gyi),Magway,Pakokku,unspecified,,73000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (New) (John Lat),Magway,Pakokku,unspecified,2000,4000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion (Old),Magway,Pakokku,unspecified,,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Brown Sesame,Magway,Pakokku,unspecified,120000,150000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Groundnut Oil,Magway,Pakokku,unspecified,,15000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick pea (v2),Mandalay,Myingyan,unspecified,3800,4500,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (929),Mandalay,Myingyan,unspecified,,3700,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,CP Corn,Mandalay,Myingyan,unspecified,,3825,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Red Pea Pyarr,Mandalay,Myingyan,unspecified,,1540,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Groundnut (Red) (New),Sagaing,Monywa,unspecified,,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Groundnut (White) (New),Sagaing,Monywa,unspecified,12500,12700,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Brown Sesame (New),Sagaing,Monywa,unspecified,12800,13100,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Sesame (New),Sagaing,Monywa,unspecified,120000,122000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Castor Seed,Sagaing,Monywa,unspecified,140000,173000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Thiwan) (Old),Sagaing,Monywa,unspecified,127000,130000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,"Chick Pea (929) (New, Old)",Sagaing,Monywa,unspecified,,72000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (V2)) (New),Sagaing,Monywa,unspecified,70000,72500,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Gram(New),Sagaing,Monywa,unspecified,,73000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Sesame (Samone) (New),Magway,Aunglan,unspecified,,,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blue Sesame (Thant) (New),Magway,Aunglan,unspecified,450000,500000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Shwe Kyun),Magway,Aunglan,unspecified,,370000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (Lat Chaw),Magway,Aunglan,unspecified,245000,260000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,CP Corn (Kyautme),Shan,Lashio,unspecified,500000,550000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,CP Corn (Naunghkio),Shan,Lashio,unspecified,123000,125000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,CP Corn (Muse),Shan,Lashio,unspecified,,92000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Holland),Magway,Magway,unspecified,,10400,,MMK,19,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Small),Magway,Magway,unspecified,95500,96000,,MMK,19,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean (White),Magway,Magway,unspecified,,,,MMK,19,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blackgram,Magway,Sinphyukyun,unspecified,,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Lablab Bean,Magway,Sinphyukyun,unspecified,,68000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean,Magway,Sinphyukyun,unspecified,,,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Yadanar Toe) (20%),Bago,Paungde,unspecified,,115000,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Inn Lal) (New) (Dry),Bago,Paungde,unspecified,,2080000,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blackgram,Bago,Paungde,unspecified,,77000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chick Pea (Holland) (New),Bago,Paungde,unspecified,,2509000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Taung Pyan) (Old),Bago,Nattalin,unspecified,,1748000,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Inn Lal),Bago,Nattalin,unspecified,,72000,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Ngwe Toe) (Old),Bago,Nattalin,unspecified,,2603700,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Blackgram (New),Bago,Pyay,unspecified,,1886000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Pigeon Pea (New),Bago,Pyay,unspecified,,82000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Red Sesame,Bago,Pyay,unspecified,,2609000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Sesame (Samone),Bago,Pyay,unspecified,,117000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Black Sesame,Bago,Pyay,unspecified,,1886000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Thuka (New),Bago,Pyay,unspecified,,82000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Yadanar Toe (Na) (85%),Bago,Pyay,unspecified,800,1500,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Taung Pyan (Old),Bago,Pyay,unspecified,800,1500,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Paw San) (Rainy 2022),Pathein,Pathein,unspecified,1800,2200,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Paw San) (Rainy 2022),Pathein,Pathein,unspecified,12000,16000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,unspecified,5000,5500,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,unspecified,,1000,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Emata) (Rainy 2022),Pathein,Myaungmya,unspecified,1500,2000,,MMK,1,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata) (Rainy 2022),Pathein,Myaungmya,unspecified,7000,7500,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Myaungmya,unspecified,900,1000,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Paw San) (Rainy 2022),Pathein,Dedaye,unspecified,650,745,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Paw San) (Rainy 2022),Pathein,Dedaye,unspecified,263,277,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Dedaye,unspecified,1238,1265,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Emata) (Rainy 2022),Pathein,Pyapon,unspecified,417,691,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata) (Rainy 2022),Pathein,Pyapon,unspecified,786,923,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Paddy (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,unspecified,317,345,,MMK,100,basket,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,unspecified,526,581,,MMK,1,bag,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Cauliflower,Shan,Aungpan,unspecified,964,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Pumpkin,Shan,Aungpan,unspecified,3000,6000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Bell Pepper,Shan,Aungpan,unspecified,1500,3000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Chayote,Shan,Aungpan,unspecified,,,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Carrot,Shan,Aungpan,unspecified,,115000,,MMK,1,pc,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Custard,Shan,Aungpan,unspecified,,104000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Eggplant,Shan,Aungpan,unspecified,,213000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Garden Pea,Shan,Aungpan,unspecified,4200,4600,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Mung Bean,Shan,105mile,unspecified,,4500,,USD,1,ton,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Maize,Shan,105mile,unspecified,,,,USD,1,ton,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Groundnut,Shan,105mile,unspecified,,,,USD,1,ton,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Onion,MON,Mawlamyine,unspecified,,2300000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Garlic (Kyu gote),MON,Mawlamyine,unspecified,,95000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
-wisarra,,Garlic (Htoo 4.5),MON,Mawlamyine,unspecified,,88000,,MMK,1,viss,2026-07-13T09:43:41Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Pyapon Paw San) (New),Yangon,War Tan,unspecified,155000,165000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (MyaungMya Pathein Paw San) (New),Yangon,War Tan,unspecified,150000,156000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Paw San Nae Sone) (New),Yangon,War Tan,unspecified,133000,142000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Nga Sein) (New),Yangon,War Tan,unspecified,65000,69000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Shwebo Paw San),Yangon,War Tan,unspecified,200000,215000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata 25%),Yangon,War Tan,unspecified,68000,72000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (90 Day Thit Shal),Yangon,War Tan,unspecified,,105000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Thee Htet Shal),Yangon,War Tan,unspecified,65000,69000,,MMK,1.5,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"Blackgram (SQ, RC) (2023)",Yangon,Bayint Naung,unspecified,,3305000,,MMK,1,ton,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Pigeon Pea (RC) (2021),Yangon,Bayint Naung,unspecified,,3650000,,MMK,1,ton,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Phyu Lone),Yangon,Bayint Naung,unspecified,,3125000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Phyu Lone Gyi),Yangon,Bayint Naung,unspecified,,3770,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Green pea,Yangon,Bayint Naung,unspecified,4120,4300,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Sultani Sultapya,Yangon,Bayint Naung,unspecified,10500,11170,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Butter Bean,Yangon,Bayint Naung,unspecified,,4865,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Shwe Kyun),Yangon,Bayint Naung,unspecified,,4210,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Kone),Yangon,Bayint Naung,unspecified,15040,11335,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean (Khayan Shwe Wah),Yangon,Bayint Naung,unspecified,13040,13220,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean(Bego Shwe Wah),Yangon,Bayint Naung,unspecified,,5500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean (Wakema),Yangon,Bayint Naung,unspecified,,5500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Corn,Yangon,Bayint Naung,unspecified,5000,6520,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Bocate,Yangon,Bayint Naung,unspecified,1750,1770,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Half Chickpea,Yangon,Bayint Naung,unspecified,3165,3335,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Soya Bean (Delta),Yangon,Bayint Naung,unspecified,5350,5600,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Soya Bean (Delta) (High Yield),Yangon,Bayint Naung,unspecified,7665,7835,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Sake Phyu Shal),Yangon,Bayint Naung,unspecified,7500,7670,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Sake Phyu Lat Gyi),Yangon,Bayint Naung,unspecified,,4600,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Sake Phyu Lat Thant),Yangon,Bayint Naung,unspecified,,4500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Sake Phyu Lat Chaw),Yangon,Bayint Naung,unspecified,,4300,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Monywa Shal) (New),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Aung Pan Htoo 3),Yangon,Bayint Naung,unspecified,,4500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Aung Pan Htoo 4),Yangon,Bayint Naung,unspecified,,5700,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Aung Pan Htoo 5),Yangon,Bayint Naung,unspecified,,7000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chili (Pwa) (Sin Phyu Kyun),Yangon,Bayint Naung,unspecified,,8500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chili (Pwa) (MyintWaKyunPaw),Yangon,Bayint Naung,unspecified,35000,36000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chili (Moe Htaung) (Myint Wa),Yangon,Bayint Naung,unspecified,33000,34000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chili (Shay) (India),Yangon,Bayint Naung,unspecified,18000,21000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chili (Shay) (Pantanaw),Yangon,Bayint Naung,unspecified,17000,18000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Jaggery (Yesakyo) (Chaw),Yangon,Bayint Naung,unspecified,4000,4200,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Tamarind (Kyaukpadaung),Yangon,Bayint Naung,unspecified,,6000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Tamarind (Pwintkat) (New),Yangon,Bayint Naung,unspecified,6000,7200,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Tamarind (Darzinn) (New),Yangon,Bayint Naung,unspecified,4300,4500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Potato (OK) (Aung Pan),Yangon,Bayint Naung,unspecified,,3000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"Potato (S1,2) (Aung Pan)",Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Potato (S3) (Aung Pan),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Potato (OK) (Heho),Yangon,Bayint Naung,unspecified,,3500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"Potato (S1,2) (Heho)",Yangon,Bayint Naung,unspecified,,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Water Melon,Yangon,Thiri Mingalar Zay,unspecified,,,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Pomelo,Yangon,Thiri Mingalar Zay,unspecified,3000,12000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Avocado,Yangon,Thiri Mingalar Zay,unspecified,2000,5000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Peasant Banana,Yangon,Thiri Mingalar Zay,unspecified,1500,3000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Shwe Banana,Yangon,Thiri Mingalar Zay,unspecified,4000,7000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rakhaine Banana,Yangon,Thiri Mingalar Zay,unspecified,7000,12000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Banana (PheGyan),Yangon,Thiri Mingalar Zay,unspecified,4000,6000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Stawberry,Yangon,Thiri Mingalar Zay,unspecified,4000,7000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chayote,Yangon,Thiri Mingalar Zay,unspecified,1500,5000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Capsicum,Yangon,Thiri Mingalar Zay,unspecified,300,500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Yard Long Bean,Yangon,Thiri Mingalar Zay,unspecified,3000,8000,,MMK,1,bundle,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Tomato,Yangon,Thiri Mingalar Zay,unspecified,1500,2500,,MMK,1,box,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Snake Gourd,Yangon,Thiri Mingalar Zay,unspecified,25000,50000,,MMK,1,bundle,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Radish,Yangon,Thiri Mingalar Zay,unspecified,5000,6000,,MMK,1,bundle,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"Wheat (Myinmu, Myaung) (New)",Mandalay,Mandalay,unspecified,210000,220000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Wheat (Kalay) (New),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Wheat (Monywa) (New),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Wheat (Shan),Mandalay,Mandalay,unspecified,220000,220000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Taiwan) (New),Mandalay,Mandalay,unspecified,175000,190000,,MMK,56,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (929) (New),Mandalay,Mandalay,unspecified,210000,212000,,MMK,56,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,White Chick Pea (V2) (New),Mandalay,Mandalay,unspecified,,220000,,MMK,57,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,White Chick Pea (V7) (New),Mandalay,Mandalay,unspecified,217000,218000,,MMK,57,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blackgram (New),Mandalay,Mandalay,unspecified,218000,220000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Red Pigeon Pea (New),Mandalay,Mandalay,unspecified,298000,300000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Green pea,Mandalay,Mandalay,unspecified,292000,293000,,MMK,59.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blue Cow Pea (New),Mandalay,Mandalay,unspecified,500000,650000,,MMK,54.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,White Cow Pea (New),Mandalay,Mandalay,unspecified,,175000,,MMK,60,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean,Mandalay,Mandalay,unspecified,240000,250000,,MMK,56.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lentil,Mandalay,Mandalay,unspecified,210000,240000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Ka),Mandalay,Mandalay,unspecified,,12200,,MMK,55.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (La),Mandalay,Mandalay,unspecified,770000,780000,,MMK,55.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Ta),Mandalay,Mandalay,unspecified,730000,750000,,MMK,55.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Butter Bean (Gyi),Mandalay,Mandalay,unspecified,690000,700000,,MMK,56.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Butter Bean (Lat),Mandalay,Mandalay,unspecified,,320000,,MMK,56.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Soya Bean (Shan),Mandalay,Mandalay,unspecified,,210000,,MMK,53.25,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"White Sesame (New) (1,2,3)",Mandalay,Mandalay,unspecified,370000,375000,,MMK,45,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Sesame (Winter),Mandalay,Mandalay,unspecified,365000,380000,,MMK,45,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Brown Sesame (Old),Mandalay,Mandalay,unspecified,490000,570000,,MMK,45,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Niger Flower (New),Mandalay,Mandalay,unspecified,360000,370000,,MMK,45,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (New) (John Gyi),Magway,Pakokku,unspecified,,73000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (New) (John Lat),Magway,Pakokku,unspecified,2000,4000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion (Old),Magway,Pakokku,unspecified,,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Brown Sesame,Magway,Pakokku,unspecified,120000,150000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Groundnut Oil,Magway,Pakokku,unspecified,,15000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick pea (v2),Mandalay,Myingyan,unspecified,3800,4500,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (929),Mandalay,Myingyan,unspecified,,3700,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,CP Corn,Mandalay,Myingyan,unspecified,,3825,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Red Pea Pyarr,Mandalay,Myingyan,unspecified,,1540,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Groundnut (Red) (New),Sagaing,Monywa,unspecified,,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Groundnut (White) (New),Sagaing,Monywa,unspecified,12500,12700,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Brown Sesame (New),Sagaing,Monywa,unspecified,12800,13100,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Sesame (New),Sagaing,Monywa,unspecified,120000,122000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Castor Seed,Sagaing,Monywa,unspecified,140000,173000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Thiwan) (Old),Sagaing,Monywa,unspecified,127000,130000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,"Chick Pea (929) (New, Old)",Sagaing,Monywa,unspecified,,72000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (V2)) (New),Sagaing,Monywa,unspecified,70000,72500,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Gram(New),Sagaing,Monywa,unspecified,,73000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Sesame (Samone) (New),Magway,Aunglan,unspecified,,,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blue Sesame (Thant) (New),Magway,Aunglan,unspecified,450000,500000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Shwe Kyun),Magway,Aunglan,unspecified,,370000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (Lat Chaw),Magway,Aunglan,unspecified,245000,260000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,CP Corn (Kyautme),Shan,Lashio,unspecified,500000,550000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,CP Corn (Naunghkio),Shan,Lashio,unspecified,123000,125000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,CP Corn (Muse),Shan,Lashio,unspecified,,92000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Holland),Magway,Magway,unspecified,,10400,,MMK,19,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Small),Magway,Magway,unspecified,95500,96000,,MMK,19,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean (White),Magway,Magway,unspecified,,,,MMK,19,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blackgram,Magway,Sinphyukyun,unspecified,,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Lablab Bean,Magway,Sinphyukyun,unspecified,,68000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean,Magway,Sinphyukyun,unspecified,,,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Yadanar Toe) (20%),Bago,Paungde,unspecified,,115000,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Inn Lal) (New) (Dry),Bago,Paungde,unspecified,,2080000,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blackgram,Bago,Paungde,unspecified,,77000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chick Pea (Holland) (New),Bago,Paungde,unspecified,,2509000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Taung Pyan) (Old),Bago,Nattalin,unspecified,,1748000,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Inn Lal),Bago,Nattalin,unspecified,,72000,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Ngwe Toe) (Old),Bago,Nattalin,unspecified,,2603700,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Blackgram (New),Bago,Pyay,unspecified,,1886000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Pigeon Pea (New),Bago,Pyay,unspecified,,82000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Red Sesame,Bago,Pyay,unspecified,,2609000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Sesame (Samone),Bago,Pyay,unspecified,,117000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Black Sesame,Bago,Pyay,unspecified,,1886000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Thuka (New),Bago,Pyay,unspecified,,82000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Yadanar Toe (Na) (85%),Bago,Pyay,unspecified,800,1500,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Taung Pyan (Old),Bago,Pyay,unspecified,800,1500,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Paw San) (Rainy 2022),Pathein,Pathein,unspecified,1800,2200,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Paw San) (Rainy 2022),Pathein,Pathein,unspecified,12000,16000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,unspecified,5000,5500,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,unspecified,,1000,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Emata) (Rainy 2022),Pathein,Myaungmya,unspecified,1500,2000,,MMK,1,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata) (Rainy 2022),Pathein,Myaungmya,unspecified,7000,7500,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Myaungmya,unspecified,900,1000,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Paw San) (Rainy 2022),Pathein,Dedaye,unspecified,650,745,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Paw San) (Rainy 2022),Pathein,Dedaye,unspecified,263,277,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Dedaye,unspecified,1238,1265,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Emata) (Rainy 2022),Pathein,Pyapon,unspecified,417,691,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata) (Rainy 2022),Pathein,Pyapon,unspecified,786,923,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Paddy (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,unspecified,317,345,,MMK,100,basket,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,unspecified,526,581,,MMK,1,bag,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Cauliflower,Shan,Aungpan,unspecified,964,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Pumpkin,Shan,Aungpan,unspecified,3000,6000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Bell Pepper,Shan,Aungpan,unspecified,1500,3000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Chayote,Shan,Aungpan,unspecified,,,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Carrot,Shan,Aungpan,unspecified,,115000,,MMK,1,pc,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Custard,Shan,Aungpan,unspecified,,104000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Eggplant,Shan,Aungpan,unspecified,,213000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Garden Pea,Shan,Aungpan,unspecified,4200,4600,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Mung Bean,Shan,105mile,unspecified,,4500,,USD,1,ton,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Maize,Shan,105mile,unspecified,,,,USD,1,ton,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Groundnut,Shan,105mile,unspecified,,,,USD,1,ton,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Onion,MON,Mawlamyine,unspecified,,2300000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Garlic (Kyu gote),MON,Mawlamyine,unspecified,,95000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price
+wisarra,,Garlic (Htoo 4.5),MON,Mawlamyine,unspecified,,88000,,MMK,1,viss,2026-07-08T00:00:00Z,2026-07-13T09:43:41Z,https://wisarra.com/en/market-price

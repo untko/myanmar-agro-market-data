@@ -2,7 +2,7 @@ import json
 import tempfile
 import unittest
 from decimal import Decimal
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 from scripts.dataset import PriceDataset, SNAPSHOT_COLUMNS, SeriesKey
@@ -36,6 +36,28 @@ def price_row(
 
 
 class PriceDatasetTests(unittest.TestCase):
+    def test_latest_observed_date_can_be_checked_per_source(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            dataset = PriceDataset(Path(temp_dir))
+            wisarra = price_row(
+                marketplace="Dedaye",
+                min_price="650",
+                max_price="745",
+                observed_at="2026-07-08T00:00:00Z",
+            )
+            cso = {
+                **wisarra,
+                "source": "cso",
+                "market_chain_level": "retail",
+                "observed_at": "2026-07-10T00:00:00Z",
+                "source_url": "https://www.csostat.gov.mm/Statistics/MarketPrice",
+            }
+            dataset.record([wisarra, cso], datetime(2026, 7, 11, tzinfo=timezone.utc))
+
+            self.assertEqual(dataset.latest_observed_date("wisarra"), date(2026, 7, 8))
+            self.assertEqual(dataset.latest_observed_date("cso"), date(2026, 7, 10))
+            self.assertIsNone(dataset.latest_observed_date("missing"))
+
     def test_documented_schema_columns_match_the_runtime_contract(self):
         schema_path = Path(__file__).resolve().parent.parent / "data" / "price-observation-schema.json"
         schema = json.loads(schema_path.read_text(encoding="utf-8"))

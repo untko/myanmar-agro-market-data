@@ -36,3 +36,11 @@ The first schema treated the collection timestamp as the market observation time
 The shared row contract now records `source`, optional `source_record_id`, `market_chain_level`, minimum/maximum/modal prices, and separate `observed_at` and `collected_at` timestamps. Comparable series include source and tier. Existing Wisarra snapshots were migrated with `market_chain_level=unspecified`; no retail or wholesale classification was inferred. Reports and chart manifests display both fields, and modal-only feeds are supported without pretending a single price is a range.
 
 The repository remains intentionally small: source snapshots live below `data/<source>/`, generated outputs live below `artifacts/`, and large contextual or historical datasets are referenced externally rather than copied here.
+
+## Source-update detection
+
+Wisarra's landing page displays a publication date but does not expose an exact update timestamp, `Last-Modified` header, or `ETag`. The collector now fetches that landing page first and performs the full paginated scrape only when the visible date is newer than the latest stored Wisarra observation. The date-only value is encoded as midnight UTC; the actual fetch remains in `collected_at`.
+
+Scheduled checks run on Saturday, Sunday, and Monday mornings after the expected Friday publication. This gives delayed updates two retries while limiting unchanged runs to one lightweight page request and no Git commit.
+
+The GitHub Actions collection at `data/wisarra/snapshots/2026/2026-07-13T09-43-41Z.csv` originally used its collection time as `observed_at`. After publication-date detection established that the page identified the batch as July 8, all 160 rows were corrected to `observed_at=2026-07-08T00:00:00Z`; their original `collected_at=2026-07-13T09:43:41Z` values were preserved. A repository test fixes that row count and timestamp pair as an auditable one-time correction.

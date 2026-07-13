@@ -1,147 +1,145 @@
 file,series_id,source,market_chain_level,name,location,marketplace,currency,quantity,unit,observations
-wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f.svg,wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f,wisarra,unspecified,Avocado,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550.svg,wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550,wisarra,unspecified,Banana (PheGyan),Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-bell-pepper-aungpan-unspecified-4df3d49835.svg,wisarra-bell-pepper-aungpan-unspecified-4df3d49835,wisarra,unspecified,Bell Pepper,Shan,Aungpan,MMK,1,viss,3
-wisarra-black-gram-new-monywa-unspecified-2e5e81ce80.svg,wisarra-black-gram-new-monywa-unspecified-2e5e81ce80,wisarra,unspecified,Black Gram(New),Sagaing,Monywa,MMK,1,basket,3
-wisarra-black-sesame-new-monywa-unspecified-9e766319cc.svg,wisarra-black-sesame-new-monywa-unspecified-9e766319cc,wisarra,unspecified,Black Sesame (New),Sagaing,Monywa,MMK,1,basket,3
-wisarra-black-sesame-pyay-unspecified-cb91fae552.svg,wisarra-black-sesame-pyay-unspecified-cb91fae552,wisarra,unspecified,Black Sesame,Bago,Pyay,MMK,1,bag,3
-wisarra-black-sesame-samone-pyay-unspecified-2283ea8a6a.svg,wisarra-black-sesame-samone-pyay-unspecified-2283ea8a6a,wisarra,unspecified,Black Sesame (Samone),Bago,Pyay,MMK,1,bag,3
-wisarra-black-sesame-winter-mandalay-unspecified-8d597377ff.svg,wisarra-black-sesame-winter-mandalay-unspecified-8d597377ff,wisarra,unspecified,Black Sesame (Winter),Mandalay,Mandalay,MMK,45,viss,3
-wisarra-blackgram-new-mandalay-unspecified-f9d5301762.svg,wisarra-blackgram-new-mandalay-unspecified-f9d5301762,wisarra,unspecified,Blackgram (New),Mandalay,Mandalay,MMK,60,viss,3
-wisarra-blackgram-new-pyay-unspecified-1e58b776a2.svg,wisarra-blackgram-new-pyay-unspecified-1e58b776a2,wisarra,unspecified,Blackgram (New),Bago,Pyay,MMK,1,basket,3
-wisarra-blackgram-paungde-unspecified-83e8553d13.svg,wisarra-blackgram-paungde-unspecified-83e8553d13,wisarra,unspecified,Blackgram,Bago,Paungde,MMK,1,basket,3
-wisarra-blackgram-sq-rc-2023-bayint-naung-unspecified-7c8f45014e.svg,wisarra-blackgram-sq-rc-2023-bayint-naung-unspecified-7c8f45014e,wisarra,unspecified,"Blackgram (SQ, RC) (2023)",Yangon,Bayint Naung,MMK,1,ton,3
-wisarra-blue-cow-pea-new-mandalay-unspecified-05288385fc.svg,wisarra-blue-cow-pea-new-mandalay-unspecified-05288385fc,wisarra,unspecified,Blue Cow Pea (New),Mandalay,Mandalay,MMK,54.25,viss,3
-wisarra-blue-sesame-thant-new-aunglan-unspecified-5e39fb02ca.svg,wisarra-blue-sesame-thant-new-aunglan-unspecified-5e39fb02ca,wisarra,unspecified,Blue Sesame (Thant) (New),Magway,Aunglan,MMK,1,bag,3
-wisarra-bocate-bayint-naung-unspecified-76439c470b.svg,wisarra-bocate-bayint-naung-unspecified-76439c470b,wisarra,unspecified,Bocate,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-brown-sesame-new-monywa-unspecified-c4f828329f.svg,wisarra-brown-sesame-new-monywa-unspecified-c4f828329f,wisarra,unspecified,Brown Sesame (New),Sagaing,Monywa,MMK,1,basket,3
-wisarra-brown-sesame-old-mandalay-unspecified-f1dce7da26.svg,wisarra-brown-sesame-old-mandalay-unspecified-f1dce7da26,wisarra,unspecified,Brown Sesame (Old),Mandalay,Mandalay,MMK,45,viss,3
-wisarra-brown-sesame-pakokku-unspecified-ff7c7552e5.svg,wisarra-brown-sesame-pakokku-unspecified-ff7c7552e5,wisarra,unspecified,Brown Sesame,Magway,Pakokku,MMK,1,viss,3
-wisarra-butter-bean-bayint-naung-unspecified-1cd9b2211f.svg,wisarra-butter-bean-bayint-naung-unspecified-1cd9b2211f,wisarra,unspecified,Butter Bean,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-butter-bean-gyi-mandalay-unspecified-bd88de93f4.svg,wisarra-butter-bean-gyi-mandalay-unspecified-bd88de93f4,wisarra,unspecified,Butter Bean (Gyi),Mandalay,Mandalay,MMK,56.25,viss,3
-wisarra-capsicum-thiri-mingalar-zay-unspecified-8408fd38d8.svg,wisarra-capsicum-thiri-mingalar-zay-unspecified-8408fd38d8,wisarra,unspecified,Capsicum,Yangon,Thiri Mingalar Zay,MMK,1,viss,3
-wisarra-carrot-aungpan-unspecified-dcda4c181b.svg,wisarra-carrot-aungpan-unspecified-dcda4c181b,wisarra,unspecified,Carrot,Shan,Aungpan,MMK,1,pc,3
-wisarra-castor-seed-monywa-unspecified-66c8549c1c.svg,wisarra-castor-seed-monywa-unspecified-66c8549c1c,wisarra,unspecified,Castor Seed,Sagaing,Monywa,MMK,1,basket,3
-wisarra-cauliflower-aungpan-unspecified-48a9398d86.svg,wisarra-cauliflower-aungpan-unspecified-48a9398d86,wisarra,unspecified,Cauliflower,Shan,Aungpan,MMK,1,viss,3
-wisarra-chayote-thiri-mingalar-zay-unspecified-7d13df8770.svg,wisarra-chayote-thiri-mingalar-zay-unspecified-7d13df8770,wisarra,unspecified,Chayote,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
+wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f.svg,wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f,wisarra,unspecified,Avocado,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550.svg,wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550,wisarra,unspecified,Banana (PheGyan),Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-bell-pepper-aungpan-unspecified-4df3d49835.svg,wisarra-bell-pepper-aungpan-unspecified-4df3d49835,wisarra,unspecified,Bell Pepper,Shan,Aungpan,MMK,1,viss,2
+wisarra-black-gram-new-monywa-unspecified-2e5e81ce80.svg,wisarra-black-gram-new-monywa-unspecified-2e5e81ce80,wisarra,unspecified,Black Gram(New),Sagaing,Monywa,MMK,1,basket,2
+wisarra-black-sesame-new-monywa-unspecified-9e766319cc.svg,wisarra-black-sesame-new-monywa-unspecified-9e766319cc,wisarra,unspecified,Black Sesame (New),Sagaing,Monywa,MMK,1,basket,2
+wisarra-black-sesame-pyay-unspecified-cb91fae552.svg,wisarra-black-sesame-pyay-unspecified-cb91fae552,wisarra,unspecified,Black Sesame,Bago,Pyay,MMK,1,bag,2
+wisarra-black-sesame-samone-pyay-unspecified-2283ea8a6a.svg,wisarra-black-sesame-samone-pyay-unspecified-2283ea8a6a,wisarra,unspecified,Black Sesame (Samone),Bago,Pyay,MMK,1,bag,2
+wisarra-black-sesame-winter-mandalay-unspecified-8d597377ff.svg,wisarra-black-sesame-winter-mandalay-unspecified-8d597377ff,wisarra,unspecified,Black Sesame (Winter),Mandalay,Mandalay,MMK,45,viss,2
+wisarra-blackgram-new-mandalay-unspecified-f9d5301762.svg,wisarra-blackgram-new-mandalay-unspecified-f9d5301762,wisarra,unspecified,Blackgram (New),Mandalay,Mandalay,MMK,60,viss,2
+wisarra-blackgram-new-pyay-unspecified-1e58b776a2.svg,wisarra-blackgram-new-pyay-unspecified-1e58b776a2,wisarra,unspecified,Blackgram (New),Bago,Pyay,MMK,1,basket,2
+wisarra-blackgram-paungde-unspecified-83e8553d13.svg,wisarra-blackgram-paungde-unspecified-83e8553d13,wisarra,unspecified,Blackgram,Bago,Paungde,MMK,1,basket,2
+wisarra-blackgram-sq-rc-2023-bayint-naung-unspecified-7c8f45014e.svg,wisarra-blackgram-sq-rc-2023-bayint-naung-unspecified-7c8f45014e,wisarra,unspecified,"Blackgram (SQ, RC) (2023)",Yangon,Bayint Naung,MMK,1,ton,2
+wisarra-blue-cow-pea-new-mandalay-unspecified-05288385fc.svg,wisarra-blue-cow-pea-new-mandalay-unspecified-05288385fc,wisarra,unspecified,Blue Cow Pea (New),Mandalay,Mandalay,MMK,54.25,viss,2
+wisarra-blue-sesame-thant-new-aunglan-unspecified-5e39fb02ca.svg,wisarra-blue-sesame-thant-new-aunglan-unspecified-5e39fb02ca,wisarra,unspecified,Blue Sesame (Thant) (New),Magway,Aunglan,MMK,1,bag,2
+wisarra-bocate-bayint-naung-unspecified-76439c470b.svg,wisarra-bocate-bayint-naung-unspecified-76439c470b,wisarra,unspecified,Bocate,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-brown-sesame-new-monywa-unspecified-c4f828329f.svg,wisarra-brown-sesame-new-monywa-unspecified-c4f828329f,wisarra,unspecified,Brown Sesame (New),Sagaing,Monywa,MMK,1,basket,2
+wisarra-brown-sesame-old-mandalay-unspecified-f1dce7da26.svg,wisarra-brown-sesame-old-mandalay-unspecified-f1dce7da26,wisarra,unspecified,Brown Sesame (Old),Mandalay,Mandalay,MMK,45,viss,2
+wisarra-brown-sesame-pakokku-unspecified-ff7c7552e5.svg,wisarra-brown-sesame-pakokku-unspecified-ff7c7552e5,wisarra,unspecified,Brown Sesame,Magway,Pakokku,MMK,1,viss,2
+wisarra-butter-bean-bayint-naung-unspecified-1cd9b2211f.svg,wisarra-butter-bean-bayint-naung-unspecified-1cd9b2211f,wisarra,unspecified,Butter Bean,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-butter-bean-gyi-mandalay-unspecified-bd88de93f4.svg,wisarra-butter-bean-gyi-mandalay-unspecified-bd88de93f4,wisarra,unspecified,Butter Bean (Gyi),Mandalay,Mandalay,MMK,56.25,viss,2
+wisarra-capsicum-thiri-mingalar-zay-unspecified-8408fd38d8.svg,wisarra-capsicum-thiri-mingalar-zay-unspecified-8408fd38d8,wisarra,unspecified,Capsicum,Yangon,Thiri Mingalar Zay,MMK,1,viss,2
+wisarra-carrot-aungpan-unspecified-dcda4c181b.svg,wisarra-carrot-aungpan-unspecified-dcda4c181b,wisarra,unspecified,Carrot,Shan,Aungpan,MMK,1,pc,2
+wisarra-castor-seed-monywa-unspecified-66c8549c1c.svg,wisarra-castor-seed-monywa-unspecified-66c8549c1c,wisarra,unspecified,Castor Seed,Sagaing,Monywa,MMK,1,basket,2
+wisarra-cauliflower-aungpan-unspecified-48a9398d86.svg,wisarra-cauliflower-aungpan-unspecified-48a9398d86,wisarra,unspecified,Cauliflower,Shan,Aungpan,MMK,1,viss,2
+wisarra-chayote-thiri-mingalar-zay-unspecified-7d13df8770.svg,wisarra-chayote-thiri-mingalar-zay-unspecified-7d13df8770,wisarra,unspecified,Chayote,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
 wisarra-chick-pea-929-myingyan-unspecified-38a3ec8841.svg,wisarra-chick-pea-929-myingyan-unspecified-38a3ec8841,wisarra,unspecified,Chick Pea (929),Mandalay,Myingyan,MMK,1,viss,2
 wisarra-chick-pea-929-new-mandalay-unspecified-8e4a247be5.svg,wisarra-chick-pea-929-new-mandalay-unspecified-8e4a247be5,wisarra,unspecified,Chick Pea (929) (New),Mandalay,Mandalay,MMK,56,viss,2
-wisarra-chick-pea-929-new-old-monywa-unspecified-71776fb0a3.svg,wisarra-chick-pea-929-new-old-monywa-unspecified-71776fb0a3,wisarra,unspecified,"Chick Pea (929) (New, Old)",Sagaing,Monywa,MMK,1,basket,3
-wisarra-chick-pea-holland-magway-unspecified-061fe36b63.svg,wisarra-chick-pea-holland-magway-unspecified-061fe36b63,wisarra,unspecified,Chick Pea (Holland),Magway,Magway,MMK,19,viss,3
-wisarra-chick-pea-holland-new-paungde-unspecified-ce10e0bf16.svg,wisarra-chick-pea-holland-new-paungde-unspecified-ce10e0bf16,wisarra,unspecified,Chick Pea (Holland) (New),Bago,Paungde,MMK,1,basket,3
-wisarra-chick-pea-phyu-lone-bayint-naung-unspecified-fa161fe029.svg,wisarra-chick-pea-phyu-lone-bayint-naung-unspecified-fa161fe029,wisarra,unspecified,Chick Pea (Phyu Lone),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chick-pea-phyu-lone-gyi-bayint-naung-unspecified-e9951e2d24.svg,wisarra-chick-pea-phyu-lone-gyi-bayint-naung-unspecified-e9951e2d24,wisarra,unspecified,Chick Pea (Phyu Lone Gyi),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chick-pea-small-magway-unspecified-fa0fc0f057.svg,wisarra-chick-pea-small-magway-unspecified-fa0fc0f057,wisarra,unspecified,Chick Pea (Small),Magway,Magway,MMK,19,viss,3
-wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada.svg,wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada,wisarra,unspecified,Chick Pea (Taiwan) (New),Mandalay,Mandalay,MMK,56,viss,3
-wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44.svg,wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44,wisarra,unspecified,Chick Pea (Thiwan) (Old),Sagaing,Monywa,MMK,1,basket,3
-wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e.svg,wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e,wisarra,unspecified,Chick pea (v2),Mandalay,Myingyan,MMK,1,viss,3
-wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73.svg,wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73,wisarra,unspecified,Chick Pea (V2)) (New),Sagaing,Monywa,MMK,1,basket,3
-wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847.svg,wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847,wisarra,unspecified,Chili (Moe Htaung) (Myint Wa),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914.svg,wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914,wisarra,unspecified,Chili (Pwa) (MyintWaKyunPaw),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f.svg,wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f,wisarra,unspecified,Chili (Pwa) (Sin Phyu Kyun),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chili-shay-india-bayint-naung-unspecified-c39360dfaf.svg,wisarra-chili-shay-india-bayint-naung-unspecified-c39360dfaf,wisarra,unspecified,Chili (Shay) (India),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-chili-shay-pantanaw-bayint-naung-unspecified-965813bcf3.svg,wisarra-chili-shay-pantanaw-bayint-naung-unspecified-965813bcf3,wisarra,unspecified,Chili (Shay) (Pantanaw),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-corn-bayint-naung-unspecified-be0399318a.svg,wisarra-corn-bayint-naung-unspecified-be0399318a,wisarra,unspecified,Corn,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-cp-corn-kyautme-lashio-unspecified-4c36611a4d.svg,wisarra-cp-corn-kyautme-lashio-unspecified-4c36611a4d,wisarra,unspecified,CP Corn (Kyautme),Shan,Lashio,MMK,1,viss,3
-wisarra-cp-corn-muse-lashio-unspecified-b0c1bec8a1.svg,wisarra-cp-corn-muse-lashio-unspecified-b0c1bec8a1,wisarra,unspecified,CP Corn (Muse),Shan,Lashio,MMK,1,viss,3
+wisarra-chick-pea-929-new-old-monywa-unspecified-71776fb0a3.svg,wisarra-chick-pea-929-new-old-monywa-unspecified-71776fb0a3,wisarra,unspecified,"Chick Pea (929) (New, Old)",Sagaing,Monywa,MMK,1,basket,2
+wisarra-chick-pea-holland-magway-unspecified-061fe36b63.svg,wisarra-chick-pea-holland-magway-unspecified-061fe36b63,wisarra,unspecified,Chick Pea (Holland),Magway,Magway,MMK,19,viss,2
+wisarra-chick-pea-holland-new-paungde-unspecified-ce10e0bf16.svg,wisarra-chick-pea-holland-new-paungde-unspecified-ce10e0bf16,wisarra,unspecified,Chick Pea (Holland) (New),Bago,Paungde,MMK,1,basket,2
+wisarra-chick-pea-phyu-lone-bayint-naung-unspecified-fa161fe029.svg,wisarra-chick-pea-phyu-lone-bayint-naung-unspecified-fa161fe029,wisarra,unspecified,Chick Pea (Phyu Lone),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chick-pea-phyu-lone-gyi-bayint-naung-unspecified-e9951e2d24.svg,wisarra-chick-pea-phyu-lone-gyi-bayint-naung-unspecified-e9951e2d24,wisarra,unspecified,Chick Pea (Phyu Lone Gyi),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chick-pea-small-magway-unspecified-fa0fc0f057.svg,wisarra-chick-pea-small-magway-unspecified-fa0fc0f057,wisarra,unspecified,Chick Pea (Small),Magway,Magway,MMK,19,viss,2
+wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada.svg,wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada,wisarra,unspecified,Chick Pea (Taiwan) (New),Mandalay,Mandalay,MMK,56,viss,2
+wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44.svg,wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44,wisarra,unspecified,Chick Pea (Thiwan) (Old),Sagaing,Monywa,MMK,1,basket,2
+wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e.svg,wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e,wisarra,unspecified,Chick pea (v2),Mandalay,Myingyan,MMK,1,viss,2
+wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73.svg,wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73,wisarra,unspecified,Chick Pea (V2)) (New),Sagaing,Monywa,MMK,1,basket,2
+wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847.svg,wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847,wisarra,unspecified,Chili (Moe Htaung) (Myint Wa),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914.svg,wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914,wisarra,unspecified,Chili (Pwa) (MyintWaKyunPaw),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f.svg,wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f,wisarra,unspecified,Chili (Pwa) (Sin Phyu Kyun),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chili-shay-india-bayint-naung-unspecified-c39360dfaf.svg,wisarra-chili-shay-india-bayint-naung-unspecified-c39360dfaf,wisarra,unspecified,Chili (Shay) (India),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-chili-shay-pantanaw-bayint-naung-unspecified-965813bcf3.svg,wisarra-chili-shay-pantanaw-bayint-naung-unspecified-965813bcf3,wisarra,unspecified,Chili (Shay) (Pantanaw),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-corn-bayint-naung-unspecified-be0399318a.svg,wisarra-corn-bayint-naung-unspecified-be0399318a,wisarra,unspecified,Corn,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-cp-corn-kyautme-lashio-unspecified-4c36611a4d.svg,wisarra-cp-corn-kyautme-lashio-unspecified-4c36611a4d,wisarra,unspecified,CP Corn (Kyautme),Shan,Lashio,MMK,1,viss,2
+wisarra-cp-corn-muse-lashio-unspecified-b0c1bec8a1.svg,wisarra-cp-corn-muse-lashio-unspecified-b0c1bec8a1,wisarra,unspecified,CP Corn (Muse),Shan,Lashio,MMK,1,viss,2
 wisarra-cp-corn-myingyan-unspecified-4fc3f55969.svg,wisarra-cp-corn-myingyan-unspecified-4fc3f55969,wisarra,unspecified,CP Corn,Mandalay,Myingyan,MMK,1,viss,2
-wisarra-cp-corn-naunghkio-lashio-unspecified-d446e52933.svg,wisarra-cp-corn-naunghkio-lashio-unspecified-d446e52933,wisarra,unspecified,CP Corn (Naunghkio),Shan,Lashio,MMK,1,viss,3
-wisarra-custard-aungpan-unspecified-f10a5a4d8a.svg,wisarra-custard-aungpan-unspecified-f10a5a4d8a,wisarra,unspecified,Custard,Shan,Aungpan,MMK,1,viss,3
-wisarra-eggplant-aungpan-unspecified-cd27d2b5a0.svg,wisarra-eggplant-aungpan-unspecified-cd27d2b5a0,wisarra,unspecified,Eggplant,Shan,Aungpan,MMK,1,viss,3
-wisarra-garden-pea-aungpan-unspecified-7dd050c08a.svg,wisarra-garden-pea-aungpan-unspecified-7dd050c08a,wisarra,unspecified,Garden Pea,Shan,Aungpan,MMK,1,viss,3
-wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac.svg,wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac,wisarra,unspecified,Garlic (Htoo 4.5),MON,Mawlamyine,MMK,1,viss,3
-wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188.svg,wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188,wisarra,unspecified,Garlic (Kyu gote),MON,Mawlamyine,MMK,1,viss,3
-wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1.svg,wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1,wisarra,unspecified,Green pea,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-green-pea-mandalay-unspecified-3ebbce93f0.svg,wisarra-green-pea-mandalay-unspecified-3ebbce93f0,wisarra,unspecified,Green pea,Mandalay,Mandalay,MMK,59.25,viss,3
-wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2.svg,wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2,wisarra,unspecified,Groundnut Oil,Magway,Pakokku,MMK,1,viss,3
-wisarra-groundnut-white-new-monywa-unspecified-6842c8439c.svg,wisarra-groundnut-white-new-monywa-unspecified-6842c8439c,wisarra,unspecified,Groundnut (White) (New),Sagaing,Monywa,MMK,1,basket,3
-wisarra-half-chickpea-bayint-naung-unspecified-627caf6f21.svg,wisarra-half-chickpea-bayint-naung-unspecified-627caf6f21,wisarra,unspecified,Half Chickpea,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-jaggery-yesakyo-chaw-bayint-naung-unspecified-438ae1550f.svg,wisarra-jaggery-yesakyo-chaw-bayint-naung-unspecified-438ae1550f,wisarra,unspecified,Jaggery (Yesakyo) (Chaw),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-lablab-bean-ka-mandalay-unspecified-ff8d57c92f.svg,wisarra-lablab-bean-ka-mandalay-unspecified-ff8d57c92f,wisarra,unspecified,Lablab Bean (Ka),Mandalay,Mandalay,MMK,55.25,viss,3
-wisarra-lablab-bean-kone-bayint-naung-unspecified-5326d8ea3e.svg,wisarra-lablab-bean-kone-bayint-naung-unspecified-5326d8ea3e,wisarra,unspecified,Lablab Bean (Kone),Yangon,Bayint Naung,MMK,1,viss,3
+wisarra-cp-corn-naunghkio-lashio-unspecified-d446e52933.svg,wisarra-cp-corn-naunghkio-lashio-unspecified-d446e52933,wisarra,unspecified,CP Corn (Naunghkio),Shan,Lashio,MMK,1,viss,2
+wisarra-custard-aungpan-unspecified-f10a5a4d8a.svg,wisarra-custard-aungpan-unspecified-f10a5a4d8a,wisarra,unspecified,Custard,Shan,Aungpan,MMK,1,viss,2
+wisarra-eggplant-aungpan-unspecified-cd27d2b5a0.svg,wisarra-eggplant-aungpan-unspecified-cd27d2b5a0,wisarra,unspecified,Eggplant,Shan,Aungpan,MMK,1,viss,2
+wisarra-garden-pea-aungpan-unspecified-7dd050c08a.svg,wisarra-garden-pea-aungpan-unspecified-7dd050c08a,wisarra,unspecified,Garden Pea,Shan,Aungpan,MMK,1,viss,2
+wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac.svg,wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac,wisarra,unspecified,Garlic (Htoo 4.5),MON,Mawlamyine,MMK,1,viss,2
+wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188.svg,wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188,wisarra,unspecified,Garlic (Kyu gote),MON,Mawlamyine,MMK,1,viss,2
+wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1.svg,wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1,wisarra,unspecified,Green pea,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-green-pea-mandalay-unspecified-3ebbce93f0.svg,wisarra-green-pea-mandalay-unspecified-3ebbce93f0,wisarra,unspecified,Green pea,Mandalay,Mandalay,MMK,59.25,viss,2
+wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2.svg,wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2,wisarra,unspecified,Groundnut Oil,Magway,Pakokku,MMK,1,viss,2
+wisarra-groundnut-white-new-monywa-unspecified-6842c8439c.svg,wisarra-groundnut-white-new-monywa-unspecified-6842c8439c,wisarra,unspecified,Groundnut (White) (New),Sagaing,Monywa,MMK,1,basket,2
+wisarra-half-chickpea-bayint-naung-unspecified-627caf6f21.svg,wisarra-half-chickpea-bayint-naung-unspecified-627caf6f21,wisarra,unspecified,Half Chickpea,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-jaggery-yesakyo-chaw-bayint-naung-unspecified-438ae1550f.svg,wisarra-jaggery-yesakyo-chaw-bayint-naung-unspecified-438ae1550f,wisarra,unspecified,Jaggery (Yesakyo) (Chaw),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-lablab-bean-ka-mandalay-unspecified-ff8d57c92f.svg,wisarra-lablab-bean-ka-mandalay-unspecified-ff8d57c92f,wisarra,unspecified,Lablab Bean (Ka),Mandalay,Mandalay,MMK,55.25,viss,2
+wisarra-lablab-bean-kone-bayint-naung-unspecified-5326d8ea3e.svg,wisarra-lablab-bean-kone-bayint-naung-unspecified-5326d8ea3e,wisarra,unspecified,Lablab Bean (Kone),Yangon,Bayint Naung,MMK,1,viss,2
 wisarra-lablab-bean-la-mandalay-unspecified-7249f95467.svg,wisarra-lablab-bean-la-mandalay-unspecified-7249f95467,wisarra,unspecified,Lablab Bean (La),Mandalay,Mandalay,MMK,55.25,viss,2
-wisarra-lablab-bean-lat-chaw-aunglan-unspecified-9711a753f0.svg,wisarra-lablab-bean-lat-chaw-aunglan-unspecified-9711a753f0,wisarra,unspecified,Lablab Bean (Lat Chaw),Magway,Aunglan,MMK,1,basket,3
-wisarra-lablab-bean-shwe-kyun-aunglan-unspecified-6a3f5627e5.svg,wisarra-lablab-bean-shwe-kyun-aunglan-unspecified-6a3f5627e5,wisarra,unspecified,Lablab Bean (Shwe Kyun),Magway,Aunglan,MMK,1,basket,3
-wisarra-lablab-bean-shwe-kyun-bayint-naung-unspecified-2c00524423.svg,wisarra-lablab-bean-shwe-kyun-bayint-naung-unspecified-2c00524423,wisarra,unspecified,Lablab Bean (Shwe Kyun),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-lablab-bean-sinphyukyun-unspecified-33bb71aae2.svg,wisarra-lablab-bean-sinphyukyun-unspecified-33bb71aae2,wisarra,unspecified,Lablab Bean,Magway,Sinphyukyun,MMK,1,basket,3
-wisarra-lablab-bean-ta-mandalay-unspecified-98a29c088f.svg,wisarra-lablab-bean-ta-mandalay-unspecified-98a29c088f,wisarra,unspecified,Lablab Bean (Ta),Mandalay,Mandalay,MMK,55.25,viss,3
-wisarra-lentil-mandalay-unspecified-151caf7116.svg,wisarra-lentil-mandalay-unspecified-151caf7116,wisarra,unspecified,Lentil,Mandalay,Mandalay,MMK,1,viss,3
-wisarra-mung-bean-105mile-unspecified-b488613358.svg,wisarra-mung-bean-105mile-unspecified-b488613358,wisarra,unspecified,Mung Bean,Shan,105mile,USD,1,ton,3
-wisarra-mung-bean-bego-shwe-wah-bayint-naung-unspecified-7d8c523412.svg,wisarra-mung-bean-bego-shwe-wah-bayint-naung-unspecified-7d8c523412,wisarra,unspecified,Mung Bean(Bego Shwe Wah),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-mung-bean-khayan-shwe-wah-bayint-naung-unspecified-c83fafa561.svg,wisarra-mung-bean-khayan-shwe-wah-bayint-naung-unspecified-c83fafa561,wisarra,unspecified,Mung Bean (Khayan Shwe Wah),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-mung-bean-wakema-bayint-naung-unspecified-573130c884.svg,wisarra-mung-bean-wakema-bayint-naung-unspecified-573130c884,wisarra,unspecified,Mung Bean (Wakema),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-niger-flower-new-mandalay-unspecified-b892b7a79a.svg,wisarra-niger-flower-new-mandalay-unspecified-b892b7a79a,wisarra,unspecified,Niger Flower (New),Mandalay,Mandalay,MMK,45,viss,2
-wisarra-onion-aung-pan-htoo-3-bayint-naung-unspecified-9a1b6a5747.svg,wisarra-onion-aung-pan-htoo-3-bayint-naung-unspecified-9a1b6a5747,wisarra,unspecified,Onion (Aung Pan Htoo 3),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-aung-pan-htoo-4-bayint-naung-unspecified-749c275b13.svg,wisarra-onion-aung-pan-htoo-4-bayint-naung-unspecified-749c275b13,wisarra,unspecified,Onion (Aung Pan Htoo 4),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-aung-pan-htoo-5-bayint-naung-unspecified-0038a58377.svg,wisarra-onion-aung-pan-htoo-5-bayint-naung-unspecified-0038a58377,wisarra,unspecified,Onion (Aung Pan Htoo 5),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-mawlamyine-unspecified-3bc385d51c.svg,wisarra-onion-mawlamyine-unspecified-3bc385d51c,wisarra,unspecified,Onion,MON,Mawlamyine,MMK,1,viss,3
-wisarra-onion-monywa-shal-new-bayint-naung-unspecified-6cba75bf0a.svg,wisarra-onion-monywa-shal-new-bayint-naung-unspecified-6cba75bf0a,wisarra,unspecified,Onion (Monywa Shal) (New),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-new-john-gyi-pakokku-unspecified-d558a2135f.svg,wisarra-onion-new-john-gyi-pakokku-unspecified-d558a2135f,wisarra,unspecified,Onion (New) (John Gyi),Magway,Pakokku,MMK,1,viss,3
-wisarra-onion-new-john-lat-pakokku-unspecified-21eb34aef3.svg,wisarra-onion-new-john-lat-pakokku-unspecified-21eb34aef3,wisarra,unspecified,Onion (New) (John Lat),Magway,Pakokku,MMK,1,viss,3
-wisarra-onion-sake-phyu-lat-chaw-bayint-naung-unspecified-5cd6842ec7.svg,wisarra-onion-sake-phyu-lat-chaw-bayint-naung-unspecified-5cd6842ec7,wisarra,unspecified,Onion (Sake Phyu Lat Chaw),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-sake-phyu-lat-gyi-bayint-naung-unspecified-859db98b18.svg,wisarra-onion-sake-phyu-lat-gyi-bayint-naung-unspecified-859db98b18,wisarra,unspecified,Onion (Sake Phyu Lat Gyi),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-sake-phyu-lat-thant-bayint-naung-unspecified-112139dd63.svg,wisarra-onion-sake-phyu-lat-thant-bayint-naung-unspecified-112139dd63,wisarra,unspecified,Onion (Sake Phyu Lat Thant),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-onion-sake-phyu-shal-bayint-naung-unspecified-c4d51f74c5.svg,wisarra-onion-sake-phyu-shal-bayint-naung-unspecified-c4d51f74c5,wisarra,unspecified,Onion (Sake Phyu Shal),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-paddy-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-18dd65db3c.svg,wisarra-paddy-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-18dd65db3c,wisarra,unspecified,Paddy (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,MMK,100,basket,3
-wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-myaungmya-unspecified-d9eac1048e.svg,wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-myaungmya-unspecified-d9eac1048e,wisarra,unspecified,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Myaungmya,MMK,100,basket,3
-wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-783017000e.svg,wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-783017000e,wisarra,unspecified,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,MMK,100,basket,3
-wisarra-paddy-emata-rainy-2022-myaungmya-unspecified-8848687ccf.svg,wisarra-paddy-emata-rainy-2022-myaungmya-unspecified-8848687ccf,wisarra,unspecified,Paddy (Emata) (Rainy 2022),Pathein,Myaungmya,MMK,1,basket,3
-wisarra-paddy-emata-rainy-2022-pyapon-unspecified-01b099eae3.svg,wisarra-paddy-emata-rainy-2022-pyapon-unspecified-01b099eae3,wisarra,unspecified,Paddy (Emata) (Rainy 2022),Pathein,Pyapon,MMK,100,basket,3
-wisarra-paddy-paw-san-rainy-2022-dedaye-unspecified-e0651f02b1.svg,wisarra-paddy-paw-san-rainy-2022-dedaye-unspecified-e0651f02b1,wisarra,unspecified,Paddy (Paw San) (Rainy 2022),Pathein,Dedaye,MMK,100,basket,3
-wisarra-paddy-paw-san-rainy-2022-pathein-unspecified-c5da4fbeb3.svg,wisarra-paddy-paw-san-rainy-2022-pathein-unspecified-c5da4fbeb3,wisarra,unspecified,Paddy (Paw San) (Rainy 2022),Pathein,Pathein,MMK,100,basket,3
-wisarra-peasant-banana-thiri-mingalar-zay-unspecified-dc6665d8bc.svg,wisarra-peasant-banana-thiri-mingalar-zay-unspecified-dc6665d8bc,wisarra,unspecified,Peasant Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-pigeon-pea-new-pyay-unspecified-09fdb2a776.svg,wisarra-pigeon-pea-new-pyay-unspecified-09fdb2a776,wisarra,unspecified,Pigeon Pea (New),Bago,Pyay,MMK,1,basket,3
-wisarra-pigeon-pea-rc-2021-bayint-naung-unspecified-393d88f177.svg,wisarra-pigeon-pea-rc-2021-bayint-naung-unspecified-393d88f177,wisarra,unspecified,Pigeon Pea (RC) (2021),Yangon,Bayint Naung,MMK,1,ton,3
-wisarra-pomelo-thiri-mingalar-zay-unspecified-a6a302e2e6.svg,wisarra-pomelo-thiri-mingalar-zay-unspecified-a6a302e2e6,wisarra,unspecified,Pomelo,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-potato-ok-aung-pan-bayint-naung-unspecified-ad71190349.svg,wisarra-potato-ok-aung-pan-bayint-naung-unspecified-ad71190349,wisarra,unspecified,Potato (OK) (Aung Pan),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-potato-ok-heho-bayint-naung-unspecified-e0374bfea5.svg,wisarra-potato-ok-heho-bayint-naung-unspecified-e0374bfea5,wisarra,unspecified,Potato (OK) (Heho),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-potato-s1-2-aung-pan-bayint-naung-unspecified-b385639fb9.svg,wisarra-potato-s1-2-aung-pan-bayint-naung-unspecified-b385639fb9,wisarra,unspecified,"Potato (S1,2) (Aung Pan)",Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-potato-s3-aung-pan-bayint-naung-unspecified-ae6f049758.svg,wisarra-potato-s3-aung-pan-bayint-naung-unspecified-ae6f049758,wisarra,unspecified,Potato (S3) (Aung Pan),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-pumpkin-aungpan-unspecified-e1ee38a4c1.svg,wisarra-pumpkin-aungpan-unspecified-e1ee38a4c1,wisarra,unspecified,Pumpkin,Shan,Aungpan,MMK,1,viss,3
-wisarra-radish-thiri-mingalar-zay-unspecified-a6f7d66d2f.svg,wisarra-radish-thiri-mingalar-zay-unspecified-a6f7d66d2f,wisarra,unspecified,Radish,Yangon,Thiri Mingalar Zay,MMK,1,bundle,3
-wisarra-rakhaine-banana-thiri-mingalar-zay-unspecified-7d462f6649.svg,wisarra-rakhaine-banana-thiri-mingalar-zay-unspecified-7d462f6649,wisarra,unspecified,Rakhaine Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-red-pea-pyarr-myingyan-unspecified-364424761f.svg,wisarra-red-pea-pyarr-myingyan-unspecified-364424761f,wisarra,unspecified,Red Pea Pyarr,Mandalay,Myingyan,MMK,1,viss,3
-wisarra-red-pigeon-pea-new-mandalay-unspecified-5f478abde2.svg,wisarra-red-pigeon-pea-new-mandalay-unspecified-5f478abde2,wisarra,unspecified,Red Pigeon Pea (New),Mandalay,Mandalay,MMK,60,viss,3
-wisarra-red-sesame-pyay-unspecified-95523ce55b.svg,wisarra-red-sesame-pyay-unspecified-95523ce55b,wisarra,unspecified,Red Sesame,Bago,Pyay,MMK,1,bag,3
-wisarra-rice-90-day-thit-shal-war-tan-unspecified-8553d5afe1.svg,wisarra-rice-90-day-thit-shal-war-tan-unspecified-8553d5afe1,wisarra,unspecified,Rice (90 Day Thit Shal),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-emata-25-war-tan-unspecified-acd6350c6e.svg,wisarra-rice-emata-25-war-tan-unspecified-acd6350c6e,wisarra,unspecified,Rice (Emata 25%),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-dedaye-unspecified-a19814c230.svg,wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-dedaye-unspecified-a19814c230,wisarra,unspecified,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Dedaye,MMK,1,bag,3
-wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-c397abee63.svg,wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-c397abee63,wisarra,unspecified,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,MMK,1,bag,3
-wisarra-rice-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-798f869d51.svg,wisarra-rice-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-798f869d51,wisarra,unspecified,Rice (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,MMK,1,bag,3
-wisarra-rice-emata-rainy-2022-myaungmya-unspecified-88aba84214.svg,wisarra-rice-emata-rainy-2022-myaungmya-unspecified-88aba84214,wisarra,unspecified,Rice (Emata) (Rainy 2022),Pathein,Myaungmya,MMK,1,bag,3
-wisarra-rice-emata-rainy-2022-pyapon-unspecified-aacfeb5be4.svg,wisarra-rice-emata-rainy-2022-pyapon-unspecified-aacfeb5be4,wisarra,unspecified,Rice (Emata) (Rainy 2022),Pathein,Pyapon,MMK,1,bag,3
-wisarra-rice-inn-lal-nattalin-unspecified-947a993fd3.svg,wisarra-rice-inn-lal-nattalin-unspecified-947a993fd3,wisarra,unspecified,Rice (Inn Lal),Bago,Nattalin,MMK,100,basket,3
-wisarra-rice-inn-lal-new-dry-paungde-unspecified-fdd8e3c239.svg,wisarra-rice-inn-lal-new-dry-paungde-unspecified-fdd8e3c239,wisarra,unspecified,Rice (Inn Lal) (New) (Dry),Bago,Paungde,MMK,100,basket,3
-wisarra-rice-myaungmya-pathein-paw-san-new-war-tan-unspecified-a78b974cfa.svg,wisarra-rice-myaungmya-pathein-paw-san-new-war-tan-unspecified-a78b974cfa,wisarra,unspecified,Rice (MyaungMya Pathein Paw San) (New),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-nga-sein-new-war-tan-unspecified-22cdd5e3a3.svg,wisarra-rice-nga-sein-new-war-tan-unspecified-22cdd5e3a3,wisarra,unspecified,Rice (Nga Sein) (New),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-ngwe-toe-old-nattalin-unspecified-0935c72354.svg,wisarra-rice-ngwe-toe-old-nattalin-unspecified-0935c72354,wisarra,unspecified,Rice (Ngwe Toe) (Old),Bago,Nattalin,MMK,100,basket,3
-wisarra-rice-paw-san-nae-sone-new-war-tan-unspecified-c6b7231503.svg,wisarra-rice-paw-san-nae-sone-new-war-tan-unspecified-c6b7231503,wisarra,unspecified,Rice (Paw San Nae Sone) (New),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-paw-san-rainy-2022-dedaye-unspecified-7f022768ce.svg,wisarra-rice-paw-san-rainy-2022-dedaye-unspecified-7f022768ce,wisarra,unspecified,Rice (Paw San) (Rainy 2022),Pathein,Dedaye,MMK,1,bag,3
-wisarra-rice-paw-san-rainy-2022-pathein-unspecified-69f9b46014.svg,wisarra-rice-paw-san-rainy-2022-pathein-unspecified-69f9b46014,wisarra,unspecified,Rice (Paw San) (Rainy 2022),Pathein,Pathein,MMK,1,bag,3
-wisarra-rice-pyapon-paw-san-new-war-tan-unspecified-4c1208cb33.svg,wisarra-rice-pyapon-paw-san-new-war-tan-unspecified-4c1208cb33,wisarra,unspecified,Rice (Pyapon Paw San) (New),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-shwebo-paw-san-war-tan-unspecified-de18da4501.svg,wisarra-rice-shwebo-paw-san-war-tan-unspecified-de18da4501,wisarra,unspecified,Rice (Shwebo Paw San),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-taung-pyan-old-nattalin-unspecified-7e4253ceae.svg,wisarra-rice-taung-pyan-old-nattalin-unspecified-7e4253ceae,wisarra,unspecified,Rice (Taung Pyan) (Old),Bago,Nattalin,MMK,100,basket,3
-wisarra-rice-thee-htet-shal-war-tan-unspecified-d51f469c63.svg,wisarra-rice-thee-htet-shal-war-tan-unspecified-d51f469c63,wisarra,unspecified,Rice (Thee Htet Shal),Yangon,War Tan,MMK,1.5,basket,3
-wisarra-rice-yadanar-toe-20-paungde-unspecified-adaf17ce76.svg,wisarra-rice-yadanar-toe-20-paungde-unspecified-adaf17ce76,wisarra,unspecified,Rice (Yadanar Toe) (20%),Bago,Paungde,MMK,100,basket,3
-wisarra-shwe-banana-thiri-mingalar-zay-unspecified-f550cbef0e.svg,wisarra-shwe-banana-thiri-mingalar-zay-unspecified-f550cbef0e,wisarra,unspecified,Shwe Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-snake-gourd-thiri-mingalar-zay-unspecified-091908bf45.svg,wisarra-snake-gourd-thiri-mingalar-zay-unspecified-091908bf45,wisarra,unspecified,Snake Gourd,Yangon,Thiri Mingalar Zay,MMK,1,bundle,3
-wisarra-soya-bean-delta-bayint-naung-unspecified-7f8e5a4c1a.svg,wisarra-soya-bean-delta-bayint-naung-unspecified-7f8e5a4c1a,wisarra,unspecified,Soya Bean (Delta),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-soya-bean-delta-high-yield-bayint-naung-unspecified-a40fa41793.svg,wisarra-soya-bean-delta-high-yield-bayint-naung-unspecified-a40fa41793,wisarra,unspecified,Soya Bean (Delta) (High Yield),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-stawberry-thiri-mingalar-zay-unspecified-c5beb01eb8.svg,wisarra-stawberry-thiri-mingalar-zay-unspecified-c5beb01eb8,wisarra,unspecified,Stawberry,Yangon,Thiri Mingalar Zay,MMK,1,pc,3
-wisarra-sultani-sultapya-bayint-naung-unspecified-039924d9f7.svg,wisarra-sultani-sultapya-bayint-naung-unspecified-039924d9f7,wisarra,unspecified,Sultani Sultapya,Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-tamarind-darzinn-new-bayint-naung-unspecified-bf5ee44aee.svg,wisarra-tamarind-darzinn-new-bayint-naung-unspecified-bf5ee44aee,wisarra,unspecified,Tamarind (Darzinn) (New),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-tamarind-kyaukpadaung-bayint-naung-unspecified-9f1b4cb70f.svg,wisarra-tamarind-kyaukpadaung-bayint-naung-unspecified-9f1b4cb70f,wisarra,unspecified,Tamarind (Kyaukpadaung),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-tamarind-pwintkat-new-bayint-naung-unspecified-b667920fd9.svg,wisarra-tamarind-pwintkat-new-bayint-naung-unspecified-b667920fd9,wisarra,unspecified,Tamarind (Pwintkat) (New),Yangon,Bayint Naung,MMK,1,viss,3
-wisarra-taung-pyan-old-pyay-unspecified-bf61316ac1.svg,wisarra-taung-pyan-old-pyay-unspecified-bf61316ac1,wisarra,unspecified,Taung Pyan (Old),Bago,Pyay,MMK,1,bag,3
-wisarra-thuka-new-pyay-unspecified-b9aa1b403d.svg,wisarra-thuka-new-pyay-unspecified-b9aa1b403d,wisarra,unspecified,Thuka (New),Bago,Pyay,MMK,1,bag,3
-wisarra-tomato-thiri-mingalar-zay-unspecified-7cdfe848d7.svg,wisarra-tomato-thiri-mingalar-zay-unspecified-7cdfe848d7,wisarra,unspecified,Tomato,Yangon,Thiri Mingalar Zay,MMK,1,box,3
-wisarra-wheat-kalay-new-mandalay-unspecified-46f038273a.svg,wisarra-wheat-kalay-new-mandalay-unspecified-46f038273a,wisarra,unspecified,Wheat (Kalay) (New),Mandalay,Mandalay,MMK,60,viss,3
-wisarra-wheat-monywa-new-mandalay-unspecified-66a778c706.svg,wisarra-wheat-monywa-new-mandalay-unspecified-66a778c706,wisarra,unspecified,Wheat (Monywa) (New),Mandalay,Mandalay,MMK,60,viss,3
-wisarra-wheat-myinmu-myaung-new-mandalay-unspecified-279b92fdda.svg,wisarra-wheat-myinmu-myaung-new-mandalay-unspecified-279b92fdda,wisarra,unspecified,"Wheat (Myinmu, Myaung) (New)",Mandalay,Mandalay,MMK,60,viss,3
-wisarra-wheat-shan-mandalay-unspecified-b213a7f58e.svg,wisarra-wheat-shan-mandalay-unspecified-b213a7f58e,wisarra,unspecified,Wheat (Shan),Mandalay,Mandalay,MMK,60,viss,3
-wisarra-white-chick-pea-v2-new-mandalay-unspecified-a711cd0713.svg,wisarra-white-chick-pea-v2-new-mandalay-unspecified-a711cd0713,wisarra,unspecified,White Chick Pea (V2) (New),Mandalay,Mandalay,MMK,57,viss,3
-wisarra-white-chick-pea-v7-new-mandalay-unspecified-2b73464bb0.svg,wisarra-white-chick-pea-v7-new-mandalay-unspecified-2b73464bb0,wisarra,unspecified,White Chick Pea (V7) (New),Mandalay,Mandalay,MMK,57,viss,3
-wisarra-white-cow-pea-new-mandalay-unspecified-17fbe6c172.svg,wisarra-white-cow-pea-new-mandalay-unspecified-17fbe6c172,wisarra,unspecified,White Cow Pea (New),Mandalay,Mandalay,MMK,60,viss,2
-wisarra-white-sesame-new-1-2-3-mandalay-unspecified-cc4be3d6b1.svg,wisarra-white-sesame-new-1-2-3-mandalay-unspecified-cc4be3d6b1,wisarra,unspecified,"White Sesame (New) (1,2,3)",Mandalay,Mandalay,MMK,45,viss,3
-wisarra-yadanar-toe-na-85-pyay-unspecified-78a8e02e52.svg,wisarra-yadanar-toe-na-85-pyay-unspecified-78a8e02e52,wisarra,unspecified,Yadanar Toe (Na) (85%),Bago,Pyay,MMK,1,bag,3
-wisarra-yard-long-bean-thiri-mingalar-zay-unspecified-13b225d912.svg,wisarra-yard-long-bean-thiri-mingalar-zay-unspecified-13b225d912,wisarra,unspecified,Yard Long Bean,Yangon,Thiri Mingalar Zay,MMK,1,bundle,3
+wisarra-lablab-bean-lat-chaw-aunglan-unspecified-9711a753f0.svg,wisarra-lablab-bean-lat-chaw-aunglan-unspecified-9711a753f0,wisarra,unspecified,Lablab Bean (Lat Chaw),Magway,Aunglan,MMK,1,basket,2
+wisarra-lablab-bean-shwe-kyun-aunglan-unspecified-6a3f5627e5.svg,wisarra-lablab-bean-shwe-kyun-aunglan-unspecified-6a3f5627e5,wisarra,unspecified,Lablab Bean (Shwe Kyun),Magway,Aunglan,MMK,1,basket,2
+wisarra-lablab-bean-shwe-kyun-bayint-naung-unspecified-2c00524423.svg,wisarra-lablab-bean-shwe-kyun-bayint-naung-unspecified-2c00524423,wisarra,unspecified,Lablab Bean (Shwe Kyun),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-lablab-bean-sinphyukyun-unspecified-33bb71aae2.svg,wisarra-lablab-bean-sinphyukyun-unspecified-33bb71aae2,wisarra,unspecified,Lablab Bean,Magway,Sinphyukyun,MMK,1,basket,2
+wisarra-lablab-bean-ta-mandalay-unspecified-98a29c088f.svg,wisarra-lablab-bean-ta-mandalay-unspecified-98a29c088f,wisarra,unspecified,Lablab Bean (Ta),Mandalay,Mandalay,MMK,55.25,viss,2
+wisarra-lentil-mandalay-unspecified-151caf7116.svg,wisarra-lentil-mandalay-unspecified-151caf7116,wisarra,unspecified,Lentil,Mandalay,Mandalay,MMK,1,viss,2
+wisarra-mung-bean-105mile-unspecified-b488613358.svg,wisarra-mung-bean-105mile-unspecified-b488613358,wisarra,unspecified,Mung Bean,Shan,105mile,USD,1,ton,2
+wisarra-mung-bean-bego-shwe-wah-bayint-naung-unspecified-7d8c523412.svg,wisarra-mung-bean-bego-shwe-wah-bayint-naung-unspecified-7d8c523412,wisarra,unspecified,Mung Bean(Bego Shwe Wah),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-mung-bean-khayan-shwe-wah-bayint-naung-unspecified-c83fafa561.svg,wisarra-mung-bean-khayan-shwe-wah-bayint-naung-unspecified-c83fafa561,wisarra,unspecified,Mung Bean (Khayan Shwe Wah),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-mung-bean-wakema-bayint-naung-unspecified-573130c884.svg,wisarra-mung-bean-wakema-bayint-naung-unspecified-573130c884,wisarra,unspecified,Mung Bean (Wakema),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-aung-pan-htoo-3-bayint-naung-unspecified-9a1b6a5747.svg,wisarra-onion-aung-pan-htoo-3-bayint-naung-unspecified-9a1b6a5747,wisarra,unspecified,Onion (Aung Pan Htoo 3),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-aung-pan-htoo-4-bayint-naung-unspecified-749c275b13.svg,wisarra-onion-aung-pan-htoo-4-bayint-naung-unspecified-749c275b13,wisarra,unspecified,Onion (Aung Pan Htoo 4),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-aung-pan-htoo-5-bayint-naung-unspecified-0038a58377.svg,wisarra-onion-aung-pan-htoo-5-bayint-naung-unspecified-0038a58377,wisarra,unspecified,Onion (Aung Pan Htoo 5),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-mawlamyine-unspecified-3bc385d51c.svg,wisarra-onion-mawlamyine-unspecified-3bc385d51c,wisarra,unspecified,Onion,MON,Mawlamyine,MMK,1,viss,2
+wisarra-onion-monywa-shal-new-bayint-naung-unspecified-6cba75bf0a.svg,wisarra-onion-monywa-shal-new-bayint-naung-unspecified-6cba75bf0a,wisarra,unspecified,Onion (Monywa Shal) (New),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-new-john-gyi-pakokku-unspecified-d558a2135f.svg,wisarra-onion-new-john-gyi-pakokku-unspecified-d558a2135f,wisarra,unspecified,Onion (New) (John Gyi),Magway,Pakokku,MMK,1,viss,2
+wisarra-onion-new-john-lat-pakokku-unspecified-21eb34aef3.svg,wisarra-onion-new-john-lat-pakokku-unspecified-21eb34aef3,wisarra,unspecified,Onion (New) (John Lat),Magway,Pakokku,MMK,1,viss,2
+wisarra-onion-sake-phyu-lat-chaw-bayint-naung-unspecified-5cd6842ec7.svg,wisarra-onion-sake-phyu-lat-chaw-bayint-naung-unspecified-5cd6842ec7,wisarra,unspecified,Onion (Sake Phyu Lat Chaw),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-sake-phyu-lat-gyi-bayint-naung-unspecified-859db98b18.svg,wisarra-onion-sake-phyu-lat-gyi-bayint-naung-unspecified-859db98b18,wisarra,unspecified,Onion (Sake Phyu Lat Gyi),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-sake-phyu-lat-thant-bayint-naung-unspecified-112139dd63.svg,wisarra-onion-sake-phyu-lat-thant-bayint-naung-unspecified-112139dd63,wisarra,unspecified,Onion (Sake Phyu Lat Thant),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-onion-sake-phyu-shal-bayint-naung-unspecified-c4d51f74c5.svg,wisarra-onion-sake-phyu-shal-bayint-naung-unspecified-c4d51f74c5,wisarra,unspecified,Onion (Sake Phyu Shal),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-paddy-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-18dd65db3c.svg,wisarra-paddy-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-18dd65db3c,wisarra,unspecified,Paddy (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,MMK,100,basket,2
+wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-myaungmya-unspecified-d9eac1048e.svg,wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-myaungmya-unspecified-d9eac1048e,wisarra,unspecified,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Myaungmya,MMK,100,basket,2
+wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-783017000e.svg,wisarra-paddy-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-783017000e,wisarra,unspecified,Paddy (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,MMK,100,basket,2
+wisarra-paddy-emata-rainy-2022-myaungmya-unspecified-8848687ccf.svg,wisarra-paddy-emata-rainy-2022-myaungmya-unspecified-8848687ccf,wisarra,unspecified,Paddy (Emata) (Rainy 2022),Pathein,Myaungmya,MMK,1,basket,2
+wisarra-paddy-emata-rainy-2022-pyapon-unspecified-01b099eae3.svg,wisarra-paddy-emata-rainy-2022-pyapon-unspecified-01b099eae3,wisarra,unspecified,Paddy (Emata) (Rainy 2022),Pathein,Pyapon,MMK,100,basket,2
+wisarra-paddy-paw-san-rainy-2022-dedaye-unspecified-e0651f02b1.svg,wisarra-paddy-paw-san-rainy-2022-dedaye-unspecified-e0651f02b1,wisarra,unspecified,Paddy (Paw San) (Rainy 2022),Pathein,Dedaye,MMK,100,basket,2
+wisarra-paddy-paw-san-rainy-2022-pathein-unspecified-c5da4fbeb3.svg,wisarra-paddy-paw-san-rainy-2022-pathein-unspecified-c5da4fbeb3,wisarra,unspecified,Paddy (Paw San) (Rainy 2022),Pathein,Pathein,MMK,100,basket,2
+wisarra-peasant-banana-thiri-mingalar-zay-unspecified-dc6665d8bc.svg,wisarra-peasant-banana-thiri-mingalar-zay-unspecified-dc6665d8bc,wisarra,unspecified,Peasant Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-pigeon-pea-new-pyay-unspecified-09fdb2a776.svg,wisarra-pigeon-pea-new-pyay-unspecified-09fdb2a776,wisarra,unspecified,Pigeon Pea (New),Bago,Pyay,MMK,1,basket,2
+wisarra-pigeon-pea-rc-2021-bayint-naung-unspecified-393d88f177.svg,wisarra-pigeon-pea-rc-2021-bayint-naung-unspecified-393d88f177,wisarra,unspecified,Pigeon Pea (RC) (2021),Yangon,Bayint Naung,MMK,1,ton,2
+wisarra-pomelo-thiri-mingalar-zay-unspecified-a6a302e2e6.svg,wisarra-pomelo-thiri-mingalar-zay-unspecified-a6a302e2e6,wisarra,unspecified,Pomelo,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-potato-ok-aung-pan-bayint-naung-unspecified-ad71190349.svg,wisarra-potato-ok-aung-pan-bayint-naung-unspecified-ad71190349,wisarra,unspecified,Potato (OK) (Aung Pan),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-potato-ok-heho-bayint-naung-unspecified-e0374bfea5.svg,wisarra-potato-ok-heho-bayint-naung-unspecified-e0374bfea5,wisarra,unspecified,Potato (OK) (Heho),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-potato-s1-2-aung-pan-bayint-naung-unspecified-b385639fb9.svg,wisarra-potato-s1-2-aung-pan-bayint-naung-unspecified-b385639fb9,wisarra,unspecified,"Potato (S1,2) (Aung Pan)",Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-potato-s3-aung-pan-bayint-naung-unspecified-ae6f049758.svg,wisarra-potato-s3-aung-pan-bayint-naung-unspecified-ae6f049758,wisarra,unspecified,Potato (S3) (Aung Pan),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-pumpkin-aungpan-unspecified-e1ee38a4c1.svg,wisarra-pumpkin-aungpan-unspecified-e1ee38a4c1,wisarra,unspecified,Pumpkin,Shan,Aungpan,MMK,1,viss,2
+wisarra-radish-thiri-mingalar-zay-unspecified-a6f7d66d2f.svg,wisarra-radish-thiri-mingalar-zay-unspecified-a6f7d66d2f,wisarra,unspecified,Radish,Yangon,Thiri Mingalar Zay,MMK,1,bundle,2
+wisarra-rakhaine-banana-thiri-mingalar-zay-unspecified-7d462f6649.svg,wisarra-rakhaine-banana-thiri-mingalar-zay-unspecified-7d462f6649,wisarra,unspecified,Rakhaine Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-red-pea-pyarr-myingyan-unspecified-364424761f.svg,wisarra-red-pea-pyarr-myingyan-unspecified-364424761f,wisarra,unspecified,Red Pea Pyarr,Mandalay,Myingyan,MMK,1,viss,2
+wisarra-red-pigeon-pea-new-mandalay-unspecified-5f478abde2.svg,wisarra-red-pigeon-pea-new-mandalay-unspecified-5f478abde2,wisarra,unspecified,Red Pigeon Pea (New),Mandalay,Mandalay,MMK,60,viss,2
+wisarra-red-sesame-pyay-unspecified-95523ce55b.svg,wisarra-red-sesame-pyay-unspecified-95523ce55b,wisarra,unspecified,Red Sesame,Bago,Pyay,MMK,1,bag,2
+wisarra-rice-90-day-thit-shal-war-tan-unspecified-8553d5afe1.svg,wisarra-rice-90-day-thit-shal-war-tan-unspecified-8553d5afe1,wisarra,unspecified,Rice (90 Day Thit Shal),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-emata-25-war-tan-unspecified-acd6350c6e.svg,wisarra-rice-emata-25-war-tan-unspecified-acd6350c6e,wisarra,unspecified,Rice (Emata 25%),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-dedaye-unspecified-a19814c230.svg,wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-dedaye-unspecified-a19814c230,wisarra,unspecified,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Dedaye,MMK,1,bag,2
+wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-c397abee63.svg,wisarra-rice-emata-new-rainy-2022-ma-naw-thu-kha-pyapon-unspecified-c397abee63,wisarra,unspecified,Rice (Emata) (New)(Rainy 2022)(Ma Naw Thu Kha),Pathein,Pyapon,MMK,1,bag,2
+wisarra-rice-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-798f869d51.svg,wisarra-rice-emata-rainy-2022-ma-naw-thu-kha-pathein-unspecified-798f869d51,wisarra,unspecified,Rice (Emata) (Rainy 2022)(Ma Naw Thu Kha),Pathein,Pathein,MMK,1,bag,2
+wisarra-rice-emata-rainy-2022-myaungmya-unspecified-88aba84214.svg,wisarra-rice-emata-rainy-2022-myaungmya-unspecified-88aba84214,wisarra,unspecified,Rice (Emata) (Rainy 2022),Pathein,Myaungmya,MMK,1,bag,2
+wisarra-rice-emata-rainy-2022-pyapon-unspecified-aacfeb5be4.svg,wisarra-rice-emata-rainy-2022-pyapon-unspecified-aacfeb5be4,wisarra,unspecified,Rice (Emata) (Rainy 2022),Pathein,Pyapon,MMK,1,bag,2
+wisarra-rice-inn-lal-nattalin-unspecified-947a993fd3.svg,wisarra-rice-inn-lal-nattalin-unspecified-947a993fd3,wisarra,unspecified,Rice (Inn Lal),Bago,Nattalin,MMK,100,basket,2
+wisarra-rice-inn-lal-new-dry-paungde-unspecified-fdd8e3c239.svg,wisarra-rice-inn-lal-new-dry-paungde-unspecified-fdd8e3c239,wisarra,unspecified,Rice (Inn Lal) (New) (Dry),Bago,Paungde,MMK,100,basket,2
+wisarra-rice-myaungmya-pathein-paw-san-new-war-tan-unspecified-a78b974cfa.svg,wisarra-rice-myaungmya-pathein-paw-san-new-war-tan-unspecified-a78b974cfa,wisarra,unspecified,Rice (MyaungMya Pathein Paw San) (New),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-nga-sein-new-war-tan-unspecified-22cdd5e3a3.svg,wisarra-rice-nga-sein-new-war-tan-unspecified-22cdd5e3a3,wisarra,unspecified,Rice (Nga Sein) (New),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-ngwe-toe-old-nattalin-unspecified-0935c72354.svg,wisarra-rice-ngwe-toe-old-nattalin-unspecified-0935c72354,wisarra,unspecified,Rice (Ngwe Toe) (Old),Bago,Nattalin,MMK,100,basket,2
+wisarra-rice-paw-san-nae-sone-new-war-tan-unspecified-c6b7231503.svg,wisarra-rice-paw-san-nae-sone-new-war-tan-unspecified-c6b7231503,wisarra,unspecified,Rice (Paw San Nae Sone) (New),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-paw-san-rainy-2022-dedaye-unspecified-7f022768ce.svg,wisarra-rice-paw-san-rainy-2022-dedaye-unspecified-7f022768ce,wisarra,unspecified,Rice (Paw San) (Rainy 2022),Pathein,Dedaye,MMK,1,bag,2
+wisarra-rice-paw-san-rainy-2022-pathein-unspecified-69f9b46014.svg,wisarra-rice-paw-san-rainy-2022-pathein-unspecified-69f9b46014,wisarra,unspecified,Rice (Paw San) (Rainy 2022),Pathein,Pathein,MMK,1,bag,2
+wisarra-rice-pyapon-paw-san-new-war-tan-unspecified-4c1208cb33.svg,wisarra-rice-pyapon-paw-san-new-war-tan-unspecified-4c1208cb33,wisarra,unspecified,Rice (Pyapon Paw San) (New),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-shwebo-paw-san-war-tan-unspecified-de18da4501.svg,wisarra-rice-shwebo-paw-san-war-tan-unspecified-de18da4501,wisarra,unspecified,Rice (Shwebo Paw San),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-taung-pyan-old-nattalin-unspecified-7e4253ceae.svg,wisarra-rice-taung-pyan-old-nattalin-unspecified-7e4253ceae,wisarra,unspecified,Rice (Taung Pyan) (Old),Bago,Nattalin,MMK,100,basket,2
+wisarra-rice-thee-htet-shal-war-tan-unspecified-d51f469c63.svg,wisarra-rice-thee-htet-shal-war-tan-unspecified-d51f469c63,wisarra,unspecified,Rice (Thee Htet Shal),Yangon,War Tan,MMK,1.5,basket,2
+wisarra-rice-yadanar-toe-20-paungde-unspecified-adaf17ce76.svg,wisarra-rice-yadanar-toe-20-paungde-unspecified-adaf17ce76,wisarra,unspecified,Rice (Yadanar Toe) (20%),Bago,Paungde,MMK,100,basket,2
+wisarra-shwe-banana-thiri-mingalar-zay-unspecified-f550cbef0e.svg,wisarra-shwe-banana-thiri-mingalar-zay-unspecified-f550cbef0e,wisarra,unspecified,Shwe Banana,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-snake-gourd-thiri-mingalar-zay-unspecified-091908bf45.svg,wisarra-snake-gourd-thiri-mingalar-zay-unspecified-091908bf45,wisarra,unspecified,Snake Gourd,Yangon,Thiri Mingalar Zay,MMK,1,bundle,2
+wisarra-soya-bean-delta-bayint-naung-unspecified-7f8e5a4c1a.svg,wisarra-soya-bean-delta-bayint-naung-unspecified-7f8e5a4c1a,wisarra,unspecified,Soya Bean (Delta),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-soya-bean-delta-high-yield-bayint-naung-unspecified-a40fa41793.svg,wisarra-soya-bean-delta-high-yield-bayint-naung-unspecified-a40fa41793,wisarra,unspecified,Soya Bean (Delta) (High Yield),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-stawberry-thiri-mingalar-zay-unspecified-c5beb01eb8.svg,wisarra-stawberry-thiri-mingalar-zay-unspecified-c5beb01eb8,wisarra,unspecified,Stawberry,Yangon,Thiri Mingalar Zay,MMK,1,pc,2
+wisarra-sultani-sultapya-bayint-naung-unspecified-039924d9f7.svg,wisarra-sultani-sultapya-bayint-naung-unspecified-039924d9f7,wisarra,unspecified,Sultani Sultapya,Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-tamarind-darzinn-new-bayint-naung-unspecified-bf5ee44aee.svg,wisarra-tamarind-darzinn-new-bayint-naung-unspecified-bf5ee44aee,wisarra,unspecified,Tamarind (Darzinn) (New),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-tamarind-kyaukpadaung-bayint-naung-unspecified-9f1b4cb70f.svg,wisarra-tamarind-kyaukpadaung-bayint-naung-unspecified-9f1b4cb70f,wisarra,unspecified,Tamarind (Kyaukpadaung),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-tamarind-pwintkat-new-bayint-naung-unspecified-b667920fd9.svg,wisarra-tamarind-pwintkat-new-bayint-naung-unspecified-b667920fd9,wisarra,unspecified,Tamarind (Pwintkat) (New),Yangon,Bayint Naung,MMK,1,viss,2
+wisarra-taung-pyan-old-pyay-unspecified-bf61316ac1.svg,wisarra-taung-pyan-old-pyay-unspecified-bf61316ac1,wisarra,unspecified,Taung Pyan (Old),Bago,Pyay,MMK,1,bag,2
+wisarra-thuka-new-pyay-unspecified-b9aa1b403d.svg,wisarra-thuka-new-pyay-unspecified-b9aa1b403d,wisarra,unspecified,Thuka (New),Bago,Pyay,MMK,1,bag,2
+wisarra-tomato-thiri-mingalar-zay-unspecified-7cdfe848d7.svg,wisarra-tomato-thiri-mingalar-zay-unspecified-7cdfe848d7,wisarra,unspecified,Tomato,Yangon,Thiri Mingalar Zay,MMK,1,box,2
+wisarra-wheat-kalay-new-mandalay-unspecified-46f038273a.svg,wisarra-wheat-kalay-new-mandalay-unspecified-46f038273a,wisarra,unspecified,Wheat (Kalay) (New),Mandalay,Mandalay,MMK,60,viss,2
+wisarra-wheat-monywa-new-mandalay-unspecified-66a778c706.svg,wisarra-wheat-monywa-new-mandalay-unspecified-66a778c706,wisarra,unspecified,Wheat (Monywa) (New),Mandalay,Mandalay,MMK,60,viss,2
+wisarra-wheat-myinmu-myaung-new-mandalay-unspecified-279b92fdda.svg,wisarra-wheat-myinmu-myaung-new-mandalay-unspecified-279b92fdda,wisarra,unspecified,"Wheat (Myinmu, Myaung) (New)",Mandalay,Mandalay,MMK,60,viss,2
+wisarra-wheat-shan-mandalay-unspecified-b213a7f58e.svg,wisarra-wheat-shan-mandalay-unspecified-b213a7f58e,wisarra,unspecified,Wheat (Shan),Mandalay,Mandalay,MMK,60,viss,2
+wisarra-white-chick-pea-v2-new-mandalay-unspecified-a711cd0713.svg,wisarra-white-chick-pea-v2-new-mandalay-unspecified-a711cd0713,wisarra,unspecified,White Chick Pea (V2) (New),Mandalay,Mandalay,MMK,57,viss,2
+wisarra-white-chick-pea-v7-new-mandalay-unspecified-2b73464bb0.svg,wisarra-white-chick-pea-v7-new-mandalay-unspecified-2b73464bb0,wisarra,unspecified,White Chick Pea (V7) (New),Mandalay,Mandalay,MMK,57,viss,2
+wisarra-white-sesame-new-1-2-3-mandalay-unspecified-cc4be3d6b1.svg,wisarra-white-sesame-new-1-2-3-mandalay-unspecified-cc4be3d6b1,wisarra,unspecified,"White Sesame (New) (1,2,3)",Mandalay,Mandalay,MMK,45,viss,2
+wisarra-yadanar-toe-na-85-pyay-unspecified-78a8e02e52.svg,wisarra-yadanar-toe-na-85-pyay-unspecified-78a8e02e52,wisarra,unspecified,Yadanar Toe (Na) (85%),Bago,Pyay,MMK,1,bag,2
+wisarra-yard-long-bean-thiri-mingalar-zay-unspecified-13b225d912.svg,wisarra-yard-long-bean-thiri-mingalar-zay-unspecified-13b225d912,wisarra,unspecified,Yard Long Bean,Yangon,Thiri Mingalar Zay,MMK,1,bundle,2
