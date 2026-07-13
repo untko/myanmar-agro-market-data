@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from decimal import Decimal
 from html import escape
 from pathlib import Path
 from typing import Sequence
@@ -10,12 +11,15 @@ from urllib.parse import urlparse
 from .dataset import PriceObservation, SeriesKey
 
 
-def _number(value: float) -> str:
+def _number(value: Decimal | float | int) -> str:
+    if isinstance(value, Decimal):
+        formatted = format(value, ",f")
+        return formatted.rstrip("0").rstrip(".") if "." in formatted else formatted
     return f"{value:,.0f}"
 
 
 def _date_label(observation: PriceObservation) -> str:
-    return observation.scraped_at.strftime("%d %b").lstrip("0")
+    return observation.observed_at.strftime("%d %b").lstrip("0")
 
 
 def _segments(points: Sequence[tuple[int, float, float, int]]) -> list[list[tuple[int, float, float, int]]]:
@@ -37,11 +41,11 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
     if not history:
         raise ValueError("A chart requires at least one observation")
 
-    history = sorted(history, key=lambda item: item.scraped_at)
+    history = sorted(history, key=lambda item: item.observed_at)
     values = [
-        value
+        float(value)
         for point in history
-        for value in (point.min_price, point.max_price)
+        for value in (point.min_price, point.max_price, point.modal_price)
         if value is not None
     ]
     if not values:
@@ -55,22 +59,22 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
     padding = max((high - low) * 0.12, high * 0.025, 1)
     y_min, y_max = max(0, low - padding), high + padding
     y_range = y_max - y_min or 1
-    first_timestamp = history[0].scraped_at
-    elapsed_seconds = (history[-1].scraped_at - first_timestamp).total_seconds()
+    first_timestamp = history[0].observed_at
+    elapsed_seconds = (history[-1].observed_at - first_timestamp).total_seconds()
 
     def x_position(index: int) -> float:
         if elapsed_seconds <= 0:
             return left + chart_width / 2
-        point_seconds = (history[index].scraped_at - first_timestamp).total_seconds()
+        point_seconds = (history[index].observed_at - first_timestamp).total_seconds()
         return left + (point_seconds / elapsed_seconds) * chart_width
 
     def week_serial(point: PriceObservation) -> int:
-        return (point.scraped_at.date().toordinal() - 1) // 7
+        return (point.observed_at.date().toordinal() - 1) // 7
 
-    def y_position(value: int | None) -> float | None:
+    def y_position(value: Decimal | int | None) -> float | None:
         if value is None:
             return None
-        return top + chart_height - ((value - y_min) / y_range) * chart_height
+        return top + chart_height - ((float(value) - y_min) / y_range) * chart_height
 
     min_points = [
         (week_serial(point), x_position(index), y_position(point.min_price), point.min_price)
@@ -82,6 +86,11 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         for index, point in enumerate(history)
         if point.max_price is not None
     ]
+    modal_points = [
+        (week_serial(point), x_position(index), y_position(point.modal_price), point.modal_price)
+        for index, point in enumerate(history)
+        if point.modal_price is not None
+    ]
     range_points = [
         (week_serial(point), x_position(index), y_position(point.min_price), y_position(point.max_price))
         for index, point in enumerate(history)
@@ -90,10 +99,15 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
 
     title = f"{key.name} prices — {key.marketplace} market"
     unit_text = f"{key.currency} per {key.unit_label}" if key.unit_label else key.currency
-    subtitle = f"{key.location} · {unit_text} · {_date_label(history[0])}–{_date_label(history[-1])} {history[-1].scraped_at.year}"
+    subtitle = (
+        f"{key.location} · {key.source} · tier {key.market_chain_level} · {unit_text} · "
+        f"{len(history)} weekly observations · "
+        f"{_date_label(history[0])}–{_date_label(history[-1])} {history[-1].observed_at.year}"
+    )
     description = (
-        f"Minimum and maximum {key.name} prices in {key.marketplace}, {key.location}, "
-        f"from {_date_label(history[0])} to {_date_label(history[-1])} {history[-1].scraped_at.year}."
+        f"Available minimum, maximum, and modal {key.name} prices in {key.marketplace}, {key.location}, "
+        f"from {_date_label(history[0])} to {_date_label(history[-1])} {history[-1].observed_at.year}. "
+        f"Source {key.source}; market-chain level {key.market_chain_level}."
     )
 
     parts = [
@@ -109,12 +123,15 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         ".range { fill: #D9F3F0; fill-opacity: 0.72; }",
         ".maximum { stroke: #0F766E; stroke-width: 3; fill: none; }",
         ".minimum { stroke: #64748B; stroke-width: 2.25; stroke-dasharray: 7 5; fill: none; }",
+        ".modal { stroke: #2563EB; stroke-width: 3; fill: none; }",
         ".point-max { fill: #FFFFFF; stroke: #0F766E; stroke-width: 2.5; }",
         ".point-min { fill: #FFFFFF; stroke: #64748B; stroke-width: 2; }",
+        ".point-modal { fill: #FFFFFF; stroke: #2563EB; stroke-width: 2.5; }",
         ".direct-label { font-size: 13px; font-weight: 650; }",
         ".maximum-label { fill: #0F766E; }",
         ".minimum-label { fill: #52606D; }",
         ".combined-label { fill: #334155; }",
+        ".modal-label { fill: #1D4ED8; }",
         ".source { font-size: 11px; fill: #7C8798; }",
         "</style>",
         f'<rect width="{width}" height="{height}" fill="#FFFFFF"/>',
@@ -137,7 +154,7 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         polygon = " ".join(f"{x:.1f},{y:.1f}" for x, y in lower + upper)
         parts.append(f'<polygon points="{polygon}" class="range"/>')
 
-    for points, css_class in ((min_points, "minimum"), (max_points, "maximum")):
+    for points, css_class in ((min_points, "minimum"), (max_points, "maximum"), (modal_points, "modal")):
         for segment in _segments(points):
             if len(segment) < 2:
                 continue
@@ -151,6 +168,8 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" class="point-min"/>')
     for _, x, y, _ in max_points:
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" class="point-max"/>')
+    for _, x, y, _ in modal_points:
+        parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" class="point-modal"/>')
 
     if len(history) <= 8:
         label_indexes = list(range(len(history)))
@@ -161,6 +180,7 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
 
     latest_max = max_points[-1] if max_points else None
     latest_min = min_points[-1] if min_points else None
+    latest_modal = modal_points[-1] if modal_points else None
     if latest_max and latest_min and latest_max[0] == latest_min[0] and latest_max[3] == latest_min[3]:
         _, x, y, value = latest_max
         parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label combined-label">Minimum / maximum · {_number(value)}</text>')
@@ -176,13 +196,23 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         if latest_min:
             _, x, y, value = latest_min
             parts.append(f'<text x="{x + 15:.1f}" y="{y + min_offset:.1f}" class="direct-label minimum-label">Minimum · {_number(value)}</text>')
+    if latest_modal:
+        _, x, y, value = latest_modal
+        modal_offset = 4
+        occupied = [point[2] for point in (latest_min, latest_max) if point and point[0] == latest_modal[0]]
+        if any(abs(y - other_y) < 24 for other_y in occupied):
+            modal_offset = 28
+        parts.append(
+            f'<text x="{x + 15:.1f}" y="{y + modal_offset:.1f}" '
+            f'class="direct-label modal-label">Modal · {_number(value)}</text>'
+        )
 
     source_host = (urlparse(history[-1].source_url).hostname or history[-1].source_url).removeprefix("www.")
 
     parts.extend(
         [
             f'<text x="28" y="{top + chart_height / 2:.1f}" text-anchor="middle" class="axis" transform="rotate(-90 28 {top + chart_height / 2:.1f})">Price ({escape(key.currency)})</text>',
-            f'<text x="{left}" y="{height - 28}" class="source">Source: {escape(source_host)} · Last observation {_date_label(history[-1])} {history[-1].scraped_at.year}</text>',
+            f'<text x="{left}" y="{height - 28}" class="source">Source: {escape(source_host)} · Last observation {_date_label(history[-1])} {history[-1].observed_at.year}</text>',
             "</svg>",
         ]
     )

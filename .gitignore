@@ -21,6 +21,11 @@ Thumbs.db
 .build/
 data/wisarra/prices.db
 data/wisarra/prices.db-*
+*.db-wal
+*.db-shm
+
+# Local research and scratch work
+tmp/
 
 # Local config
 .env

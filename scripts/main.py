@@ -18,14 +18,14 @@ def run_pipeline(
     dataset: PriceDataset,
     rows: Iterable[Mapping[str, object]] | None,
     *,
-    observed_at: datetime | None = None,
+    collected_at: datetime | None = None,
     reports_dir: Path = REPORTS_DIR,
     charts_dir: Path = CHARTS_DIR,
 ) -> dict[str, object]:
     """Record an optional scrape batch and build all derived artifacts."""
     snapshot_path = None
     if rows is not None:
-        snapshot_path = dataset.record(rows, observed_at)
+        snapshot_path = dataset.record(rows, collected_at)
 
     series = dataset.weekly_series()
     if not series:
@@ -45,11 +45,22 @@ def main() -> None:
     args = parser.parse_args()
 
     rows = None
-    observed_at = None
+    collected_at = None
     if not args.skip_scrape:
         print("Scraping wisarra.com...", file=sys.stderr)
-        rows = [{**row, "source_url": BASE_URL} for row in scrape_all()]
-        observed_at = datetime.now(timezone.utc)
+        collected_at = datetime.now(timezone.utc)
+        rows = [
+            {
+                **row,
+                "source": "wisarra",
+                "source_record_id": "",
+                "market_chain_level": "unspecified",
+                "modal_price": "",
+                "observed_at": collected_at,
+                "source_url": BASE_URL,
+            }
+            for row in scrape_all()
+        ]
         print(f"  Scraped {len(rows)} rows", file=sys.stderr)
     else:
         print("Skipping scrape; rebuilding from committed snapshots", file=sys.stderr)
@@ -57,7 +68,7 @@ def main() -> None:
     result = run_pipeline(
         PriceDataset(SNAPSHOTS_DIR),
         rows,
-        observed_at=observed_at,
+        collected_at=collected_at,
     )
     print(f"  Report: {result['stats']['report_path']}", file=sys.stderr)
     print(f"  Charts: {result['charts_generated']}", file=sys.stderr)

@@ -34,12 +34,22 @@ def migrate_database(database_path: Path, dataset: PriceDataset) -> list[Path]:
 
     batches: dict[str, list[dict[str, object]]] = defaultdict(list)
     for row in rows:
-        batches[row["scraped_at"]].append({**dict(row), "source_url": BASE_URL})
+        batches[row["scraped_at"]].append(
+            {
+                **dict(row),
+                "source": "wisarra",
+                "source_record_id": "",
+                "market_chain_level": "unspecified",
+                "modal_price": "",
+                "observed_at": row["scraped_at"],
+                "source_url": BASE_URL,
+            }
+        )
 
     snapshots = []
     for timestamp in sorted(batches):
-        observed_at = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
-        snapshots.append(dataset.record(batches[timestamp], observed_at))
+        collected_at = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+        snapshots.append(dataset.record(batches[timestamp], collected_at))
 
     migrated_rows = len(dataset.load())
     if migrated_rows != len(rows):

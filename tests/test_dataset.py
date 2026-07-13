@@ -1,9 +1,11 @@
+import json
 import tempfile
 import unittest
+from decimal import Decimal
 from datetime import datetime, timezone
 from pathlib import Path
 
-from scripts.dataset import PriceDataset, SeriesKey
+from scripts.dataset import PriceDataset, SNAPSHOT_COLUMNS, SeriesKey
 
 
 def price_row(
@@ -13,21 +15,61 @@ def price_row(
     max_price: str,
     quantity: str = "100",
     unit: str = "basket",
+    observed_at: str = "2026-07-06T00:00:00Z",
 ) -> dict[str, str]:
     return {
+        "source": "wisarra",
+        "source_record_id": "",
         "name": "Paddy (Paw San) (Rainy 2022)",
         "location": "Pathein",
         "marketplace": marketplace,
+        "market_chain_level": "unspecified",
         "min_price": min_price,
         "max_price": max_price,
+        "modal_price": "",
         "currency": "MMK",
         "quantity": quantity,
         "unit": unit,
+        "observed_at": observed_at,
         "source_url": "https://wisarra.com/en/market-price",
     }
 
 
 class PriceDatasetTests(unittest.TestCase):
+    def test_documented_schema_columns_match_the_runtime_contract(self):
+        schema_path = Path(__file__).resolve().parent.parent / "data" / "price-observation-schema.json"
+        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+
+        self.assertEqual(tuple(schema["required"]), SNAPSHOT_COLUMNS)
+        self.assertEqual(set(schema["properties"]), set(SNAPSHOT_COLUMNS))
+
+    def test_series_keep_source_tier_observation_and_collection_context_separate(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            dataset = PriceDataset(Path(temp_dir))
+            collected_at = datetime(2026, 7, 7, 9, 30, tzinfo=timezone.utc)
+            retail = price_row(marketplace="Yangon", min_price="100", max_price="120")
+            retail.update(
+                source="cso",
+                source_record_id="rice-2026-07-06",
+                market_chain_level="retail",
+                modal_price="110.50",
+                observed_at="2026-07-06T00:00:00Z",
+                source_url="https://www.csostat.gov.mm/Statistics/MarketPrice",
+            )
+            wholesale = {**retail, "source": "example-wholesale", "market_chain_level": "wholesale"}
+
+            dataset.record([retail, wholesale], collected_at)
+            observations = dataset.load()
+            series = dataset.weekly_series()
+
+            self.assertEqual(len(series), 2)
+            self.assertEqual({item.series.source for item in observations}, {"cso", "example-wholesale"})
+            self.assertEqual({item.series.market_chain_level for item in observations}, {"retail", "wholesale"})
+            self.assertEqual({item.modal_price for item in observations}, {Decimal("110.50")})
+            self.assertEqual({item.observed_at for item in observations}, {datetime(2026, 7, 6, tzinfo=timezone.utc)})
+            self.assertEqual({item.collected_at for item in observations}, {collected_at})
+            self.assertEqual({item.source_record_id for item in observations}, {"rice-2026-07-06"})
+
     def test_empty_scrape_is_rejected_instead_of_becoming_a_snapshot(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             dataset = PriceDataset(Path(temp_dir))
@@ -53,7 +95,8 @@ class PriceDatasetTests(unittest.TestCase):
             )
             self.assertEqual(len(observations), 2)
             self.assertEqual({item.series.marketplace for item in observations}, {"Dedaye", "Pathein"})
-            self.assertEqual({item.scraped_at for item in observations}, {observed_at})
+            self.assertEqual({item.observed_at for item in observations}, {datetime(2026, 7, 6, tzinfo=timezone.utc)})
+            self.assertEqual({item.collected_at for item in observations}, {observed_at})
 
             # Replaying the same batch is idempotent, but a timestamp can never be rewritten.
             self.assertEqual(dataset.record(rows, observed_at), snapshot)
@@ -84,14 +127,30 @@ class PriceDatasetTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "non-negative"):
                 dataset.record([negative_price], observed_at)
 
+            invalid_tier = price_row(marketplace="Dedaye", min_price="650", max_price="745")
+            invalid_tier["market_chain_level"] = "consumer-ish"
+            with self.assertRaisesRegex(ValueError, "market_chain_level"):
+                dataset.record([invalid_tier], observed_at)
+
+            with self.assertRaisesRegex(ValueError, "collected_at.*timezone"):
+                dataset.record(
+                    [price_row(marketplace="Dedaye", min_price="650", max_price="745")],
+                    datetime(2026, 7, 6),
+                )
+
+            naive_observation = price_row(marketplace="Dedaye", min_price="650", max_price="745")
+            naive_observation["observed_at"] = "2026-07-06T00:00:00"
+            with self.assertRaisesRegex(ValueError, "observed_at.*timezone"):
+                dataset.record([naive_observation], observed_at)
+
     def test_manually_added_snapshot_is_validated_when_loaded(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             snapshots = Path(temp_dir)
             snapshot = snapshots / "2026" / "2026-07-06T12-45-54Z.csv"
             snapshot.parent.mkdir(parents=True)
             snapshot.write_text(
-                "name,location,marketplace,min_price,max_price,currency,quantity,unit,scraped_at,source_url\n"
-                "Rice,Yangon,Bayint Naung,100,120,MMK,1,bag,2026-07-06T12:45:54Z,not-a-url\n",
+                "source,source_record_id,name,location,marketplace,market_chain_level,min_price,max_price,modal_price,currency,quantity,unit,observed_at,collected_at,source_url\n"
+                "wisarra,,Rice,Yangon,Bayint Naung,unspecified,100,120,,MMK,1,bag,2026-07-06T12:45:54Z,2026-07-06T12:45:54Z,not-a-url\n",
                 encoding="utf-8",
             )
 
@@ -103,20 +162,21 @@ class PriceDatasetTests(unittest.TestCase):
             dataset = PriceDataset(Path(temp_dir))
             dataset.record(
                 [
-                    price_row(marketplace="Dedaye", min_price="650", max_price="745"),
-                    price_row(marketplace="Pathein", min_price="700", max_price="1000"),
+                    price_row(marketplace="Dedaye", min_price="650", max_price="745", observed_at="2026-06-30T07:14:10Z"),
+                    price_row(marketplace="Pathein", min_price="700", max_price="1000", observed_at="2026-06-30T07:14:10Z"),
                     price_row(
                         marketplace="Dedaye",
                         min_price="12000",
                         max_price="16000",
                         quantity="1",
                         unit="ton",
+                        observed_at="2026-06-30T07:14:10Z",
                     ),
                 ],
                 datetime(2026, 6, 30, 7, 14, 10, tzinfo=timezone.utc),
             )
             dataset.record(
-                [price_row(marketplace="Dedaye", min_price="675", max_price="760")],
+                [price_row(marketplace="Dedaye", min_price="675", max_price="760", observed_at="2026-06-30T08:11:31Z")],
                 datetime(2026, 6, 30, 8, 11, 31, tzinfo=timezone.utc),
             )
             dataset.record(
@@ -129,17 +189,21 @@ class PriceDatasetTests(unittest.TestCase):
 
             series = dataset.weekly_series()
             dedaye_baskets = SeriesKey(
+                source="wisarra",
                 name="Paddy (Paw San) (Rainy 2022)",
                 location="Pathein",
                 marketplace="Dedaye",
+                market_chain_level="unspecified",
                 currency="MMK",
                 quantity="100",
                 unit="basket",
             )
             pathein_baskets = SeriesKey(
+                source="wisarra",
                 name="Paddy (Paw San) (Rainy 2022)",
                 location="Pathein",
                 marketplace="Pathein",
+                market_chain_level="unspecified",
                 currency="MMK",
                 quantity="100",
                 unit="basket",

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agricultural market price CSV snapshot row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source",
+    "source_record_id",
+    "name",
+    "location",
+    "marketplace",
+    "market_chain_level",
+    "min_price",
+    "max_price",
+    "modal_price",
+    "currency",
+    "quantity",
+    "unit",
+    "observed_at",
+    "collected_at",
+    "source_url"
+  ],
+  "properties": {
+    "source": {"type": "string", "minLength": 1, "description": "Stable short identifier for the publisher or feed."},
+    "source_record_id": {"type": "string", "description": "Identifier published by the source, or empty when none is available."},
+    "name": {"type": "string", "minLength": 1, "description": "Product name preserved as published by the source."},
+    "location": {"type": "string", "minLength": 1, "description": "Location preserved as published by the source."},
+    "marketplace": {"type": "string", "minLength": 1, "description": "Specific market preserved as published by the source."},
+    "market_chain_level": {
+      "type": "string",
+      "enum": ["farmgate", "wholesale", "retail", "fob_export", "unspecified"],
+      "description": "Documented trading tier; unspecified means the source does not state one."
+    },
+    "min_price": {"type": "string", "pattern": "^(?:[0-9]+(?:\\.[0-9]+)?)?$", "description": "Non-negative decimal encoded as CSV text, or empty when unavailable."},
+    "max_price": {"type": "string", "pattern": "^(?:[0-9]+(?:\\.[0-9]+)?)?$", "description": "Non-negative decimal encoded as CSV text, or empty when unavailable."},
+    "modal_price": {"type": "string", "pattern": "^(?:[0-9]+(?:\\.[0-9]+)?)?$", "description": "Non-negative modal or single representative price, or empty when unavailable."},
+    "currency": {"type": "string", "minLength": 1, "description": "Currency code as published or unambiguously documented by the source."},
+    "quantity": {"type": "string", "minLength": 1, "description": "Raw trading quantity."},
+    "unit": {"type": "string", "minLength": 1, "description": "Raw trading unit."},
+    "observed_at": {"type": "string", "format": "date-time", "description": "When the source says the market price applies."},
+    "collected_at": {"type": "string", "format": "date-time", "description": "When this repository collected the record."},
+    "source_url": {"type": "string", "format": "uri", "description": "Page or file from which the record was collected."}
+  }
+}

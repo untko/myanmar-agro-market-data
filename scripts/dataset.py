@@ -8,26 +8,46 @@ import io
 import re
 from dataclasses import dataclass, fields
 from datetime import datetime, timezone
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Iterable, Mapping
 from urllib.parse import urlparse
 
 
-def _parse_price(value: object) -> int | None:
+MARKET_CHAIN_LEVELS = frozenset({"farmgate", "wholesale", "retail", "fob_export", "unspecified"})
+
+
+def _parse_price(value: object) -> Decimal | None:
     if value is None or str(value).strip() in {"", "-"}:
         return None
-    price = int(str(value).replace(",", "").strip())
-    if price < 0:
-        raise ValueError("Prices must be non-negative integers")
+    try:
+        price = Decimal(str(value).replace(",", "").strip())
+    except InvalidOperation as error:
+        raise ValueError("Prices must be non-negative decimal numbers") from error
+    if not price.is_finite() or price < 0:
+        raise ValueError("Prices must be non-negative decimal numbers")
     return price
+
+
+def _format_price(value: Decimal | None) -> str:
+    return "" if value is None else format(value, "f")
 
 
 def _format_timestamp(value: datetime) -> str:
     return value.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def _parse_timestamp(value: str) -> datetime:
-    return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
+def _coerce_timestamp(value: object, field_name: str) -> datetime:
+    if isinstance(value, datetime):
+        timestamp = value
+    else:
+        try:
+            timestamp = datetime.fromisoformat(str(value or "").strip().replace("Z", "+00:00"))
+        except ValueError as error:
+            raise ValueError(f"Snapshot {field_name} must be an ISO 8601 timestamp") from error
+    if timestamp.tzinfo is None:
+        raise ValueError(f"Snapshot {field_name} must include a timezone")
+    return timestamp.astimezone(timezone.utc)
 
 
 def _validate_source_url(value: object) -> str:
@@ -42,9 +62,11 @@ def _validate_source_url(value: object) -> str:
 class SeriesKey:
     """Everything that must remain constant within one comparable price series."""
 
+    source: str
     name: str
     location: str
     marketplace: str
+    market_chain_level: str
     currency: str
     quantity: str
     unit: str
@@ -55,13 +77,20 @@ class SeriesKey:
         empty = [field for field, value in values.items() if not value]
         if empty:
             raise ValueError(f"Series identity fields cannot be empty: {', '.join(empty)}")
+        if values["market_chain_level"] not in MARKET_CHAIN_LEVELS:
+            allowed = ", ".join(sorted(MARKET_CHAIN_LEVELS))
+            raise ValueError(f"Snapshot market_chain_level must be one of: {allowed}")
         return cls(**values)
 
     @property
     def stable_id(self) -> str:
         identity = "\x1f".join(getattr(self, field) for field in SERIES_FIELDS)
         digest = hashlib.sha256(identity.encode("utf-8")).hexdigest()[:10]
-        readable = re.sub(r"[^a-z0-9]+", "-", f"{self.name}-{self.marketplace}".lower()).strip("-")
+        readable = re.sub(
+            r"[^a-z0-9]+",
+            "-",
+            f"{self.source}-{self.name}-{self.marketplace}-{self.market_chain_level}".lower(),
+        ).strip("-")
         return f"{readable[:70]}-{digest}"
 
     @property
@@ -72,22 +101,42 @@ class SeriesKey:
 @dataclass(frozen=True)
 class PriceObservation:
     series: SeriesKey
-    min_price: int | None
-    max_price: int | None
-    scraped_at: datetime
+    min_price: Decimal | None
+    max_price: Decimal | None
+    modal_price: Decimal | None
+    observed_at: datetime
+    collected_at: datetime
+    source_record_id: str
     source_url: str
 
 
 SERIES_FIELDS = tuple(field.name for field in fields(SeriesKey))
 SNAPSHOT_COLUMNS = (
-    *SERIES_FIELDS[:3],
+    "source",
+    "source_record_id",
+    "name",
+    "location",
+    "marketplace",
+    "market_chain_level",
     "min_price",
     "max_price",
-    *SERIES_FIELDS[3:],
-    "scraped_at",
+    "modal_price",
+    "currency",
+    "quantity",
+    "unit",
+    "observed_at",
+    "collected_at",
     "source_url",
 )
-REQUIRED_INPUT_FIELDS = (*SERIES_FIELDS, "min_price", "max_price", "source_url")
+REQUIRED_INPUT_FIELDS = (
+    *SERIES_FIELDS,
+    "source_record_id",
+    "min_price",
+    "max_price",
+    "modal_price",
+    "observed_at",
+    "source_url",
+)
 
 
 class PriceDataset:
@@ -99,14 +148,14 @@ class PriceDataset:
     def record(
         self,
         rows: Iterable[Mapping[str, object]],
-        observed_at: datetime | None = None,
+        collected_at: datetime | None = None,
     ) -> Path:
         rows = list(rows)
         if not rows:
             raise ValueError("Cannot record an empty scrape snapshot")
-        observed_at = (observed_at or datetime.now(timezone.utc)).astimezone(timezone.utc)
-        timestamp = _format_timestamp(observed_at)
-        output_path = self.snapshots_dir / observed_at.strftime("%Y") / f"{observed_at.strftime('%Y-%m-%dT%H-%M-%SZ')}.csv"
+        collected_at = _coerce_timestamp(collected_at or datetime.now(timezone.utc), "collected_at")
+        collection_timestamp = _format_timestamp(collected_at)
+        output_path = self.snapshots_dir / collected_at.strftime("%Y") / f"{collected_at.strftime('%Y-%m-%dT%H-%M-%SZ')}.csv"
 
         buffer = io.StringIO(newline="")
         writer = csv.DictWriter(buffer, fieldnames=SNAPSHOT_COLUMNS, lineterminator="\n")
@@ -119,17 +168,24 @@ class PriceDataset:
             source_url = _validate_source_url(source_row["source_url"])
             min_price = _parse_price(source_row.get("min_price"))
             max_price = _parse_price(source_row.get("max_price"))
+            modal_price = _parse_price(source_row.get("modal_price"))
+            observed_at = _coerce_timestamp(source_row.get("observed_at"), "observed_at")
             writer.writerow(
                 {
+                    "source": series.source,
+                    "source_record_id": str(source_row.get("source_record_id") or "").strip(),
                     "name": series.name,
                     "location": series.location,
                     "marketplace": series.marketplace,
-                    "min_price": "" if min_price is None else min_price,
-                    "max_price": "" if max_price is None else max_price,
+                    "market_chain_level": series.market_chain_level,
+                    "min_price": _format_price(min_price),
+                    "max_price": _format_price(max_price),
+                    "modal_price": _format_price(modal_price),
                     "currency": series.currency,
                     "quantity": series.quantity,
                     "unit": series.unit,
-                    "scraped_at": timestamp,
+                    "observed_at": _format_timestamp(observed_at),
+                    "collected_at": collection_timestamp,
                     "source_url": source_url,
                 }
             )
@@ -157,23 +213,29 @@ class PriceDataset:
                             series=SeriesKey.from_mapping(row),
                             min_price=_parse_price(row.get("min_price")),
                             max_price=_parse_price(row.get("max_price")),
-                            scraped_at=_parse_timestamp(row["scraped_at"]),
+                            modal_price=_parse_price(row.get("modal_price")),
+                            observed_at=_coerce_timestamp(row.get("observed_at"), "observed_at"),
+                            collected_at=_coerce_timestamp(row.get("collected_at"), "collected_at"),
+                            source_record_id=str(row.get("source_record_id") or "").strip(),
                             source_url=_validate_source_url(row["source_url"]),
                         )
                     )
-        return sorted(observations, key=lambda item: (item.series, item.scraped_at))
+        return sorted(observations, key=lambda item: (item.series, item.observed_at, item.collected_at))
 
     def weekly_series(self, limit: int = 52) -> dict[SeriesKey, list[PriceObservation]]:
         by_series_week: dict[SeriesKey, dict[tuple[int, int], PriceObservation]] = {}
         for observation in self.load():
-            year, week, _ = observation.scraped_at.isocalendar()
+            year, week, _ = observation.observed_at.isocalendar()
             weekly = by_series_week.setdefault(observation.series, {})
             current = weekly.get((year, week))
-            if current is None or observation.scraped_at > current.scraped_at:
+            if current is None or (observation.observed_at, observation.collected_at) > (
+                current.observed_at,
+                current.collected_at,
+            ):
                 weekly[(year, week)] = observation
 
         result: dict[SeriesKey, list[PriceObservation]] = {}
         for key in sorted(by_series_week):
-            history = sorted(by_series_week[key].values(), key=lambda item: item.scraped_at)
+            history = sorted(by_series_week[key].values(), key=lambda item: (item.observed_at, item.collected_at))
             result[key] = history[-limit:]
         return result

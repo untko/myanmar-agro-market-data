@@ -7,7 +7,7 @@ The original pipeline committed a mutable SQLite database and category-organized
 ## Decision
 
 - Treat one immutable CSV per scrape as the canonical dataset.
-- Identify comparable series by product name, location, marketplace, currency, quantity, and unit.
+- Identify comparable series by source, product name, location, marketplace, market-chain level, currency, quantity, and unit.
 - Retain every raw observation, while using the latest observation per exact series and ISO week for reports and charts.
 - Generate reports and charts under `artifacts/`, commit them alongside each snapshot, and also upload them from GitHub Actions for convenient bundled download.
 - Use a flat stable chart identifier derived from the complete series identity; publish an `index.csv` manifest for discovery.
@@ -28,3 +28,11 @@ The binary database and category folders were removed from version control. Repo
 Repository diffs now show newly observed data directly. Charts no longer mix markets or units, reruns within one week no longer create duplicate x-axis points, and all derived outputs can be reproduced offline with `python -m scripts.main --skip-scrape`.
 
 The post-implementation review also tightened the interfaces: empty or schema-invalid snapshots are rejected, report sections distinguish mixed minimum/maximum movements, missing chart bounds remain visible as gaps, source attribution is derived from observation metadata, and every series with at least two weeks and one numeric price receives a chart.
+
+## Multi-source provenance follow-up
+
+The first schema treated the collection timestamp as the market observation time and did not place the publisher or market-chain tier in the series identity. That was safe for one feed but would allow invalid comparisons after adding a retail or wholesale source.
+
+The shared row contract now records `source`, optional `source_record_id`, `market_chain_level`, minimum/maximum/modal prices, and separate `observed_at` and `collected_at` timestamps. Comparable series include source and tier. Existing Wisarra snapshots were migrated with `market_chain_level=unspecified`; no retail or wholesale classification was inferred. Reports and chart manifests display both fields, and modal-only feeds are supported without pretending a single price is a range.
+
+The repository remains intentionally small: source snapshots live below `data/<source>/`, generated outputs live below `artifacts/`, and large contextual or historical datasets are referenced externally rather than copied here.

@@ -38,7 +38,12 @@ class LegacyMigrationTests(unittest.TestCase):
                 "2026-06-30T07-14-10Z.csv",
                 "2026-07-06T12-45-54Z.csv",
             ])
-            self.assertEqual(len(dataset.load()), 3)
+            observations = dataset.load()
+            self.assertEqual(len(observations), 3)
+            self.assertEqual({point.series.source for point in observations}, {"wisarra"})
+            self.assertEqual({point.series.market_chain_level for point in observations}, {"unspecified"})
+            self.assertEqual({point.modal_price for point in observations}, {None})
+            self.assertTrue(all(point.observed_at == point.collected_at for point in observations))
 
 
 if __name__ == "__main__":

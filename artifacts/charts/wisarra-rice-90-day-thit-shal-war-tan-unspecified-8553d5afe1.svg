@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
+<title>Rice (90 Day Thit Shal) prices — War Tan market</title>
+<desc id="chart-desc">Available minimum, maximum, and modal Rice (90 Day Thit Shal) prices in War Tan, Yangon, from 30 Jun to 6 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
+<style>
+text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
+.chart-title { font-size: 24px; font-weight: 650; }
+.subtitle { font-size: 14px; fill: #52606D; }
+.axis { font-size: 12px; fill: #697586; }
+.grid { stroke: #E5EAF0; stroke-width: 1; }
+.range { fill: #D9F3F0; fill-opacity: 0.72; }
+.maximum { stroke: #0F766E; stroke-width: 3; fill: none; }
+.minimum { stroke: #64748B; stroke-width: 2.25; stroke-dasharray: 7 5; fill: none; }
+.modal { stroke: #2563EB; stroke-width: 3; fill: none; }
+.point-max { fill: #FFFFFF; stroke: #0F766E; stroke-width: 2.5; }
+.point-min { fill: #FFFFFF; stroke: #64748B; stroke-width: 2; }
+.point-modal { fill: #FFFFFF; stroke: #2563EB; stroke-width: 2.5; }
+.direct-label { font-size: 13px; font-weight: 650; }
+.maximum-label { fill: #0F766E; }
+.minimum-label { fill: #52606D; }
+.combined-label { fill: #334155; }
+.modal-label { fill: #1D4ED8; }
+.source { font-size: 11px; fill: #7C8798; }
+</style>
+<rect width="960" height="540" fill="#FFFFFF"/>
+<text id="chart-title" x="100" y="48" class="chart-title">Rice (90 Day Thit Shal) prices — War Tan market</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1.5 basket · 2 weekly observations · 30 Jun–6 Jul 2026</text>
+<line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
+<text x="85" y="134.0" text-anchor="end" class="axis">107,625</text>
+<line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
+<text x="85" y="214.0" text-anchor="end" class="axis">106,312</text>
+<line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
+<text x="85" y="294.0" text-anchor="end" class="axis">105,000</text>
+<line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
+<text x="85" y="374.0" text-anchor="end" class="axis">103,688</text>
+<line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">102,375</text>
+<path d="M 100.0 290.0 L 810.0 290.0" class="maximum"/>
+<circle cx="100.0" cy="290.0" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="290.0" r="4.5" class="point-max"/>
+<text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="825.0" y="294.0" class="direct-label maximum-label">Maximum · 105,000</text>
+<text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Jul 2026</text>
+</svg>
