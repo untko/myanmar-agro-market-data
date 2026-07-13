@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wisarra agricultural market price snapshot row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "location",
+    "marketplace",
+    "min_price",
+    "max_price",
+    "currency",
+    "quantity",
+    "unit",
+    "scraped_at",
+    "source_url"
+  ],
+  "properties": {
+    "name": {"type": "string", "description": "Product name as published by Wisarra."},
+    "location": {"type": "string", "description": "City or region as published by Wisarra."},
+    "marketplace": {"type": "string", "description": "Specific market as published by Wisarra."},
+    "min_price": {"type": ["integer", "null"], "minimum": 0},
+    "max_price": {"type": ["integer", "null"], "minimum": 0},
+    "currency": {"type": "string"},
+    "quantity": {"type": "string"},
+    "unit": {"type": "string"},
+    "scraped_at": {"type": "string", "format": "date-time"},
+    "source_url": {"type": "string", "format": "uri"}
+  }
+}

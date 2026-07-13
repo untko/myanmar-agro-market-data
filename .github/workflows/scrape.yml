@@ -28,13 +28,23 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraper + analyzer
-        run: python scripts/main.py 2>&1 | tee scrape_output.log
+        run: python -m scripts.main 2>&1 | tee scrape_output.log
         id: scrape
+
+      - name: Upload reports and charts
+        uses: actions/upload-artifact@v7
+        with:
+          name: wisarra-analysis-${{ github.run_number }}
+          path: |
+            artifacts/reports/
+            artifacts/charts/
+          if-no-files-found: error
+          retention-days: 90
 
       - name: Check for changes
         id: changes
         run: |
-          git add -A
+          git add data/wisarra/snapshots/
           if git diff --cached --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
@@ -48,7 +58,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: weekly price update - ${{ github.run_number }}"
-          file_pattern: "data/"
+          file_pattern: "data/wisarra/snapshots/"
           commit_user_name: "bot@myanmar-agro-market"
           commit_user_email: "bot@myanmar-agro-market.data"
           commit_author: "Scraper Bot <bot@myanmar-agro-market.data>"

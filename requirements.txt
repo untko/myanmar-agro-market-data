@@ -1,3 +1,1 @@
-# No external dependencies — uses only Python stdlib
-# If you want matplotlib for enhanced charts later, uncomment:
-# matplotlib>=3.8
+# No external dependencies; the pipeline uses the Python standard library.

@@ -1,77 +1,67 @@
-"""
-Main entry point: scrape + store + analyze.
-Usage: python main.py [--skip-scrape]
-"""
+"""Scrape Wisarra, record an immutable snapshot, and build analysis artifacts."""
 
+from __future__ import annotations
+
+import argparse
 import json
 import sys
-import os
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Iterable, Mapping
 
-# Add scripts dir to path
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from scrape_wisarra import scrape_all
-from db import (
-    get_connection, db_path, init_db, upsert_prices, log_scrape
-)
-from analyze import generate_report, generate_charts
+from .analyze import CHARTS_DIR, REPORTS_DIR, SNAPSHOTS_DIR, generate_charts, generate_report
+from .dataset import PriceDataset
+from .scrape_wisarra import scrape_all
 
 
-def main():
-    skip_scrape = "--skip-scrape" in sys.argv
+def run_pipeline(
+    dataset: PriceDataset,
+    rows: Iterable[Mapping[str, object]] | None,
+    *,
+    observed_at: datetime | None = None,
+    reports_dir: Path = REPORTS_DIR,
+    charts_dir: Path = CHARTS_DIR,
+) -> dict[str, object]:
+    """Record an optional scrape batch and build all derived artifacts."""
+    snapshot_path = None
+    if rows is not None:
+        snapshot_path = dataset.record(rows, observed_at)
 
-    # 1. Scrape
-    if not skip_scrape:
-        print("🔍 Scraping wisarra.com...", file=sys.stderr)
-        try:
-            rows = scrape_all()
-            print(f"  Scraped {len(rows)} rows", file=sys.stderr)
-        except Exception as e:
-            print(f"  Scrape failed: {e}", file=sys.stderr)
-            # Log the failure
-            db = db_path()
-            conn = get_connection(db)
-            init_db(conn)
-            log_scrape(conn, "wisarra", 0, {"inserted": 0, "updated": 0, "unchanged": 0},
-                       "error", str(e))
-            conn.close()
-            sys.exit(1)
-    else:
-        print("  Skipping scrape (--skip-scrape)", file=sys.stderr)
-        rows = []
-
-    # 2. Store
-    if rows:
-        print("💾 Storing in SQLite...", file=sys.stderr)
-        db = db_path()
-        conn = get_connection(db)
-        init_db(conn)
-        counts = upsert_prices(conn, rows)
-        log_scrape(conn, "wisarra", len(rows), counts, "success")
-        print(f"  Inserted: {counts['inserted']}, Updated: {counts['updated']}, Unchanged: {counts['unchanged']}", file=sys.stderr)
-        conn.close()
-
-    # 3. Analyze
-    print("📊 Generating analysis...", file=sys.stderr)
-    db = db_path()
-    conn = get_connection(db)
-    stats = generate_report(conn)
-    n_charts = generate_charts(conn)
-    conn.close()
-
-    print(f"  Report: {stats['report_path']}", file=sys.stderr)
-    print(f"  Charts: {n_charts} SVGs", file=sys.stderr)
-
-    # Output JSON for GitHub Actions to read
-    output = {
-        "scrape_success": True,
-        "rows": len(rows) if rows else 0,
+    series = dataset.weekly_series()
+    if not series:
+        raise RuntimeError("No snapshots are available for analysis")
+    stats = generate_report(series, reports_dir)
+    chart_count = generate_charts(series, charts_dir)
+    return {
+        "snapshot": str(snapshot_path) if snapshot_path else None,
         "stats": stats,
-        "charts_generated": n_charts,
+        "charts_generated": chart_count,
     }
-    print(json.dumps(output, ensure_ascii=False, indent=2))
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--skip-scrape", action="store_true", help="Rebuild artifacts from existing snapshots")
+    args = parser.parse_args()
+
+    rows = None
+    observed_at = None
+    if not args.skip_scrape:
+        print("Scraping wisarra.com...", file=sys.stderr)
+        rows = scrape_all()
+        observed_at = datetime.now(timezone.utc)
+        print(f"  Scraped {len(rows)} rows", file=sys.stderr)
+    else:
+        print("Skipping scrape; rebuilding from committed snapshots", file=sys.stderr)
+
+    result = run_pipeline(
+        PriceDataset(SNAPSHOTS_DIR),
+        rows,
+        observed_at=observed_at,
+    )
+    print(f"  Report: {result['stats']['report_path']}", file=sys.stderr)
+    print(f"  Charts: {result['charts_generated']}", file=sys.stderr)
+    print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
 if __name__ == "__main__":

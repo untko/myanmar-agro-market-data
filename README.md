@@ -1,88 +1,74 @@
-# myanmar-agro-market-data
+# Myanmar Agricultural Market Data
 
-Automated agricultural market price tracking for Myanmar. Data scraped weekly from [Wisarra.com](https://wisarra.com/en/market-price).
+An automated, auditable archive of agricultural market prices published by [Wisarra](https://wisarra.com/en/market-price).
 
-## What this does
+Every scheduled run records one immutable CSV snapshot. Reports and charts are rebuilt from those snapshots, so the repository stores transparent source data instead of a changing binary database or hundreds of generated chart files.
 
-1. **Scrapes** agricultural product prices every Monday at 09:00 UTC
-2. **Stores** all historical data in SQLite (`data/wisarra/prices.db`)
-3. **Generates** a weekly markdown report with price changes, trends, and new/removed products
-4. **Creates** SVG trend charts for each tracked product
-5. **Commits** everything to this repo automatically via GitHub Actions
+## Repository structure
 
-## Data structure
-
-```
+```text
 data/wisarra/
-├── prices.db          # SQLite database (all historical prices)
-├── charts/            # SVG trend charts per product
-│   ├── rice-paddy/
-│   ├── legumes/
-│   ├── vegetables/
-│   ├── fruits/
-│   └── grains-seeds/
-└── reports/           # Weekly markdown summaries
-    ├── 2026-W26.md
-    └── ...
+├── README.md
+├── schema.json
+└── snapshots/
+    └── YYYY/
+        └── YYYY-MM-DDTHH-MM-SSZ.csv
+
+scripts/
+├── dataset.py             # snapshot and comparable-series module
+├── scrape_wisarra.py      # Wisarra extraction
+├── analyze.py             # weekly report and chart selection
+├── charts.py              # accessible SVG renderer
+└── main.py                # pipeline entry point
+
+artifacts/                 # generated locally; ignored by Git
+├── reports/
+└── charts/
 ```
 
-## Schema (SQLite)
+## Data model
 
-```sql
-CREATE TABLE prices (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,           -- Product name
-    location TEXT NOT NULL,       -- City/region
-    marketplace TEXT NOT NULL,    -- Marketplace name
-    min_price INTEGER,            -- Minimum price (in currency units)
-    max_price INTEGER,            -- Maximum price
-    currency TEXT NOT NULL,       -- MMK, USD, etc.
-    quantity TEXT,                -- Quantity per unit
-    unit TEXT,                    -- basket, viss, ton, pc, etc.
-    scraped_at TEXT NOT NULL      -- ISO 8601 timestamp
-);
+A comparable price series is identified by all of the following fields:
 
-CREATE TABLE scrape_log (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    source TEXT NOT NULL,
-    scraped_at TEXT NOT NULL,
-    rows_scraped INTEGER,
-    rows_inserted INTEGER,
-    rows_updated INTEGER,
-    rows_unchanged INTEGER,
-    status TEXT,                  -- success / error
-    error_message TEXT
-);
+```text
+product name + location + marketplace + currency + quantity + unit
 ```
+
+This prevents prices from different markets or trading units from being joined into false trends. All raw observations remain in the snapshots; charts retain only the latest observation for each exact series in each ISO week.
+
+See [`data/wisarra/schema.json`](data/wisarra/schema.json) for the snapshot row contract.
 
 ## Running locally
 
+The project uses only the Python standard library.
+
 ```bash
-# Install dependencies
-pip install -r requirements.txt
+# Scrape, append a snapshot, and generate artifacts
+python -m scripts.main
 
-# Full scrape + analyze
-python scripts/main.py
+# Rebuild reports and charts without network access
+python -m scripts.main --skip-scrape
 
-# Only analyze (skip scraping)
-python scripts/main.py --skip-scrape
+# Run the test suite
+python -m unittest discover -s tests -v
 ```
 
-## Adding new sources
+Generated charts are flat, stable per-series SVG files. `artifacts/charts/index.csv` maps each filename to its product, location, marketplace, currency, quantity, and unit.
 
-To add another scraping source:
-1. Create `scripts/scrape_<source>.py` with a `scrape_all()` function
-2. Create `data/<source>/` directory
-3. Add source-specific analysis in `scripts/analyze_<source>.py`
-4. Update `scripts/main.py` to call the new scraper
-5. The GitHub Actions workflow will automatically pick it up
+## Automation
+
+GitHub Actions runs every Monday at 09:00 UTC. It commits only the new immutable snapshot and uploads the generated report and charts as a workflow artifact. Generated files and analysis databases are never committed.
+
+## Adding another source
+
+Add a source-specific scraper that returns rows matching the snapshot schema, then record the batch through `PriceDataset`. Do not add source-specific report or chart logic: the dataset module supplies exact comparable series to the shared analysis modules.
 
 ## Data notes
 
-- **"No change" is recorded**: Even when prices don't change, a new row is inserted with the current timestamp. This proves the scrape happened and the product is still available.
-- **Prices are in MMK** (Myanmar Kyat) unless otherwise noted. Some Shan region products are priced in USD.
-- **Units vary**: basket (~50kg for rice, ~25kg for beans), viss (~1.6kg), ton, piece, etc.
+- Repeated prices are retained because an unchanged observation still proves that the product was present.
+- Prices are usually MMK, but currency is part of the series identity and must not be assumed.
+- Trading quantities and units vary and must never be aggregated without conversion.
 
-## License
+## License and source
 
-Data is sourced from Wisarra International Co., Ltd. and is their property.
+The underlying data is published by Wisarra International Co., Ltd. Review the source's terms before redistribution or commercial use.
