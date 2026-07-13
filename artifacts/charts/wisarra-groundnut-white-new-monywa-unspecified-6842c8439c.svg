@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Groundnut (White) (New) prices — Monywa market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Groundnut (White) (New) prices in Monywa, Sagaing, from 30 Jun to 6 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Groundnut (White) (New) prices in Monywa, Sagaing, from 30 Jun to 13 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,25 +23,30 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Groundnut (White) (New) prices — Monywa market</text>
-<text x="100" y="76" class="subtitle">Sagaing · wisarra · tier unspecified · MMK per 1 basket · 2 weekly observations · 30 Jun–6 Jul 2026</text>
+<text x="100" y="76" class="subtitle">Sagaing · wisarra · tier unspecified · MMK per 1 basket · 3 weekly observations · 30 Jun–13 Jul 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
-<text x="85" y="134.0" text-anchor="end" class="axis">11,890</text>
+<text x="85" y="134.0" text-anchor="end" class="axis">13,018</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">11,695</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">12,534</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">11,500</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">12,050</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">11,305</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">11,566</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">11,110</text>
-<path d="M 100.0 331.0 L 810.0 249.0" class="maximum"/>
-<circle cx="810.0" cy="290.0" r="4" class="point-min"/>
-<circle cx="100.0" cy="331.0" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="249.0" r="4.5" class="point-max"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">11,082</text>
+<polygon points="436.4,381.0 810.0,215.6 810.0,182.5 436.4,364.4" class="range"/>
+<path d="M 436.4 381.0 L 810.0 215.6" class="minimum"/>
+<path d="M 100.0 397.5 L 436.4 364.4 L 810.0 182.5" class="maximum"/>
+<circle cx="436.4" cy="381.0" r="4" class="point-min"/>
+<circle cx="810.0" cy="215.6" r="4" class="point-min"/>
+<circle cx="100.0" cy="397.5" r="4.5" class="point-max"/>
+<circle cx="436.4" cy="364.4" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="182.5" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">6 Jul</text>
-<text x="825.0" y="253.0" class="direct-label maximum-label">Maximum · 11,600</text>
-<text x="825.0" y="294.0" class="direct-label minimum-label">Minimum · 11,500</text>
+<text x="436.4" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">13 Jul</text>
+<text x="825.0" y="186.5" class="direct-label maximum-label">Maximum · 12,700</text>
+<text x="825.0" y="219.6" class="direct-label minimum-label">Minimum · 12,500</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Jul 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 13 Jul 2026</text>
 </svg>

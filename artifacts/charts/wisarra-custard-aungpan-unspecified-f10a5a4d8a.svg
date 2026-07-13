@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Custard prices — Aungpan market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Custard prices in Aungpan, Shan, from 30 Jun to 6 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Custard prices in Aungpan, Shan, from 30 Jun to 13 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,23 +23,25 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Custard prices — Aungpan market</text>
-<text x="100" y="76" class="subtitle">Shan · wisarra · tier unspecified · MMK per 1 viss · 2 weekly observations · 30 Jun–6 Jul 2026</text>
+<text x="100" y="76" class="subtitle">Shan · wisarra · tier unspecified · MMK per 1 viss · 3 weekly observations · 30 Jun–13 Jul 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
-<text x="85" y="134.0" text-anchor="end" class="axis">105,575</text>
+<text x="85" y="134.0" text-anchor="end" class="axis">106,600</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">103,662</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">104,425</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">101,750</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">102,250</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">99,838</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">100,075</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">97,925</text>
-<path d="M 100.0 342.3 L 810.0 237.7" class="maximum"/>
-<circle cx="100.0" cy="342.3" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="237.7" r="4.5" class="point-max"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">97,900</text>
+<path d="M 100.0 354.4 L 436.4 262.4 L 810.0 225.6" class="maximum"/>
+<circle cx="100.0" cy="354.4" r="4.5" class="point-max"/>
+<circle cx="436.4" cy="262.4" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="225.6" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">6 Jul</text>
-<text x="825.0" y="241.7" class="direct-label maximum-label">Maximum · 103,000</text>
+<text x="436.4" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">13 Jul</text>
+<text x="825.0" y="229.6" class="direct-label maximum-label">Maximum · 104,000</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Jul 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 13 Jul 2026</text>
 </svg>

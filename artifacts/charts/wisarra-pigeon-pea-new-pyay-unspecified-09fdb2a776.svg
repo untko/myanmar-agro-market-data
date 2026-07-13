@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Pigeon Pea (New) prices — Pyay market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Pigeon Pea (New) prices in Pyay, Bago, from 30 Jun to 6 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Pigeon Pea (New) prices in Pyay, Bago, from 30 Jun to 13 Jul 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,7 +23,7 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Pigeon Pea (New) prices — Pyay market</text>
-<text x="100" y="76" class="subtitle">Bago · wisarra · tier unspecified · MMK per 1 basket · 2 weekly observations · 30 Jun–6 Jul 2026</text>
+<text x="100" y="76" class="subtitle">Bago · wisarra · tier unspecified · MMK per 1 basket · 3 weekly observations · 30 Jun–13 Jul 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
 <text x="85" y="134.0" text-anchor="end" class="axis">84,050</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
@@ -34,12 +34,14 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 <text x="85" y="374.0" text-anchor="end" class="axis">80,975</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
 <text x="85" y="454.0" text-anchor="end" class="axis">79,950</text>
-<path d="M 100.0 290.0 L 810.0 290.0" class="maximum"/>
+<path d="M 100.0 290.0 L 436.4 290.0 L 810.0 290.0" class="maximum"/>
 <circle cx="100.0" cy="290.0" r="4.5" class="point-max"/>
+<circle cx="436.4" cy="290.0" r="4.5" class="point-max"/>
 <circle cx="810.0" cy="290.0" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="436.4" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">13 Jul</text>
 <text x="825.0" y="294.0" class="direct-label maximum-label">Maximum · 82,000</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Jul 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 13 Jul 2026</text>
 </svg>
