@@ -6,7 +6,7 @@ Each file under `snapshots/YYYY/` is one immutable scrape batch. Rows retain the
 
 The CSV row contract is documented in [`schema.json`](schema.json). Because CSV values are textual, numeric prices are encoded as digit strings; empty price cells represent unavailable prices.
 
-Reports, charts, and analytical databases are derived from these snapshots. They are intentionally excluded from the canonical data directory and can be rebuilt with:
+Reports and charts are derived from these snapshots and versioned under the repository-level `artifacts/` directory. Analytical databases remain untracked. All derived outputs can be rebuilt with:
 
 ```bash
 python -m scripts.main --skip-scrape

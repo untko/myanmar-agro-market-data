@@ -9,7 +9,7 @@ The original pipeline committed a mutable SQLite database and category-organized
 - Treat one immutable CSV per scrape as the canonical dataset.
 - Identify comparable series by product name, location, marketplace, currency, quantity, and unit.
 - Retain every raw observation, while using the latest observation per exact series and ISO week for reports and charts.
-- Generate reports and charts under ignored `artifacts/` and upload them from GitHub Actions instead of committing them.
+- Generate reports and charts under `artifacts/`, commit them alongside each snapshot, and also upload them from GitHub Actions for convenient bundled download.
 - Use a flat stable chart identifier derived from the complete series identity; publish an `index.csv` manifest for discovery.
 - Keep the pipeline dependency-free and test behavior through the snapshot, series, reporting, migration, and rendering interfaces.
 
@@ -21,7 +21,7 @@ The 472 rows in the legacy SQLite database were exported without loss into three
 - `2026-06-30T08-11-31Z.csv`: 159 observations
 - `2026-07-06T12-45-54Z.csv`: 154 observations
 
-The binary database, category folders, and generated reports were then removed from version control. They remain recoverable from Git history, while current artifacts can be rebuilt from the snapshots.
+The binary database and category folders were removed from version control. Reports and redesigned flat chart artifacts remain versioned and can be rebuilt from the snapshots.
 
 ## Consequences
 

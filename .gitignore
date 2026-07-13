@@ -17,8 +17,7 @@ Thumbs.db
 # Logs
 *.log
 
-# Derived analysis artifacts
-artifacts/
+# Local analysis databases
 .build/
 data/wisarra/prices.db
 data/wisarra/prices.db-*

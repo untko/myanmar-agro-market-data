@@ -44,7 +44,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git add data/wisarra/snapshots/
+          git add data/wisarra/snapshots/ artifacts/reports/ artifacts/charts/
           if git diff --cached --quiet; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
@@ -55,10 +55,11 @@ jobs:
 
       - name: Commit and push
         if: steps.changes.outputs.has_changes == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: weekly price update - ${{ github.run_number }}"
-          file_pattern: "data/wisarra/snapshots/"
+          file_pattern: "data/wisarra/snapshots/ artifacts/reports/ artifacts/charts/"
+          disable_globbing: true
           commit_user_name: "bot@myanmar-agro-market"
           commit_user_email: "bot@myanmar-agro-market.data"
           commit_author: "Scraper Bot <bot@myanmar-agro-market.data>"

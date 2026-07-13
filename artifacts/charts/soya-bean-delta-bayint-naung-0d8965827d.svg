@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
+<title>Soya Bean (Delta) prices — Bayint Naung market</title>
+<desc id="chart-desc">Minimum and maximum Soya Bean (Delta) prices in Bayint Naung, Yangon, from 30 Jun to 6 Jul 2026.</desc>
+<style>
+text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
+.chart-title { font-size: 24px; font-weight: 650; }
+.subtitle { font-size: 14px; fill: #52606D; }
+.axis { font-size: 12px; fill: #697586; }
+.grid { stroke: #E5EAF0; stroke-width: 1; }
+.range { fill: #D9F3F0; fill-opacity: 0.72; }
+.maximum { stroke: #0F766E; stroke-width: 3; fill: none; }
+.minimum { stroke: #64748B; stroke-width: 2.25; stroke-dasharray: 7 5; fill: none; }
+.point-max { fill: #FFFFFF; stroke: #0F766E; stroke-width: 2.5; }
+.point-min { fill: #FFFFFF; stroke: #64748B; stroke-width: 2; }
+.direct-label { font-size: 13px; font-weight: 650; }
+.maximum-label { fill: #0F766E; }
+.minimum-label { fill: #52606D; }
+.combined-label { fill: #334155; }
+.source { font-size: 11px; fill: #7C8798; }
+</style>
+<rect width="960" height="540" fill="#FFFFFF"/>
+<text id="chart-title" x="100" y="48" class="chart-title">Soya Bean (Delta) prices — Bayint Naung market</text>
+<text x="100" y="76" class="subtitle">Yangon · MMK per 1 viss · 30 Jun–6 Jul 2026</text>
+<line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
+<text x="85" y="134.0" text-anchor="end" class="axis">5,842</text>
+<line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
+<text x="85" y="214.0" text-anchor="end" class="axis">5,684</text>
+<line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
+<text x="85" y="294.0" text-anchor="end" class="axis">5,525</text>
+<line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
+<text x="85" y="374.0" text-anchor="end" class="axis">5,366</text>
+<line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">5,208</text>
+<polygon points="100.0,353.0 810.0,378.2 810.0,201.8 100.0,201.8" class="range"/>
+<path d="M 100.0 353.0 L 810.0 378.2" class="minimum"/>
+<path d="M 100.0 201.8 L 810.0 201.8" class="maximum"/>
+<circle cx="100.0" cy="353.0" r="4" class="point-min"/>
+<circle cx="810.0" cy="378.2" r="4" class="point-min"/>
+<circle cx="100.0" cy="201.8" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="201.8" r="4.5" class="point-max"/>
+<text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">6 Jul</text>
+<text x="825.0" y="205.8" class="direct-label maximum-label">Maximum · 5,700</text>
+<text x="825.0" y="382.2" class="direct-label minimum-label">Minimum · 5,350</text>
+<text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Jul 2026</text>
+</svg>

@@ -137,11 +137,11 @@ def generate_report(
     lines = [
         "# Myanmar Agricultural Market Prices",
         "",
-        f"**Source:** [{source_host}]({source_url})  ",
-        f"**Latest observation:** {latest_date:%Y-%m-%d}  ",
+        f"- **Source:** [{source_host}]({source_url})",
+        f"- **Latest observation:** {latest_date:%Y-%m-%d}",
     ]
     if previous_date:
-        lines.append(f"**Previous comparison:** {previous_date:%Y-%m-%d}  ")
+        lines.append(f"- **Previous comparison:** {previous_date:%Y-%m-%d}")
     lines.extend(
         [
             f"**Market series tracked:** {len(latest)}",

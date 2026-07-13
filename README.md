@@ -2,7 +2,7 @@
 
 An automated, auditable archive of agricultural market prices published by [Wisarra](https://wisarra.com/en/market-price).
 
-Every scheduled run records one immutable CSV snapshot. Reports and charts are rebuilt from those snapshots, so the repository stores transparent source data instead of a changing binary database or hundreds of generated chart files.
+Every scheduled run records one immutable CSV snapshot. Reports and charts are rebuilt from those snapshots and committed alongside them, while the transparent snapshots remain the canonical source instead of a changing binary database.
 
 ## Repository structure
 
@@ -21,7 +21,7 @@ scripts/
 ├── charts.py              # accessible SVG renderer
 └── main.py                # pipeline entry point
 
-artifacts/                 # generated locally; ignored by Git
+artifacts/                 # generated and versioned in Git
 ├── reports/
 └── charts/
 ```
@@ -57,7 +57,7 @@ Generated charts are flat, stable per-series SVG files. `artifacts/charts/index.
 
 ## Automation
 
-GitHub Actions runs every Monday at 09:00 UTC. It commits only the new immutable snapshot and uploads the generated report and charts as a workflow artifact. Generated files and analysis databases are never committed.
+GitHub Actions runs every Monday at 09:00 UTC. It commits the new immutable snapshot together with the regenerated report and charts, and also uploads the generated outputs as a convenient workflow download. Analysis databases are never committed.
 
 ## Adding another source
 
