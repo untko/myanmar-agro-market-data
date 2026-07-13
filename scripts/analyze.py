@@ -142,6 +142,7 @@ def generate_report(
     ]
     if previous_date:
         lines.append(f"- **Previous comparison:** {previous_date:%Y-%m-%d}")
+    lines.append("")
     lines.extend(
         [
             f"**Market series tracked:** {len(latest)}",

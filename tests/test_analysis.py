@@ -40,6 +40,7 @@ class AnalysisTests(unittest.TestCase):
             report = Path(stats["report_path"]).read_text(encoding="utf-8")
 
             self.assertEqual(Path(stats["report_path"]).name, "2026-W28.md")
+            self.assertIn("- **Previous comparison:** 2026-06-30\n\n**Market series tracked:** 2", report)
             self.assertIn("| Product | Location | Market | Unit | Previous Min | Current Min | Min change | Previous Max | Current Max | Max change |", report)
             self.assertIn("| Paddy (Paw San) (Rainy 2022) | Pathein | Pathein | MMK per 100 basket | 700 | 1,000 | +42.9% | 1,000 | 1,500 | +50.0% |", report)
             self.assertIn("| Paddy (Paw San) (Rainy 2022) | Pathein | Dedaye | MMK per 100 basket | 650 | 680 | +4.6% | 745 | 770 | +3.4% |", report)
