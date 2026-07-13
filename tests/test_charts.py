@@ -48,6 +48,34 @@ class PriceChartTests(unittest.TestCase):
         self.assertNotIn('class="range"', svg)
         self.assertIn("Source: example.org", svg)
 
+    def test_missing_whole_week_breaks_lines_and_preserves_elapsed_time_spacing(self):
+        key = SeriesKey("Rice", "Yangon", "Bayint Naung", "MMK", "1", "bag")
+        source = "https://example.org/prices"
+        history = [
+            PriceObservation(key, 80, 100, datetime(2026, 6, 29, tzinfo=timezone.utc), source),  # W27
+            PriceObservation(key, 90, 110, datetime(2026, 7, 13, tzinfo=timezone.utc), source),  # W29
+            PriceObservation(key, 95, 120, datetime(2026, 7, 20, tzinfo=timezone.utc), source),  # W30
+        ]
+
+        svg = render_price_chart(key, history)
+
+        self.assertEqual(svg.count('class="maximum"'), 1)
+        self.assertIn('cx="573.3"', svg)
+        self.assertNotIn('cx="455.0"', svg)
+
+    def test_equal_latest_bounds_use_one_direct_label(self):
+        key = SeriesKey("Wheat", "Sagaing", "Kalay", "MMK", "1", "ton")
+        source = "https://example.org/prices"
+        history = [
+            PriceObservation(key, 210000, 220000, datetime(2026, 6, 29, tzinfo=timezone.utc), source),
+            PriceObservation(key, 220000, 220000, datetime(2026, 7, 6, tzinfo=timezone.utc), source),
+        ]
+
+        svg = render_price_chart(key, history)
+
+        self.assertIn("Minimum / maximum · 220,000", svg)
+        self.assertEqual(svg.count('class="direct-label combined-label"'), 1)
+
 
 if __name__ == "__main__":
     unittest.main()

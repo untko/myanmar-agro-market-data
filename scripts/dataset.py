@@ -30,6 +30,14 @@ def _parse_timestamp(value: str) -> datetime:
     return datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(timezone.utc)
 
 
+def _validate_source_url(value: object) -> str:
+    source_url = str(value or "").strip()
+    parsed_url = urlparse(source_url)
+    if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
+        raise ValueError("Snapshot source_url must be an absolute HTTP(S) URL")
+    return source_url
+
+
 @dataclass(frozen=True, order=True)
 class SeriesKey:
     """Everything that must remain constant within one comparable price series."""
@@ -108,10 +116,7 @@ class PriceDataset:
             if missing:
                 raise ValueError(f"Snapshot row is missing required fields: {', '.join(missing)}")
             series = SeriesKey.from_mapping(source_row)
-            source_url = str(source_row["source_url"]).strip()
-            parsed_url = urlparse(source_url)
-            if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
-                raise ValueError("Snapshot source_url must be an absolute HTTP(S) URL")
+            source_url = _validate_source_url(source_row["source_url"])
             min_price = _parse_price(source_row.get("min_price"))
             max_price = _parse_price(source_row.get("max_price"))
             writer.writerow(
@@ -143,14 +148,17 @@ class PriceDataset:
         observations: list[PriceObservation] = []
         for snapshot_path in sorted(self.snapshots_dir.glob("*/*.csv")):
             with snapshot_path.open(newline="", encoding="utf-8") as handle:
-                for row in csv.DictReader(handle):
+                reader = csv.DictReader(handle)
+                if tuple(reader.fieldnames or ()) != SNAPSHOT_COLUMNS:
+                    raise ValueError(f"Snapshot {snapshot_path} does not match the required CSV columns")
+                for row in reader:
                     observations.append(
                         PriceObservation(
                             series=SeriesKey.from_mapping(row),
                             min_price=_parse_price(row.get("min_price")),
                             max_price=_parse_price(row.get("max_price")),
                             scraped_at=_parse_timestamp(row["scraped_at"]),
-                            source_url=row["source_url"],
+                            source_url=_validate_source_url(row["source_url"]),
                         )
                     )
         return sorted(observations, key=lambda item: (item.series, item.scraped_at))

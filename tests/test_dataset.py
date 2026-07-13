@@ -84,6 +84,20 @@ class PriceDatasetTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "non-negative"):
                 dataset.record([negative_price], observed_at)
 
+    def test_manually_added_snapshot_is_validated_when_loaded(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            snapshots = Path(temp_dir)
+            snapshot = snapshots / "2026" / "2026-07-06T12-45-54Z.csv"
+            snapshot.parent.mkdir(parents=True)
+            snapshot.write_text(
+                "name,location,marketplace,min_price,max_price,currency,quantity,unit,scraped_at,source_url\n"
+                "Rice,Yangon,Bayint Naung,100,120,MMK,1,bag,2026-07-06T12:45:54Z,not-a-url\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(ValueError, "source_url"):
+                PriceDataset(snapshots).load()
+
     def test_weekly_series_never_mix_market_or_unit_and_keep_latest_observation(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             dataset = PriceDataset(Path(temp_dir))

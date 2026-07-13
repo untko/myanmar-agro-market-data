@@ -55,11 +55,17 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
     padding = max((high - low) * 0.12, high * 0.025, 1)
     y_min, y_max = max(0, low - padding), high + padding
     y_range = y_max - y_min or 1
+    first_timestamp = history[0].scraped_at
+    elapsed_seconds = (history[-1].scraped_at - first_timestamp).total_seconds()
 
     def x_position(index: int) -> float:
-        if len(history) == 1:
+        if elapsed_seconds <= 0:
             return left + chart_width / 2
-        return left + index * chart_width / (len(history) - 1)
+        point_seconds = (history[index].scraped_at - first_timestamp).total_seconds()
+        return left + (point_seconds / elapsed_seconds) * chart_width
+
+    def week_serial(point: PriceObservation) -> int:
+        return (point.scraped_at.date().toordinal() - 1) // 7
 
     def y_position(value: int | None) -> float | None:
         if value is None:
@@ -67,17 +73,17 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         return top + chart_height - ((value - y_min) / y_range) * chart_height
 
     min_points = [
-        (index, x_position(index), y_position(point.min_price), point.min_price)
+        (week_serial(point), x_position(index), y_position(point.min_price), point.min_price)
         for index, point in enumerate(history)
         if point.min_price is not None
     ]
     max_points = [
-        (index, x_position(index), y_position(point.max_price), point.max_price)
+        (week_serial(point), x_position(index), y_position(point.max_price), point.max_price)
         for index, point in enumerate(history)
         if point.max_price is not None
     ]
     range_points = [
-        (index, x_position(index), y_position(point.min_price), y_position(point.max_price))
+        (week_serial(point), x_position(index), y_position(point.min_price), y_position(point.max_price))
         for index, point in enumerate(history)
         if point.min_price is not None and point.max_price is not None
     ]
@@ -108,6 +114,7 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         ".direct-label { font-size: 13px; font-weight: 650; }",
         ".maximum-label { fill: #0F766E; }",
         ".minimum-label { fill: #52606D; }",
+        ".combined-label { fill: #334155; }",
         ".source { font-size: 11px; fill: #7C8798; }",
         "</style>",
         f'<rect width="{width}" height="{height}" fill="#FFFFFF"/>',
@@ -152,12 +159,23 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
     for index in label_indexes:
         parts.append(f'<text x="{x_position(index):.1f}" y="{top + chart_height + 34}" text-anchor="middle" class="axis">{escape(_date_label(history[index]))}</text>')
 
-    if max_points:
-        _, x, y, latest_maximum = max_points[-1]
-        parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label maximum-label">Maximum · {_number(latest_maximum)}</text>')
-    if min_points:
-        _, x, y, latest_minimum = min_points[-1]
-        parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label minimum-label">Minimum · {_number(latest_minimum)}</text>')
+    latest_max = max_points[-1] if max_points else None
+    latest_min = min_points[-1] if min_points else None
+    if latest_max and latest_min and latest_max[0] == latest_min[0] and latest_max[3] == latest_min[3]:
+        _, x, y, value = latest_max
+        parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label combined-label">Minimum / maximum · {_number(value)}</text>')
+    else:
+        max_offset = 4
+        min_offset = 4
+        if latest_max and latest_min and latest_max[0] == latest_min[0] and abs(latest_max[2] - latest_min[2]) < 24:
+            max_offset = -8
+            min_offset = 16
+        if latest_max:
+            _, x, y, value = latest_max
+            parts.append(f'<text x="{x + 15:.1f}" y="{y + max_offset:.1f}" class="direct-label maximum-label">Maximum · {_number(value)}</text>')
+        if latest_min:
+            _, x, y, value = latest_min
+            parts.append(f'<text x="{x + 15:.1f}" y="{y + min_offset:.1f}" class="direct-label minimum-label">Minimum · {_number(value)}</text>')
 
     source_host = (urlparse(history[-1].source_url).hostname or history[-1].source_url).removeprefix("www.")
 
