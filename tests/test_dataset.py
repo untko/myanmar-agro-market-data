@@ -23,10 +23,18 @@ def price_row(
         "currency": "MMK",
         "quantity": quantity,
         "unit": unit,
+        "source_url": "https://wisarra.com/en/market-price",
     }
 
 
 class PriceDatasetTests(unittest.TestCase):
+    def test_empty_scrape_is_rejected_instead_of_becoming_a_snapshot(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            dataset = PriceDataset(Path(temp_dir))
+            with self.assertRaisesRegex(ValueError, "empty"):
+                dataset.record([], datetime(2026, 7, 6, tzinfo=timezone.utc))
+            self.assertEqual(list(Path(temp_dir).rglob("*.csv")), [])
+
     def test_snapshot_round_trip_is_immutable_and_auditable(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             dataset = PriceDataset(Path(temp_dir))
@@ -52,6 +60,29 @@ class PriceDatasetTests(unittest.TestCase):
             changed_rows = [price_row(marketplace="Dedaye", min_price="700", max_price="800")]
             with self.assertRaisesRegex(ValueError, "immutable"):
                 dataset.record(changed_rows, observed_at)
+
+    def test_snapshot_rows_must_satisfy_the_documented_identity_and_source_contract(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            dataset = PriceDataset(Path(temp_dir))
+            observed_at = datetime(2026, 7, 6, tzinfo=timezone.utc)
+
+            missing_price_field = price_row(marketplace="Dedaye", min_price="650", max_price="745")
+            del missing_price_field["min_price"]
+            with self.assertRaisesRegex(ValueError, "min_price"):
+                dataset.record([missing_price_field], observed_at)
+
+            empty_market = price_row(marketplace="", min_price="650", max_price="745")
+            with self.assertRaisesRegex(ValueError, "marketplace"):
+                dataset.record([empty_market], observed_at)
+
+            invalid_source = price_row(marketplace="Dedaye", min_price="650", max_price="745")
+            invalid_source["source_url"] = "not a URL"
+            with self.assertRaisesRegex(ValueError, "source_url"):
+                dataset.record([invalid_source], observed_at)
+
+            negative_price = price_row(marketplace="Dedaye", min_price="-1", max_price="745")
+            with self.assertRaisesRegex(ValueError, "non-negative"):
+                dataset.record([negative_price], observed_at)
 
     def test_weekly_series_never_mix_market_or_unit_and_keep_latest_observation(self):
         with tempfile.TemporaryDirectory() as temp_dir:

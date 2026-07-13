@@ -11,7 +11,7 @@ from typing import Iterable, Mapping
 
 from .analyze import CHARTS_DIR, REPORTS_DIR, SNAPSHOTS_DIR, generate_charts, generate_report
 from .dataset import PriceDataset
-from .scrape_wisarra import scrape_all
+from .scrape_wisarra import BASE_URL, scrape_all
 
 
 def run_pipeline(
@@ -48,7 +48,7 @@ def main() -> None:
     observed_at = None
     if not args.skip_scrape:
         print("Scraping wisarra.com...", file=sys.stderr)
-        rows = scrape_all()
+        rows = [{**row, "source_url": BASE_URL} for row in scrape_all()]
         observed_at = datetime.now(timezone.utc)
         print(f"  Scraped {len(rows)} rows", file=sys.stderr)
     else:

@@ -5,6 +5,7 @@ from __future__ import annotations
 from html import escape
 from pathlib import Path
 from typing import Sequence
+from urllib.parse import urlparse
 
 from .dataset import PriceObservation, SeriesKey
 
@@ -15,6 +16,20 @@ def _number(value: float) -> str:
 
 def _date_label(observation: PriceObservation) -> str:
     return observation.scraped_at.strftime("%d %b").lstrip("0")
+
+
+def _segments(points: Sequence[tuple[int, float, float, int]]) -> list[list[tuple[int, float, float, int]]]:
+    """Split plotted points whenever an observation is missing."""
+    result: list[list[tuple[int, float, float, int]]] = []
+    current: list[tuple[int, float, float, int]] = []
+    for point in points:
+        if current and point[0] != current[-1][0] + 1:
+            result.append(current)
+            current = []
+        current.append(point)
+    if current:
+        result.append(current)
+    return result
 
 
 def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> str:
@@ -51,8 +66,21 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
             return None
         return top + chart_height - ((value - y_min) / y_range) * chart_height
 
-    min_points = [(x_position(i), y_position(point.min_price)) for i, point in enumerate(history) if point.min_price is not None]
-    max_points = [(x_position(i), y_position(point.max_price)) for i, point in enumerate(history) if point.max_price is not None]
+    min_points = [
+        (index, x_position(index), y_position(point.min_price), point.min_price)
+        for index, point in enumerate(history)
+        if point.min_price is not None
+    ]
+    max_points = [
+        (index, x_position(index), y_position(point.max_price), point.max_price)
+        for index, point in enumerate(history)
+        if point.max_price is not None
+    ]
+    range_points = [
+        (index, x_position(index), y_position(point.min_price), y_position(point.max_price))
+        for index, point in enumerate(history)
+        if point.min_price is not None and point.max_price is not None
+    ]
 
     title = f"{key.name} prices — {key.marketplace} market"
     unit_text = f"{key.currency} per {key.unit_label}" if key.unit_label else key.currency
@@ -94,18 +122,27 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         parts.append(f'<line x1="{left}" y1="{y:.1f}" x2="{left + chart_width}" y2="{y:.1f}" class="grid"/>')
         parts.append(f'<text x="{left - 15}" y="{y + 4:.1f}" text-anchor="end" class="axis">{escape(_number(value))}</text>')
 
-    if len(min_points) >= 2 and len(max_points) >= 2:
-        polygon = " ".join(f"{x:.1f},{y:.1f}" for x, y in min_points + list(reversed(max_points)))
+    for segment in _segments(range_points):
+        if len(segment) < 2:
+            continue
+        lower = [(x, min_y) for _, x, min_y, _ in segment]
+        upper = [(x, max_y) for _, x, _, max_y in reversed(segment)]
+        polygon = " ".join(f"{x:.1f},{y:.1f}" for x, y in lower + upper)
         parts.append(f'<polygon points="{polygon}" class="range"/>')
 
     for points, css_class in ((min_points, "minimum"), (max_points, "maximum")):
-        if len(points) >= 2:
-            path = " ".join(("M" if index == 0 else "L") + f" {x:.1f} {y:.1f}" for index, (x, y) in enumerate(points))
+        for segment in _segments(points):
+            if len(segment) < 2:
+                continue
+            path = " ".join(
+                ("M" if point_index == 0 else "L") + f" {x:.1f} {y:.1f}"
+                for point_index, (_, x, y, _) in enumerate(segment)
+            )
             parts.append(f'<path d="{path}" class="{css_class}"/>')
 
-    for x, y in min_points:
+    for _, x, y, _ in min_points:
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" class="point-min"/>')
-    for x, y in max_points:
+    for _, x, y, _ in max_points:
         parts.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4.5" class="point-max"/>')
 
     if len(history) <= 8:
@@ -116,18 +153,18 @@ def render_price_chart(key: SeriesKey, history: Sequence[PriceObservation]) -> s
         parts.append(f'<text x="{x_position(index):.1f}" y="{top + chart_height + 34}" text-anchor="middle" class="axis">{escape(_date_label(history[index]))}</text>')
 
     if max_points:
-        x, y = max_points[-1]
-        latest_maximum = next(point.max_price for point in reversed(history) if point.max_price is not None)
+        _, x, y, latest_maximum = max_points[-1]
         parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label maximum-label">Maximum · {_number(latest_maximum)}</text>')
     if min_points:
-        x, y = min_points[-1]
-        latest_minimum = next(point.min_price for point in reversed(history) if point.min_price is not None)
+        _, x, y, latest_minimum = min_points[-1]
         parts.append(f'<text x="{x + 15:.1f}" y="{y + 4:.1f}" class="direct-label minimum-label">Minimum · {_number(latest_minimum)}</text>')
+
+    source_host = (urlparse(history[-1].source_url).hostname or history[-1].source_url).removeprefix("www.")
 
     parts.extend(
         [
             f'<text x="28" y="{top + chart_height / 2:.1f}" text-anchor="middle" class="axis" transform="rotate(-90 28 {top + chart_height / 2:.1f})">Price ({escape(key.currency)})</text>',
-            f'<text x="{left}" y="{height - 28}" class="source">Source: Wisarra · Last observation {_date_label(history[-1])} {history[-1].scraped_at.year}</text>',
+            f'<text x="{left}" y="{height - 28}" class="source">Source: {escape(source_host)} · Last observation {_date_label(history[-1])} {history[-1].scraped_at.year}</text>',
             "</svg>",
         ]
     )

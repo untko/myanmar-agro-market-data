@@ -53,7 +53,7 @@ python -m scripts.main --skip-scrape
 python -m unittest discover -s tests -v
 ```
 
-Generated charts are flat, stable per-series SVG files. `artifacts/charts/index.csv` maps each filename to its product, location, marketplace, currency, quantity, and unit.
+Generated charts are flat, stable per-series SVG files. `artifacts/charts/index.csv` maps each filename to its product, location, marketplace, currency, quantity, and unit. A series needs at least two weekly observations and one numeric price to produce a meaningful chart.
 
 ## Automation
 

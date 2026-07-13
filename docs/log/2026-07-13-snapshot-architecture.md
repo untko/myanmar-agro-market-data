@@ -26,3 +26,5 @@ The binary database, category folders, and generated reports were then removed f
 ## Consequences
 
 Repository diffs now show newly observed data directly. Charts no longer mix markets or units, reruns within one week no longer create duplicate x-axis points, and all derived outputs can be reproduced offline with `python -m scripts.main --skip-scrape`.
+
+The post-implementation review also tightened the interfaces: empty or schema-invalid snapshots are rejected, report sections distinguish mixed minimum/maximum movements, missing chart bounds remain visible as gaps, source attribution is derived from observation metadata, and every series with at least two weeks and one numeric price receives a chart.

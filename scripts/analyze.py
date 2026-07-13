@@ -5,8 +5,11 @@ from __future__ import annotations
 import csv
 import json
 import shutil
+from dataclasses import dataclass
+from enum import StrEnum
 from pathlib import Path
 from typing import Mapping, Sequence
+from urllib.parse import urlparse
 
 from .charts import write_price_chart
 from .dataset import PriceDataset, PriceObservation, SeriesKey
@@ -37,27 +40,49 @@ def _markdown(value: str) -> str:
     return value.replace("|", "\\|")
 
 
-def _comparison_row(
+class Movement(StrEnum):
+    UP = "up"
+    DOWN = "down"
+    MIXED = "mixed"
+    SAME = "same"
+
+
+@dataclass(frozen=True)
+class PriceComparison:
+    key: SeriesKey
+    previous: PriceObservation
+    current: PriceObservation
+    min_change: float | None
+    max_change: float | None
+    magnitude: float
+    movement: Movement
+
+
+def _compare_prices(
     key: SeriesKey,
     previous: PriceObservation,
     current: PriceObservation,
-) -> dict[str, object]:
+) -> PriceComparison:
     min_change = _percent_change(previous.min_price, current.min_price)
     max_change = _percent_change(previous.max_price, current.max_price)
     changes = [value for value in (min_change, max_change) if value is not None]
-    direction = "same"
-    if any(value > 0 for value in changes):
-        direction = "up"
+    if any(value > 0 for value in changes) and any(value < 0 for value in changes):
+        movement = Movement.MIXED
+    elif any(value > 0 for value in changes):
+        movement = Movement.UP
     elif any(value < 0 for value in changes):
-        direction = "down"
-    return {
-        "key": key,
-        "previous": previous,
-        "current": current,
-        "max_change": max_change,
-        "magnitude": max((abs(value) for value in changes), default=0),
-        "direction": direction,
-    }
+        movement = Movement.DOWN
+    else:
+        movement = Movement.SAME
+    return PriceComparison(
+        key=key,
+        previous=previous,
+        current=current,
+        min_change=min_change,
+        max_change=max_change,
+        magnitude=max((abs(value) for value in changes), default=0),
+        movement=movement,
+    )
 
 
 def generate_report(
@@ -80,20 +105,25 @@ def generate_report(
     )
 
     comparisons = [
-        _comparison_row(key, previous[key], latest[key])
+        _compare_prices(key, previous[key], latest[key])
         for key in sorted(latest.keys() & previous.keys())
     ]
     increases = sorted(
-        (row for row in comparisons if row["direction"] == "up"),
-        key=lambda row: row["magnitude"],
+        (row for row in comparisons if row.movement is Movement.UP),
+        key=lambda row: row.magnitude,
         reverse=True,
     )
     decreases = sorted(
-        (row for row in comparisons if row["direction"] == "down"),
-        key=lambda row: row["magnitude"],
+        (row for row in comparisons if row.movement is Movement.DOWN),
+        key=lambda row: row.magnitude,
         reverse=True,
     )
-    unchanged = [row for row in comparisons if row["direction"] == "same"]
+    mixed = sorted(
+        (row for row in comparisons if row.movement is Movement.MIXED),
+        key=lambda row: row.magnitude,
+        reverse=True,
+    )
+    unchanged = [row for row in comparisons if row.movement is Movement.SAME]
     new_keys = sorted(latest.keys() - previous.keys())
     removed_keys = sorted(previous.keys() - latest.keys())
 
@@ -101,11 +131,13 @@ def generate_report(
     previous_date = max((point.scraped_at for point in previous.values()), default=None)
     report_path = Path(output_dir) / f"{latest_week[0]}-W{latest_week[1]:02d}.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
+    source_url = max(latest.values(), key=lambda point: point.scraped_at).source_url
+    source_host = (urlparse(source_url).hostname or source_url).removeprefix("www.")
 
     lines = [
         "# Myanmar Agricultural Market Prices",
         "",
-        f"**Source:** [Wisarra](https://wisarra.com/en/market-price)  ",
+        f"**Source:** [{source_host}]({source_url})  ",
         f"**Latest observation:** {latest_date:%Y-%m-%d}  ",
     ]
     if previous_date:
@@ -120,6 +152,7 @@ def generate_report(
             "|---|---:|",
             f"| Price increased | {len(increases)} |",
             f"| Price decreased | {len(decreases)} |",
+            f"| Range moved in opposite directions | {len(mixed)} |",
             f"| Price unchanged | {len(unchanged)} |",
             f"| New market series | {len(new_keys)} |",
             f"| Removed market series | {len(removed_keys)} |",
@@ -127,31 +160,34 @@ def generate_report(
         ]
     )
 
-    def add_change_table(title: str, rows: Sequence[dict[str, object]]) -> None:
+    def format_change(value: float | None) -> str:
+        return "N/A" if value is None else f"{value:+.1f}%"
+
+    def add_change_table(title: str, rows: Sequence[PriceComparison]) -> None:
         if not rows:
             return
         lines.extend(
             [
                 f"## {title}",
                 "",
-                "| Product | Location | Market | Previous Max | Current Max | Change |",
-                "|---|---|---|---:|---:|---:|",
+                "| Product | Location | Market | Unit | Previous Min | Current Min | Min change | Previous Max | Current Max | Max change |",
+                "|---|---|---|---|---:|---:|---:|---:|---:|---:|",
             ]
         )
         for row in rows[:10]:
-            key = row["key"]
-            previous_point = row["previous"]
-            current_point = row["current"]
-            change = row["max_change"]
-            change_text = "N/A" if change is None else f"{change:+.1f}%"
+            key = row.key
+            unit_context = f"{key.currency} per {key.unit_label}"
             lines.append(
                 f"| {_markdown(key.name)} | {_markdown(key.location)} | {_markdown(key.marketplace)} "
-                f"| {_price(previous_point.max_price)} | {_price(current_point.max_price)} | {change_text} |"
+                f"| {_markdown(unit_context)} | {_price(row.previous.min_price)} | {_price(row.current.min_price)} "
+                f"| {format_change(row.min_change)} | {_price(row.previous.max_price)} | {_price(row.current.max_price)} "
+                f"| {format_change(row.max_change)} |"
             )
         lines.append("")
 
     add_change_table("Price increases", increases)
     add_change_table("Price decreases", decreases)
+    add_change_table("Mixed range movements", mixed)
 
     if new_keys:
         lines.extend(["## New market series", ""])
@@ -172,8 +208,8 @@ def generate_report(
     if unchanged:
         lines.extend([f"## Unchanged ({len(unchanged)} series)", "", "<details><summary>Show series</summary>", ""])
         for row in unchanged:
-            key = row["key"]
-            point = row["current"]
+            key = row.key
+            point = row.current
             lines.append(
                 f"- {_markdown(key.name)} — {_markdown(key.marketplace)}, {_markdown(key.location)}: "
                 f"{_price(point.min_price)}–{_price(point.max_price)} {key.currency} per {_markdown(key.unit_label)}"
@@ -185,6 +221,7 @@ def generate_report(
         "report_path": str(report_path),
         "price_up": len(increases),
         "price_down": len(decreases),
+        "price_mixed": len(mixed),
         "price_same": len(unchanged),
         "new_series": len(new_keys),
         "removed_series": len(removed_keys),
@@ -192,23 +229,11 @@ def generate_report(
     }
 
 
-def _chart_score(history: Sequence[PriceObservation]) -> tuple[int, float, int]:
-    maximums = [point.max_price for point in history if point.max_price is not None]
-    changes = sum(previous != current for previous, current in zip(maximums, maximums[1:]))
-    percentages = [
-        abs((current - previous) / previous)
-        for previous, current in zip(maximums, maximums[1:])
-        if previous
-    ]
-    return changes, max(percentages, default=0), len(history)
-
-
 def generate_charts(
     series: Mapping[SeriesKey, Sequence[PriceObservation]],
     charts_dir: Path = CHARTS_DIR,
-    top_n: int = 20,
 ) -> int:
-    """Generate flat, stable chart artifacts for the most informative market series."""
+    """Generate one flat, stable chart artifact for every chartable market series."""
     output_dir = Path(charts_dir)
     if output_dir.exists():
         for child in output_dir.iterdir():
@@ -218,9 +243,16 @@ def generate_charts(
                 child.unlink()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    candidates = [(key, list(history)) for key, history in series.items() if len(history) >= 2]
-    candidates.sort(key=lambda item: (_chart_score(item[1]), item[0].stable_id), reverse=True)
-    selected = candidates[:top_n]
+    candidates = [
+        (key, list(history))
+        for key, history in series.items()
+        if len(history) >= 2
+        and any(
+            point.min_price is not None or point.max_price is not None
+            for point in history
+        )
+    ]
+    candidates.sort(key=lambda item: item[0].stable_id)
 
     manifest_path = output_dir / "index.csv"
     with manifest_path.open("w", newline="", encoding="utf-8") as handle:
@@ -237,7 +269,7 @@ def generate_charts(
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
-        for key, history in selected:
+        for key, history in candidates:
             filename = f"{key.stable_id}.svg"
             write_price_chart(output_dir / filename, key, history)
             writer.writerow(
@@ -253,7 +285,7 @@ def generate_charts(
                     "observations": len(history),
                 }
             )
-    return len(selected)
+    return len(candidates)
 
 
 def main() -> None:

@@ -9,6 +9,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .dataset import PriceDataset
+from .scrape_wisarra import BASE_URL
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -33,7 +34,7 @@ def migrate_database(database_path: Path, dataset: PriceDataset) -> list[Path]:
 
     batches: dict[str, list[dict[str, object]]] = defaultdict(list)
     for row in rows:
-        batches[row["scraped_at"]].append(dict(row))
+        batches[row["scraped_at"]].append({**dict(row), "source_url": BASE_URL})
 
     snapshots = []
     for timestamp in sorted(batches):

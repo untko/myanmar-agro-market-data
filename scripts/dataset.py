@@ -6,32 +6,20 @@ import csv
 import hashlib
 import io
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable, Mapping
-
-
-SOURCE_URL = "https://wisarra.com/en/market-price"
-SNAPSHOT_COLUMNS = (
-    "name",
-    "location",
-    "marketplace",
-    "min_price",
-    "max_price",
-    "currency",
-    "quantity",
-    "unit",
-    "scraped_at",
-    "source_url",
-)
-SERIES_FIELDS = ("name", "location", "marketplace", "currency", "quantity", "unit")
+from urllib.parse import urlparse
 
 
 def _parse_price(value: object) -> int | None:
     if value is None or str(value).strip() in {"", "-"}:
         return None
-    return int(str(value).replace(",", "").strip())
+    price = int(str(value).replace(",", "").strip())
+    if price < 0:
+        raise ValueError("Prices must be non-negative integers")
+    return price
 
 
 def _format_timestamp(value: datetime) -> str:
@@ -55,7 +43,11 @@ class SeriesKey:
 
     @classmethod
     def from_mapping(cls, row: Mapping[str, object]) -> "SeriesKey":
-        return cls(**{field: str(row.get(field) or "").strip() for field in SERIES_FIELDS})
+        values = {field: str(row.get(field) or "").strip() for field in SERIES_FIELDS}
+        empty = [field for field, value in values.items() if not value]
+        if empty:
+            raise ValueError(f"Series identity fields cannot be empty: {', '.join(empty)}")
+        return cls(**values)
 
     @property
     def stable_id(self) -> str:
@@ -75,6 +67,19 @@ class PriceObservation:
     min_price: int | None
     max_price: int | None
     scraped_at: datetime
+    source_url: str
+
+
+SERIES_FIELDS = tuple(field.name for field in fields(SeriesKey))
+SNAPSHOT_COLUMNS = (
+    *SERIES_FIELDS[:3],
+    "min_price",
+    "max_price",
+    *SERIES_FIELDS[3:],
+    "scraped_at",
+    "source_url",
+)
+REQUIRED_INPUT_FIELDS = (*SERIES_FIELDS, "min_price", "max_price", "source_url")
 
 
 class PriceDataset:
@@ -88,6 +93,9 @@ class PriceDataset:
         rows: Iterable[Mapping[str, object]],
         observed_at: datetime | None = None,
     ) -> Path:
+        rows = list(rows)
+        if not rows:
+            raise ValueError("Cannot record an empty scrape snapshot")
         observed_at = (observed_at or datetime.now(timezone.utc)).astimezone(timezone.utc)
         timestamp = _format_timestamp(observed_at)
         output_path = self.snapshots_dir / observed_at.strftime("%Y") / f"{observed_at.strftime('%Y-%m-%dT%H-%M-%SZ')}.csv"
@@ -96,23 +104,28 @@ class PriceDataset:
         writer = csv.DictWriter(buffer, fieldnames=SNAPSHOT_COLUMNS, lineterminator="\n")
         writer.writeheader()
         for source_row in rows:
-            missing = [field for field in SERIES_FIELDS if field not in source_row]
+            missing = [field for field in REQUIRED_INPUT_FIELDS if field not in source_row]
             if missing:
                 raise ValueError(f"Snapshot row is missing required fields: {', '.join(missing)}")
+            series = SeriesKey.from_mapping(source_row)
+            source_url = str(source_row["source_url"]).strip()
+            parsed_url = urlparse(source_url)
+            if parsed_url.scheme not in {"http", "https"} or not parsed_url.netloc:
+                raise ValueError("Snapshot source_url must be an absolute HTTP(S) URL")
             min_price = _parse_price(source_row.get("min_price"))
             max_price = _parse_price(source_row.get("max_price"))
             writer.writerow(
                 {
-                    "name": str(source_row["name"]).strip(),
-                    "location": str(source_row["location"]).strip(),
-                    "marketplace": str(source_row["marketplace"]).strip(),
+                    "name": series.name,
+                    "location": series.location,
+                    "marketplace": series.marketplace,
                     "min_price": "" if min_price is None else min_price,
                     "max_price": "" if max_price is None else max_price,
-                    "currency": str(source_row["currency"]).strip(),
-                    "quantity": str(source_row.get("quantity") or "").strip(),
-                    "unit": str(source_row.get("unit") or "").strip(),
+                    "currency": series.currency,
+                    "quantity": series.quantity,
+                    "unit": series.unit,
                     "scraped_at": timestamp,
-                    "source_url": str(source_row.get("source_url") or SOURCE_URL),
+                    "source_url": source_url,
                 }
             )
 
@@ -137,6 +150,7 @@ class PriceDataset:
                             min_price=_parse_price(row.get("min_price")),
                             max_price=_parse_price(row.get("max_price")),
                             scraped_at=_parse_timestamp(row["scraped_at"]),
+                            source_url=row["source_url"],
                         )
                     )
         return sorted(observations, key=lambda item: (item.series, item.scraped_at))

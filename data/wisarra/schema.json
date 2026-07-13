@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Wisarra agricultural market price snapshot row",
+  "title": "Wisarra agricultural market price CSV snapshot row",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -16,14 +16,14 @@
     "source_url"
   ],
   "properties": {
-    "name": {"type": "string", "description": "Product name as published by Wisarra."},
-    "location": {"type": "string", "description": "City or region as published by Wisarra."},
-    "marketplace": {"type": "string", "description": "Specific market as published by Wisarra."},
-    "min_price": {"type": ["integer", "null"], "minimum": 0},
-    "max_price": {"type": ["integer", "null"], "minimum": 0},
-    "currency": {"type": "string"},
-    "quantity": {"type": "string"},
-    "unit": {"type": "string"},
+    "name": {"type": "string", "minLength": 1, "description": "Product name as published by Wisarra."},
+    "location": {"type": "string", "minLength": 1, "description": "City or region as published by Wisarra."},
+    "marketplace": {"type": "string", "minLength": 1, "description": "Specific market as published by Wisarra."},
+    "min_price": {"type": "string", "pattern": "^(?:[0-9]+)?$", "description": "Non-negative integer encoded as CSV text, or empty when unavailable."},
+    "max_price": {"type": "string", "pattern": "^(?:[0-9]+)?$", "description": "Non-negative integer encoded as CSV text, or empty when unavailable."},
+    "currency": {"type": "string", "minLength": 1},
+    "quantity": {"type": "string", "minLength": 1},
+    "unit": {"type": "string", "minLength": 1},
     "scraped_at": {"type": "string", "format": "date-time"},
     "source_url": {"type": "string", "format": "uri"}
   }
