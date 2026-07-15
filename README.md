@@ -35,7 +35,7 @@ A comparable price series is identified by all of the following fields:
 source + product name + location + marketplace + market-chain level + currency + quantity + unit
 ```
 
-This prevents different publishers, retail/wholesale tiers, markets, or trading units from being joined into false trends. Product, location, marketplace, quantity, unit, and decimal price values remain as published. `observed_at` records when the price applies; `collected_at` records when the repository captured it. Charts retain only the latest observation for each exact series in each ISO week, and reports compare the latest two available ISO weeks independently for each source.
+This prevents different publishers, retail/wholesale tiers, markets, or trading units from being joined into false trends. Product, location, marketplace, quantity, unit, and decimal price values remain as published. `observed_at` records when the price applies; `collected_at` records when the repository captured it. Reports compare each source's latest two publication editions, distinguishing newly reported series, series returning after an absence, and series not reported in the latest edition. Absence is not interpreted as product removal. Charts remain weekly: they retain the latest observation for each exact series in each ISO week and leave truthful gaps when a week is missing.
 
 See [`data/price-observation-schema.json`](data/price-observation-schema.json) for the shared snapshot row contract.
 

@@ -6,6 +6,7 @@ import csv
 import json
 import shutil
 from dataclasses import dataclass
+from datetime import date, datetime
 from decimal import Decimal
 from enum import StrEnum
 from pathlib import Path
@@ -115,33 +116,61 @@ def generate_report(
     series: Mapping[SeriesKey, Sequence[PriceObservation]],
     output_dir: Path = REPORTS_DIR,
 ) -> dict[str, object]:
-    """Generate a report comparing exact market series across the latest two weeks."""
-    points = [point for history in series.values() for point in history]
-    if not points:
+    """Compare exact market series across each source's latest two publications."""
+    collected_points = [point for history in series.values() for point in history]
+    if not collected_points:
         raise ValueError("Cannot generate a report without observations")
+
+    latest_collection: dict[tuple[str, date], datetime] = {}
+    for point in collected_points:
+        edition = (point.series.source, point.observed_at.date())
+        latest_collection[edition] = max(
+            latest_collection.get(edition, point.collected_at),
+            point.collected_at,
+        )
+    points = [
+        point
+        for point in collected_points
+        if point.collected_at == latest_collection[(point.series.source, point.observed_at.date())]
+    ]
+    edition_series: dict[SeriesKey, list[PriceObservation]] = {}
+    for point in points:
+        edition_series.setdefault(point.series, []).append(point)
 
     latest: dict[SeriesKey, PriceObservation] = {}
     previous: dict[SeriesKey, PriceObservation] = {}
+    returned_key_set: set[SeriesKey] = set()
     source_windows: dict[str, tuple[PriceObservation | None, PriceObservation]] = {}
     latest_weeks: list[tuple[int, int]] = []
     for source in sorted({point.series.source for point in points}):
-        source_series = {key: history for key, history in series.items() if key.source == source}
-        source_weeks = sorted({_week(point) for history in source_series.values() for point in history})
-        source_latest_week = source_weeks[-1]
-        source_previous_week = source_weeks[-2] if len(source_weeks) > 1 else None
-        latest_weeks.append(source_latest_week)
+        source_series = {
+            key: history for key, history in edition_series.items() if key.source == source
+        }
+        source_dates = sorted(
+            {point.observed_at.date() for history in source_series.values() for point in history}
+        )
+        source_latest_date = source_dates[-1]
+        source_previous_date = source_dates[-2] if len(source_dates) > 1 else None
         for key, history in source_series.items():
-            latest_matches = [point for point in history if _week(point) == source_latest_week]
+            latest_matches = [point for point in history if point.observed_at.date() == source_latest_date]
             if latest_matches:
                 latest[key] = max(latest_matches, key=lambda point: (point.observed_at, point.collected_at))
-            if source_previous_week:
-                previous_matches = [point for point in history if _week(point) == source_previous_week]
+            previous_matches: list[PriceObservation] = []
+            if source_previous_date:
+                previous_matches = [
+                    point for point in history if point.observed_at.date() == source_previous_date
+                ]
                 if previous_matches:
                     previous[key] = max(previous_matches, key=lambda point: (point.observed_at, point.collected_at))
+                elif latest_matches and any(
+                    point.observed_at.date() < source_previous_date for point in history
+                ):
+                    returned_key_set.add(key)
         latest_point = max(
             (point for key, point in latest.items() if key.source == source),
             key=lambda point: point.observed_at,
         )
+        latest_weeks.append(_week(latest_point))
         previous_point = max(
             (point for key, point in previous.items() if key.source == source),
             key=lambda point: point.observed_at,
@@ -170,8 +199,10 @@ def generate_report(
     )
     unchanged = [row for row in comparisons if row.movement is Movement.SAME]
     not_comparable = [row for row in comparisons if row.movement is Movement.NOT_COMPARABLE]
-    new_keys = sorted(latest.keys() - previous.keys())
-    removed_keys = sorted(previous.keys() - latest.keys())
+    returned_keys = sorted(returned_key_set & (latest.keys() - previous.keys()))
+    newly_reported_keys = sorted((latest.keys() - previous.keys()) - set(returned_keys))
+    not_reported_keys = sorted(previous.keys() - latest.keys())
+    not_reported_verb = "was" if len(not_reported_keys) == 1 else "were"
 
     latest_date = max(point.observed_at for point in latest.values())
     previous_date = max((point.observed_at for point in previous.values()), default=None)
@@ -198,11 +229,18 @@ def generate_report(
         f"- **Coverage.** {len(latest)} exact market series from {len(source_points)} "
         f"{'source' if len(source_points) == 1 else 'sources'}, with the latest observation on {latest_date:%Y-%m-%d}.",
         (
-            f"- **Weekly movement.** {len(increases)} increased, {len(decreases)} decreased, "
+            f"- **Edition-to-edition movement.** {len(increases)} increased, {len(decreases)} decreased, "
             f"{len(mixed)} had mixed range movement, {len(unchanged)} were unchanged, and "
             f"{len(not_comparable)} lacked a shared numeric measure."
             if previous_date
-            else "- **Weekly movement.** No prior ISO week is available for comparison."
+            else "- **Edition-to-edition movement.** No prior publication is available for comparison."
+        ),
+        (
+            f"- **Coverage changes.** {len(newly_reported_keys)} newly reported, "
+            f"{len(returned_keys)} returned after absence, and {len(not_reported_keys)} "
+            f"{not_reported_verb} not reported in the latest edition."
+            if previous_date
+            else "- **Coverage changes.** No prior publication is available for comparison."
         ),
         "- **Comparability.** Changes are calculated only between observations with the same source, market tier, product, location, market, currency, quantity, and unit.",
         "",
@@ -227,9 +265,9 @@ def generate_report(
     lines.append("")
     lines.extend(
         [
-            f"**Market series tracked:** {len(latest)}",
+            f"**Market series reported in the latest edition:** {len(latest)}",
             "",
-            "## Weekly counts",
+            "## Edition-to-edition counts",
             "",
             "| Metric | Count |",
             "|---|---:|",
@@ -238,8 +276,9 @@ def generate_report(
             f"| Range moved in opposite directions | {len(mixed)} |",
             f"| Price unchanged | {len(unchanged)} |",
             f"| Not comparable | {len(not_comparable)} |",
-            f"| New market series | {len(new_keys)} |",
-            f"| Removed market series | {len(removed_keys)} |",
+            f"| Newly reported market series | {len(newly_reported_keys)} |",
+            f"| Returned after absence | {len(returned_keys)} |",
+            f"| Not reported in latest edition | {len(not_reported_keys)} |",
             "",
         ]
     )
@@ -318,9 +357,9 @@ def generate_report(
     add_change_table("Price decreases", decreases)
     add_change_table("Mixed range movements", mixed)
 
-    if new_keys:
-        lines.extend(["## New market series", ""])
-        for key in new_keys:
+    if newly_reported_keys:
+        lines.extend(["## Newly reported market series", ""])
+        for key in newly_reported_keys:
             point = latest[key]
             lines.append(
                 f"- **{_markdown(key.name)}** [{_markdown(key.source)} · {_markdown(key.market_chain_level)}] "
@@ -329,9 +368,22 @@ def generate_report(
             )
         lines.append("")
 
-    if removed_keys:
-        lines.extend(["## Removed market series", ""])
-        for key in removed_keys:
+    if returned_keys:
+        lines.extend(["## Returned after absence", ""])
+        for key in returned_keys:
+            point = latest[key]
+            lines.append(
+                f"- **{_markdown(key.name)}** [{_markdown(key.source)} · {_markdown(key.market_chain_level)}] "
+                f"— {_markdown(key.marketplace)}, {_markdown(key.location)}: "
+                f"{_price_summary(point)} {key.currency} per {_markdown(key.unit_label)}"
+            )
+        lines.append("")
+
+    if not_reported_keys:
+        lines.extend(["## Not reported in the latest edition", ""])
+        lines.append("Absence means the source did not list the series in this edition; it does not prove that the product or market was removed.")
+        lines.append("")
+        for key in not_reported_keys:
             lines.append(
                 f"- **{_markdown(key.name)}** [{_markdown(key.source)} · {_markdown(key.market_chain_level)}] "
                 f"— {_markdown(key.marketplace)}, {_markdown(key.location)}"
@@ -353,7 +405,7 @@ def generate_report(
     if not_comparable:
         lines.extend([f"## Not comparable ({len(not_comparable)} series)", ""])
         lines.append(
-            "These series appeared in both weeks but did not have the same numeric price measure available in both observations."
+            "These series appeared in both editions but did not have the same numeric price measure available in both observations."
         )
         lines.append("")
         for row in not_comparable:
@@ -373,8 +425,9 @@ def generate_report(
         "price_mixed": len(mixed),
         "price_same": len(unchanged),
         "price_not_comparable": len(not_comparable),
-        "new_series": len(new_keys),
-        "removed_series": len(removed_keys),
+        "newly_reported_series": len(newly_reported_keys),
+        "returned_series": len(returned_keys),
+        "not_reported_series": len(not_reported_keys),
         "total_series": len(latest),
         "sources": sorted(source_points),
     }
@@ -445,9 +498,8 @@ def generate_charts(
 
 def main() -> None:
     dataset = PriceDataset(SNAPSHOTS_DIR)
-    series = dataset.weekly_series()
-    stats = generate_report(series)
-    chart_count = generate_charts(series)
+    stats = generate_report(dataset.observation_series())
+    chart_count = generate_charts(dataset.weekly_series())
     print(json.dumps({**stats, "charts_generated": chart_count}, indent=2))
 
 

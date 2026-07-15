@@ -240,6 +240,13 @@ class PriceDataset:
             result[key] = history[-limit:]
         return result
 
+    def observation_series(self) -> dict[SeriesKey, list[PriceObservation]]:
+        """Group every collected observation by its exact market-series identity."""
+        result: dict[SeriesKey, list[PriceObservation]] = {}
+        for observation in self.load():
+            result.setdefault(observation.series, []).append(observation)
+        return result
+
     def latest_observed_date(self, source: str) -> date | None:
         """Return the latest published calendar date stored for one source."""
         dates = [

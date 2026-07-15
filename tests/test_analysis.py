@@ -29,6 +29,7 @@ def observation(
     observed_at: datetime,
     source_url: str = "https://wisarra.com/en/market-price",
     modal_price: int | None = None,
+    collected_at: datetime | None = None,
 ) -> PriceObservation:
     return PriceObservation(
         series=key,
@@ -36,7 +37,7 @@ def observation(
         max_price=max_price,
         modal_price=modal_price,
         observed_at=observed_at,
-        collected_at=observed_at,
+        collected_at=collected_at or observed_at,
         source_record_id="",
         source_url=source_url,
     )
@@ -109,7 +110,7 @@ class AnalysisTests(unittest.TestCase):
             self.assertIn("Previous Modal | Current Modal | Modal change", report)
             self.assertIn("| 4,200.5 | 4,300.75 | +2.4% |", report)
 
-    def test_each_source_uses_its_own_latest_two_weeks(self):
+    def test_each_source_uses_its_own_latest_two_publications(self):
         wisarra = series_key("Dedaye")
         cso = SeriesKey("cso", "Rice", "Yangon", "Yangon", "retail", "MMK", "1", "pyi")
         series = {
@@ -128,9 +129,98 @@ class AnalysisTests(unittest.TestCase):
             report = Path(stats["report_path"]).read_text(encoding="utf-8")
 
             self.assertEqual(stats["total_series"], 2)
-            self.assertEqual(stats["removed_series"], 0)
+            self.assertEqual(stats["not_reported_series"], 0)
             self.assertIn("**cso comparison:** 2026-07-06 → 2026-07-13", report)
             self.assertIn("**wisarra comparison:** 2026-06-30 → 2026-07-06", report)
+
+    def test_report_distinguishes_new_returned_and_not_reported_series(self):
+        continuing = series_key("Continuing")
+        newly_reported = series_key("Newly Reported")
+        returned = series_key("Returned")
+        not_reported = series_key("Not Reported")
+        source = "https://wisarra.com/en/market-price"
+        series = {
+            continuing: [
+                observation(continuing, 100, 120, datetime(2026, 7, 6, tzinfo=timezone.utc), source),
+                observation(continuing, 110, 130, datetime(2026, 7, 8, tzinfo=timezone.utc), source),
+            ],
+            newly_reported: [
+                observation(newly_reported, 90, 100, datetime(2026, 7, 8, tzinfo=timezone.utc), source),
+            ],
+            returned: [
+                observation(returned, 80, 90, datetime(2026, 6, 30, tzinfo=timezone.utc), source),
+                observation(returned, 85, 95, datetime(2026, 7, 8, tzinfo=timezone.utc), source),
+            ],
+            not_reported: [
+                observation(not_reported, 70, 80, datetime(2026, 7, 6, tzinfo=timezone.utc), source),
+            ],
+        }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            stats = generate_report(series, Path(temp_dir))
+            report = Path(stats["report_path"]).read_text(encoding="utf-8")
+
+            self.assertEqual(stats["newly_reported_series"], 1)
+            self.assertEqual(stats["returned_series"], 1)
+            self.assertEqual(stats["not_reported_series"], 1)
+            self.assertIn("## Newly reported market series", report)
+            self.assertIn("## Returned after absence", report)
+            self.assertIn("## Not reported in the latest edition", report)
+            self.assertIn("1 was not reported in the latest edition", report)
+            self.assertNotIn("New market series", report)
+            self.assertNotIn("Removed market series", report)
+
+    def test_report_uses_latest_complete_batch_when_one_date_was_collected_twice(self):
+        continuing = series_key("Continuing")
+        omitted_later = series_key("Omitted Later")
+        added_later = series_key("Added Later")
+        source = "https://wisarra.com/en/market-price"
+        previous_date = datetime(2026, 6, 30, tzinfo=timezone.utc)
+        edition_date = datetime(2026, 7, 6, tzinfo=timezone.utc)
+        first_collection = datetime(2026, 7, 6, 1, tzinfo=timezone.utc)
+        corrected_collection = datetime(2026, 7, 6, 2, tzinfo=timezone.utc)
+        series = {
+            continuing: [
+                observation(continuing, 100, 120, previous_date, source),
+                observation(continuing, 105, 125, edition_date, source, collected_at=first_collection),
+                observation(continuing, 110, 130, edition_date, source, collected_at=corrected_collection),
+            ],
+            omitted_later: [
+                observation(omitted_later, 80, 90, previous_date, source),
+                observation(omitted_later, 85, 95, edition_date, source, collected_at=first_collection),
+            ],
+            added_later: [
+                observation(added_later, 70, 75, edition_date, source, collected_at=corrected_collection),
+            ],
+        }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            stats = generate_report(series, Path(temp_dir))
+            report = Path(stats["report_path"]).read_text(encoding="utf-8")
+
+            self.assertEqual(stats["total_series"], 2)
+            self.assertEqual(stats["newly_reported_series"], 1)
+            self.assertEqual(stats["not_reported_series"], 1)
+            self.assertIn("Added Later", report)
+            self.assertIn("Omitted Later", report)
+
+    def test_not_comparable_explanation_refers_to_editions(self):
+        empty = series_key("No Comparable Price")
+        source = "https://wisarra.com/en/market-price"
+        series = {
+            empty: [
+                observation(empty, None, 100, datetime(2026, 7, 6, tzinfo=timezone.utc), source),
+                observation(empty, 100, None, datetime(2026, 7, 8, tzinfo=timezone.utc), source),
+            ]
+        }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            stats = generate_report(series, Path(temp_dir))
+            report = Path(stats["report_path"]).read_text(encoding="utf-8")
+
+            self.assertEqual(stats["price_not_comparable"], 1)
+            self.assertIn("appeared in both editions", report)
+            self.assertNotIn("appeared in both weeks", report)
 
     def test_chart_generation_is_flat_stable_and_manifested(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -160,6 +250,27 @@ class AnalysisTests(unittest.TestCase):
         ]
         with tempfile.TemporaryDirectory() as temp_dir:
             self.assertEqual(generate_charts(series, Path(temp_dir)), 3)
+
+    def test_chart_generation_retains_history_when_latest_week_is_missing(self):
+        missing_latest = series_key("Missing Latest")
+        current = series_key("Current")
+        source = "https://wisarra.com/en/market-price"
+        series = {
+            missing_latest: [
+                observation(missing_latest, 100, 120, datetime(2026, 6, 23, tzinfo=timezone.utc), source),
+                observation(missing_latest, 110, 130, datetime(2026, 6, 30, tzinfo=timezone.utc), source),
+            ],
+            current: [
+                observation(current, 200, 220, datetime(2026, 6, 30, tzinfo=timezone.utc), source),
+                observation(current, 210, 230, datetime(2026, 7, 6, tzinfo=timezone.utc), source),
+            ],
+        }
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_dir = Path(temp_dir)
+            self.assertEqual(generate_charts(series, output_dir), 2)
+            manifest = (output_dir / "index.csv").read_text(encoding="utf-8")
+            self.assertIn("Missing Latest", manifest)
 
     def test_chart_generation_skips_series_without_any_numeric_price(self):
         empty = series_key("No Price Market")

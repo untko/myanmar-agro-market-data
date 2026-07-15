@@ -52,11 +52,11 @@ def run_pipeline(
     if rows is not None:
         snapshot_path = dataset.record(rows, collected_at)
 
-    series = dataset.weekly_series()
-    if not series:
+    observation_series = dataset.observation_series()
+    if not observation_series:
         raise RuntimeError("No snapshots are available for analysis")
-    stats = generate_report(series, reports_dir)
-    chart_count = generate_charts(series, charts_dir)
+    stats = generate_report(observation_series, reports_dir)
+    chart_count = generate_charts(dataset.weekly_series(), charts_dir)
     return {
         "snapshot": str(snapshot_path) if snapshot_path else None,
         "stats": stats,
