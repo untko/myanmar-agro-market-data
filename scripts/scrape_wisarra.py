@@ -89,6 +89,8 @@ def fetch_page(page_num: int) -> str:
             try:
                 data = json.loads(raw)
                 html = data.get("data", "")
+                if data.get("total") == 0 and not html:
+                    return "There is no price list"
                 return html
             except json.JSONDecodeError:
                 # Fallback: it might be raw HTML

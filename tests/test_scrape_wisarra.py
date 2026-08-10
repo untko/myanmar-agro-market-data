@@ -1,8 +1,8 @@
 import unittest
 from datetime import date
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
-from scripts.scrape_wisarra import parse_published_date, scrape_all
+from scripts.scrape_wisarra import fetch_page, parse_published_date, scrape_all
 
 
 class WisarraScraperTests(unittest.TestCase):
@@ -38,6 +38,14 @@ class WisarraScraperTests(unittest.TestCase):
         """
 
         self.assertEqual(parse_published_date(html), date(2026, 7, 8))
+
+    def test_empty_json_page_is_normalized_to_end_of_results(self):
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.read.return_value = b'{"total": 0, "data": ""}'
+
+        with patch("scripts.scrape_wisarra.urlopen", return_value=response):
+            self.assertEqual(fetch_page(10), "There is no price list")
 
     def test_unexpected_empty_page_rejects_partial_scrape(self):
         row = """
