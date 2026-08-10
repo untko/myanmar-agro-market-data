@@ -31,7 +31,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scraper + analyzer
-        run: python -m scripts.main 2>&1 | tee scrape_output.log
+        run: |
+          set -o pipefail
+          python -m scripts.main 2>&1 | tee scrape_output.log
         id: scrape
 
       - name: Upload reports and charts
