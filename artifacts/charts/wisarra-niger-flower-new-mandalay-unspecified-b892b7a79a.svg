@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Niger Flower (New) prices — Mandalay market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Niger Flower (New) prices in Mandalay, Mandalay, from 8 Jul to 8 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Niger Flower (New) prices in Mandalay, Mandalay, from 8 Jul to 14 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,25 +23,31 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Niger Flower (New) prices — Mandalay market</text>
-<text x="100" y="76" class="subtitle">Mandalay · wisarra · tier unspecified · MMK per 45 viss · 2 weekly observations · 8 Jul–8 Aug 2026</text>
+<text x="100" y="76" class="subtitle">Mandalay · wisarra · tier unspecified · MMK per 45 viss · 3 weekly observations · 8 Jul–14 Aug 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
-<text x="85" y="134.0" text-anchor="end" class="axis">410,000</text>
+<text x="85" y="134.0" text-anchor="end" class="axis">430,500</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">395,000</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">410,250</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">380,000</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">390,000</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">365,000</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">369,750</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">350,000</text>
-<circle cx="100.0" cy="396.7" r="4" class="point-min"/>
-<circle cx="810.0" cy="236.7" r="4" class="point-min"/>
-<circle cx="100.0" cy="343.3" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="183.3" r="4.5" class="point-max"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">349,500</text>
+<polygon points="694.9,290.0 810.0,211.0 810.0,171.5 694.9,250.5" class="range"/>
+<path d="M 694.9 290.0 L 810.0 211.0" class="minimum"/>
+<path d="M 694.9 250.5 L 810.0 171.5" class="maximum"/>
+<circle cx="100.0" cy="408.5" r="4" class="point-min"/>
+<circle cx="694.9" cy="290.0" r="4" class="point-min"/>
+<circle cx="810.0" cy="211.0" r="4" class="point-min"/>
+<circle cx="100.0" cy="369.0" r="4.5" class="point-max"/>
+<circle cx="694.9" cy="250.5" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="171.5" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">8 Jul</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="825.0" y="187.3" class="direct-label maximum-label">Maximum · 400,000</text>
-<text x="825.0" y="240.7" class="direct-label minimum-label">Minimum · 390,000</text>
+<text x="694.9" y="484" text-anchor="middle" class="axis">8 Aug</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="825.0" y="175.5" class="direct-label maximum-label">Maximum · 420,000</text>
+<text x="825.0" y="215.0" class="direct-label minimum-label">Minimum · 410,000</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 8 Aug 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 14 Aug 2026</text>
 </svg>
