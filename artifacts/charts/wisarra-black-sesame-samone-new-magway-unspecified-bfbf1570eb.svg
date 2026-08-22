@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
-<title>CP Corn (Hsipaw) prices — Lashio market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal CP Corn (Hsipaw) prices in Lashio, Shan, from 8 Aug to 21 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
+<title>Black Sesame (Samone) (New) prices — Magway market</title>
+<desc id="chart-desc">Available minimum, maximum, and modal Black Sesame (Samone) (New) prices in Magway, Magway, from 14 Aug to 21 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -22,26 +22,24 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 .source { font-size: 11px; fill: #7C8798; }
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
-<text id="chart-title" x="100" y="48" class="chart-title">CP Corn (Hsipaw) prices — Lashio market</text>
-<text x="100" y="76" class="subtitle">Shan · wisarra · tier unspecified · MMK per 1 viss · 3 weekly observations · 8 Aug–21 Aug 2026</text>
+<text id="chart-title" x="100" y="48" class="chart-title">Black Sesame (Samone) (New) prices — Magway market</text>
+<text x="100" y="76" class="subtitle">Magway · wisarra · tier unspecified · MMK per 45 viss · 2 weekly observations · 14 Aug–21 Aug 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
-<text x="85" y="134.0" text-anchor="end" class="axis">153,750</text>
+<text x="85" y="134.0" text-anchor="end" class="axis">86,100</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">148,125</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">84,975</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">142,500</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">83,850</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">136,875</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">82,725</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">131,250</text>
-<path d="M 100.0 396.7 L 427.7 226.0 L 810.0 183.3" class="maximum"/>
-<circle cx="100.0" cy="396.7" r="4.5" class="point-max"/>
-<circle cx="427.7" cy="226.0" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="183.3" r="4.5" class="point-max"/>
-<text x="100.0" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="427.7" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="85" y="454.0" text-anchor="end" class="axis">81,600</text>
+<path d="M 100.0 300.7 L 810.0 279.3" class="maximum"/>
+<circle cx="100.0" cy="300.7" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="279.3" r="4.5" class="point-max"/>
+<text x="100.0" y="484" text-anchor="middle" class="axis">14 Aug</text>
 <text x="810.0" y="484" text-anchor="middle" class="axis">21 Aug</text>
-<text x="825.0" y="187.3" class="direct-label maximum-label">Maximum · 150,000</text>
+<text x="825.0" y="283.3" class="direct-label maximum-label">Maximum · 84,000</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
 <text x="100" y="512" class="source">Source: wisarra.com · Last observation 21 Aug 2026</text>
 </svg>

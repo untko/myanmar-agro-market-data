@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Lablab Bean (Shwe Kyun) prices — Bayint Naung market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Lablab Bean (Shwe Kyun) prices in Bayint Naung, Yangon, from 30 Jun to 14 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Lablab Bean (Shwe Kyun) prices in Bayint Naung, Yangon, from 30 Jun to 21 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,7 +23,7 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Lablab Bean (Shwe Kyun) prices — Bayint Naung market</text>
-<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 4 weekly observations · 30 Jun–14 Aug 2026</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 5 weekly observations · 30 Jun–21 Aug 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
 <text x="85" y="134.0" text-anchor="end" class="axis">4,315</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
@@ -34,17 +34,19 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 <text x="85" y="374.0" text-anchor="end" class="axis">4,127</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
 <text x="85" y="454.0" text-anchor="end" class="axis">4,065</text>
-<path d="M 100.0 264.5 L 221.8 264.5" class="maximum"/>
-<path d="M 714.6 315.5 L 810.0 315.5" class="maximum"/>
+<path d="M 100.0 264.5 L 205.3 264.5" class="maximum"/>
+<path d="M 631.3 315.5 L 713.8 315.5 L 810.0 315.5" class="maximum"/>
 <circle cx="100.0" cy="264.5" r="4.5" class="point-max"/>
-<circle cx="221.8" cy="264.5" r="4.5" class="point-max"/>
-<circle cx="714.6" cy="315.5" r="4.5" class="point-max"/>
+<circle cx="205.3" cy="264.5" r="4.5" class="point-max"/>
+<circle cx="631.3" cy="315.5" r="4.5" class="point-max"/>
+<circle cx="713.8" cy="315.5" r="4.5" class="point-max"/>
 <circle cx="810.0" cy="315.5" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="221.8" y="484" text-anchor="middle" class="axis">8 Jul</text>
-<text x="714.6" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="205.3" y="484" text-anchor="middle" class="axis">8 Jul</text>
+<text x="631.3" y="484" text-anchor="middle" class="axis">8 Aug</text>
+<text x="713.8" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">21 Aug</text>
 <text x="825.0" y="319.5" class="direct-label maximum-label">Maximum · 4,170</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 14 Aug 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 21 Aug 2026</text>
 </svg>

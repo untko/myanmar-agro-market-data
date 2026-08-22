@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Mung Bean (Khayan Shwe Wah) prices — Bayint Naung market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Mung Bean (Khayan Shwe Wah) prices in Bayint Naung, Yangon, from 30 Jun to 14 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Mung Bean (Khayan Shwe Wah) prices in Bayint Naung, Yangon, from 30 Jun to 21 Aug 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,7 +23,7 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Mung Bean (Khayan Shwe Wah) prices — Bayint Naung market</text>
-<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 4 weekly observations · 30 Jun–14 Aug 2026</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 5 weekly observations · 30 Jun–21 Aug 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
 <text x="85" y="134.0" text-anchor="end" class="axis">14,354</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
@@ -34,26 +34,29 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 <text x="85" y="374.0" text-anchor="end" class="axis">10,954</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
 <text x="85" y="454.0" text-anchor="end" class="axis">9,821</text>
-<polygon points="100.0,419.0 221.8,222.7 221.8,210.0 100.0,406.7" class="range"/>
-<polygon points="714.6,185.7 810.0,210.4 810.0,197.7 714.6,161.0" class="range"/>
-<path d="M 100.0 419.0 L 221.8 222.7" class="minimum"/>
-<path d="M 714.6 185.7 L 810.0 210.4" class="minimum"/>
-<path d="M 100.0 406.7 L 221.8 210.0" class="maximum"/>
-<path d="M 714.6 161.0 L 810.0 197.7" class="maximum"/>
+<polygon points="100.0,419.0 205.3,222.7 205.3,210.0 100.0,406.7" class="range"/>
+<polygon points="631.3,185.7 713.8,210.4 810.0,247.1 810.0,222.4 713.8,197.7 631.3,161.0" class="range"/>
+<path d="M 100.0 419.0 L 205.3 222.7" class="minimum"/>
+<path d="M 631.3 185.7 L 713.8 210.4 L 810.0 247.1" class="minimum"/>
+<path d="M 100.0 406.7 L 205.3 210.0" class="maximum"/>
+<path d="M 631.3 161.0 L 713.8 197.7 L 810.0 222.4" class="maximum"/>
 <circle cx="100.0" cy="419.0" r="4" class="point-min"/>
-<circle cx="221.8" cy="222.7" r="4" class="point-min"/>
-<circle cx="714.6" cy="185.7" r="4" class="point-min"/>
-<circle cx="810.0" cy="210.4" r="4" class="point-min"/>
+<circle cx="205.3" cy="222.7" r="4" class="point-min"/>
+<circle cx="631.3" cy="185.7" r="4" class="point-min"/>
+<circle cx="713.8" cy="210.4" r="4" class="point-min"/>
+<circle cx="810.0" cy="247.1" r="4" class="point-min"/>
 <circle cx="100.0" cy="406.7" r="4.5" class="point-max"/>
-<circle cx="221.8" cy="210.0" r="4.5" class="point-max"/>
-<circle cx="714.6" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="197.7" r="4.5" class="point-max"/>
+<circle cx="205.3" cy="210.0" r="4.5" class="point-max"/>
+<circle cx="631.3" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="713.8" cy="197.7" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="222.4" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="221.8" y="484" text-anchor="middle" class="axis">8 Jul</text>
-<text x="714.6" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">14 Aug</text>
-<text x="825.0" y="189.7" class="direct-label maximum-label">Maximum · 13,395</text>
-<text x="825.0" y="226.4" class="direct-label minimum-label">Minimum · 13,215</text>
+<text x="205.3" y="484" text-anchor="middle" class="axis">8 Jul</text>
+<text x="631.3" y="484" text-anchor="middle" class="axis">8 Aug</text>
+<text x="713.8" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">21 Aug</text>
+<text x="825.0" y="226.4" class="direct-label maximum-label">Maximum · 13,045</text>
+<text x="825.0" y="251.1" class="direct-label minimum-label">Minimum · 12,695</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 14 Aug 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 21 Aug 2026</text>
 </svg>
