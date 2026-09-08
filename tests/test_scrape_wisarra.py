@@ -27,6 +27,16 @@ class WisarraScraperTests(unittest.TestCase):
 
         self.assertEqual(parse_published_date(html), date(2026, 8, 8))
 
+    def test_four_letter_september_abbreviation_is_extracted(self):
+        html = """
+        <main>
+          <h2>Agricultural Market Prices</h2>
+          <p><span>Sept 2, 2026.</span></p>
+        </main>
+        """
+
+        self.assertEqual(parse_published_date(html), date(2026, 9, 2))
+
     def test_missing_published_date_fails_instead_of_guessing_collection_time(self):
         with self.assertRaisesRegex(ValueError, "publication date"):
             parse_published_date("<h2>Agricultural Market Prices</h2><table></table>")

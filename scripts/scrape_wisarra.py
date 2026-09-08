@@ -51,7 +51,7 @@ def parse_published_date(html: str) -> date:
     visible_text = " ".join(parser.parts)
     month_names = (
         "January|February|March|April|May|June|July|August|September|October|November|December|"
-        "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+        "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sept|Sep|Oct|Nov|Dec"
     )
     match = re.search(
         rf"Agricultural Market Prices\s+({month_names})\s+(\d{{1,2}}),\s+(\d{{4}})\.?",
@@ -60,6 +60,7 @@ def parse_published_date(html: str) -> date:
     if not match:
         raise ValueError("Wisarra market page does not contain a recognizable publication date")
     month, day, year = match.groups()
+    month = "Sep" if month == "Sept" else month
     for date_format in ("%B %d %Y", "%b %d %Y"):
         try:
             return datetime.strptime(f"{month} {day} {year}", date_format).date()
