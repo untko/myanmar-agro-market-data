@@ -2,7 +2,7 @@ file,series_id,source,market_chain_level,name,location,marketplace,currency,quan
 wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f.svg,wisarra-avocado-thiri-mingalar-zay-unspecified-7a9f54aa3f,wisarra,unspecified,Avocado,Yangon,Thiri Mingalar Zay,MMK,1,pc,9
 wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550.svg,wisarra-banana-phegyan-thiri-mingalar-zay-unspecified-d4b4790550,wisarra,unspecified,Banana (PheGyan),Yangon,Thiri Mingalar Zay,MMK,1,pc,9
 wisarra-bell-pepper-aungpan-unspecified-4df3d49835.svg,wisarra-bell-pepper-aungpan-unspecified-4df3d49835,wisarra,unspecified,Bell Pepper,Shan,Aungpan,MMK,1,viss,9
-wisarra-black-gram-new-monywa-unspecified-2e5e81ce80.svg,wisarra-black-gram-new-monywa-unspecified-2e5e81ce80,wisarra,unspecified,Black Gram(New),Sagaing,Monywa,MMK,1,basket,8
+wisarra-black-gram-new-monywa-unspecified-2e5e81ce80.svg,wisarra-black-gram-new-monywa-unspecified-2e5e81ce80,wisarra,unspecified,Black Gram(New),Sagaing,Monywa,MMK,1,basket,9
 wisarra-black-sesame-new-monywa-unspecified-9e766319cc.svg,wisarra-black-sesame-new-monywa-unspecified-9e766319cc,wisarra,unspecified,Black Sesame (New),Sagaing,Monywa,MMK,1,basket,7
 wisarra-black-sesame-pyay-unspecified-cb91fae552.svg,wisarra-black-sesame-pyay-unspecified-cb91fae552,wisarra,unspecified,Black Sesame,Bago,Pyay,MMK,1,bag,9
 wisarra-black-sesame-samone-new-magway-unspecified-bfbf1570eb.svg,wisarra-black-sesame-samone-new-magway-unspecified-bfbf1570eb,wisarra,unspecified,Black Sesame (Samone) (New),Magway,Magway,MMK,45,viss,5
@@ -40,7 +40,7 @@ wisarra-chick-pea-small-magway-unspecified-fa0fc0f057.svg,wisarra-chick-pea-smal
 wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada.svg,wisarra-chick-pea-taiwan-new-mandalay-unspecified-81c6aabada,wisarra,unspecified,Chick Pea (Taiwan) (New),Mandalay,Mandalay,MMK,56,viss,9
 wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44.svg,wisarra-chick-pea-thiwan-old-monywa-unspecified-54ec2ddb44,wisarra,unspecified,Chick Pea (Thiwan) (Old),Sagaing,Monywa,MMK,1,basket,2
 wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e.svg,wisarra-chick-pea-v2-myingyan-unspecified-0e893fd99e,wisarra,unspecified,Chick pea (v2),Mandalay,Myingyan,MMK,1,viss,9
-wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73.svg,wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73,wisarra,unspecified,Chick Pea (V2)) (New),Sagaing,Monywa,MMK,1,basket,8
+wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73.svg,wisarra-chick-pea-v2-new-monywa-unspecified-e8c4536a73,wisarra,unspecified,Chick Pea (V2)) (New),Sagaing,Monywa,MMK,1,basket,9
 wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847.svg,wisarra-chili-moe-htaung-myint-wa-bayint-naung-unspecified-d489dc4847,wisarra,unspecified,Chili (Moe Htaung) (Myint Wa),Yangon,Bayint Naung,MMK,1,viss,9
 wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914.svg,wisarra-chili-pwa-myintwakyunpaw-bayint-naung-unspecified-8ba8ce8914,wisarra,unspecified,Chili (Pwa) (MyintWaKyunPaw),Yangon,Bayint Naung,MMK,1,viss,9
 wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f.svg,wisarra-chili-pwa-sin-phyu-kyun-bayint-naung-unspecified-ef48b2c82f,wisarra,unspecified,Chili (Pwa) (Sin Phyu Kyun),Yangon,Bayint Naung,MMK,1,viss,9
@@ -58,7 +58,7 @@ wisarra-garden-pea-aungpan-unspecified-7dd050c08a.svg,wisarra-garden-pea-aungpan
 wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac.svg,wisarra-garlic-htoo-4-5-mawlamyine-unspecified-67485775ac,wisarra,unspecified,Garlic (Htoo 4.5),MON,Mawlamyine,MMK,1,viss,9
 wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188.svg,wisarra-garlic-kyu-gote-mawlamyine-unspecified-16ab93d188,wisarra,unspecified,Garlic (Kyu gote),MON,Mawlamyine,MMK,1,viss,9
 wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1.svg,wisarra-green-pea-bayint-naung-unspecified-f85eb5d3d1,wisarra,unspecified,Green pea,Yangon,Bayint Naung,MMK,1,viss,9
-wisarra-green-pea-mandalay-unspecified-3ebbce93f0.svg,wisarra-green-pea-mandalay-unspecified-3ebbce93f0,wisarra,unspecified,Green pea,Mandalay,Mandalay,MMK,59.25,viss,8
+wisarra-green-pea-mandalay-unspecified-3ebbce93f0.svg,wisarra-green-pea-mandalay-unspecified-3ebbce93f0,wisarra,unspecified,Green pea,Mandalay,Mandalay,MMK,59.25,viss,9
 wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2.svg,wisarra-groundnut-oil-pakokku-unspecified-2cad228bc2,wisarra,unspecified,Groundnut Oil,Magway,Pakokku,MMK,1,viss,9
 wisarra-groundnut-pea-red-magway-unspecified-96c3e8271b.svg,wisarra-groundnut-pea-red-magway-unspecified-96c3e8271b,wisarra,unspecified,Groundnut Pea (Red),Magway,Magway,MMK,1,viss,2
 wisarra-groundnut-white-new-monywa-unspecified-6842c8439c.svg,wisarra-groundnut-white-new-monywa-unspecified-6842c8439c,wisarra,unspecified,Groundnut (White) (New),Sagaing,Monywa,MMK,1,basket,2
