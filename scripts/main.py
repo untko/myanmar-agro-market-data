@@ -39,6 +39,31 @@ def collect_wisarra_update(
     ]
 
 
+def collect_wisarra_if_available(
+    dataset: PriceDataset,
+    *,
+    fetch_date: Callable[[], date] = fetch_published_date,
+    scrape: Callable[[], list[dict]] = scrape_all,
+) -> list[dict[str, object]] | None:
+    """Collect a Wisarra update, but degrade safely when its landing page is unavailable."""
+    try:
+        published_date = fetch_date()
+    except RuntimeError as error:
+        print(
+            f"WARNING: Wisarra publication page unavailable; preserving existing snapshots: {error}",
+            file=sys.stderr,
+        )
+        return None
+
+    print(f"Wisarra publication date: {published_date:%Y-%m-%d}", file=sys.stderr)
+    rows = collect_wisarra_update(dataset, published_date=published_date, scrape=scrape)
+    if rows is None:
+        print("  Already collected; skipping full scrape", file=sys.stderr)
+    else:
+        print(f"  Scraped {len(rows)} rows", file=sys.stderr)
+    return rows
+
+
 def run_pipeline(
     dataset: PriceDataset,
     rows: Iterable[Mapping[str, object]] | None,
@@ -74,13 +99,7 @@ def main() -> None:
     collected_at = None
     if not args.skip_scrape:
         collected_at = datetime.now(timezone.utc)
-        published_date = fetch_published_date()
-        print(f"Wisarra publication date: {published_date:%Y-%m-%d}", file=sys.stderr)
-        rows = collect_wisarra_update(dataset, published_date=published_date)
-        if rows is None:
-            print("  Already collected; skipping full scrape", file=sys.stderr)
-        else:
-            print(f"  Scraped {len(rows)} rows", file=sys.stderr)
+        rows = collect_wisarra_if_available(dataset)
     else:
         print("Skipping scrape; rebuilding from committed snapshots", file=sys.stderr)
 
