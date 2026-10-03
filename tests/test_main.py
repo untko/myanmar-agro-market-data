@@ -5,7 +5,7 @@ from pathlib import Path
 from unittest.mock import Mock
 
 from scripts.dataset import PriceDataset
-from scripts.main import collect_wisarra_update, run_pipeline
+from scripts.main import collect_wisarra_if_available, collect_wisarra_update, run_pipeline
 
 
 def stored_wisarra_row(observed_at: str) -> dict[str, str]:
@@ -85,6 +85,27 @@ class MainPipelineTests(unittest.TestCase):
 
             self.assertIsNone(rows)
             scrape.assert_not_called()
+
+    def test_unavailable_publication_page_preserves_existing_snapshots(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            dataset = PriceDataset(Path(temp_dir))
+            dataset.record(
+                [stored_wisarra_row("2026-07-08T00:00:00Z")],
+                datetime(2026, 7, 9, tzinfo=timezone.utc),
+            )
+            fetch_date = Mock(side_effect=RuntimeError("HTTP Error 500: Internal Server Error"))
+            scrape = Mock(side_effect=AssertionError("full scrape should not run"))
+
+            rows = collect_wisarra_if_available(
+                dataset,
+                fetch_date=fetch_date,
+                scrape=scrape,
+            )
+
+            self.assertIsNone(rows)
+            fetch_date.assert_called_once_with()
+            scrape.assert_not_called()
+            self.assertEqual(dataset.latest_observed_date("wisarra"), date(2026, 7, 8))
 
     def test_new_site_date_is_used_as_observation_date_not_collection_time(self):
         with tempfile.TemporaryDirectory() as temp_dir:
