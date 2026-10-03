@@ -50,7 +50,7 @@ def collect_wisarra_if_available(
         published_date = fetch_date()
     except RuntimeError as error:
         print(
-            f"WARNING: Wisarra publication page unavailable; preserving existing snapshots: {error}",
+            f"::warning::Wisarra publication page unavailable; preserving existing snapshots: {error}",
             file=sys.stderr,
         )
         return None
