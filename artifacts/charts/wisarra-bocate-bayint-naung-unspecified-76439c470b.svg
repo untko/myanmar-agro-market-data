@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Bocate prices — Bayint Naung market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Bocate prices in Bayint Naung, Yangon, from 30 Jun to 9 Oct 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Bocate prices in Bayint Naung, Yangon, from 30 Jun to 22 Oct 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,58 +23,56 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Bocate prices — Bayint Naung market</text>
-<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 11 weekly observations · 30 Jun–9 Oct 2026</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 12 weekly observations · 30 Jun–22 Oct 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
 <text x="85" y="134.0" text-anchor="end" class="axis">1,845</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">1,802</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">1,792</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">1,760</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">1,740</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">1,718</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">1,688</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">1,675</text>
-<polygon points="100.0,252.4 154.0,308.8 154.0,271.2 100.0,214.7" class="range"/>
-<polygon points="372.7,327.6 415.0,327.6 464.4,327.6 513.8,252.4 549.0,252.4 605.4,252.4 654.8,252.4 704.2,252.4 704.2,214.7 654.8,214.7 605.4,214.7 549.0,214.7 513.8,214.7 464.4,271.2 415.0,290.0 372.7,290.0" class="range"/>
-<path d="M 100.0 252.4 L 154.0 308.8" class="minimum"/>
-<path d="M 372.7 327.6 L 415.0 327.6 L 464.4 327.6 L 513.8 252.4 L 549.0 252.4 L 605.4 252.4 L 654.8 252.4 L 704.2 252.4" class="minimum"/>
-<path d="M 100.0 214.7 L 154.0 271.2" class="maximum"/>
-<path d="M 372.7 290.0 L 415.0 290.0 L 464.4 271.2 L 513.8 214.7 L 549.0 214.7 L 605.4 214.7 L 654.8 214.7 L 704.2 214.7" class="maximum"/>
-<circle cx="100.0" cy="252.4" r="4" class="point-min"/>
-<circle cx="154.0" cy="308.8" r="4" class="point-min"/>
-<circle cx="372.7" cy="327.6" r="4" class="point-min"/>
-<circle cx="415.0" cy="327.6" r="4" class="point-min"/>
-<circle cx="464.4" cy="327.6" r="4" class="point-min"/>
-<circle cx="513.8" cy="252.4" r="4" class="point-min"/>
-<circle cx="549.0" cy="252.4" r="4" class="point-min"/>
-<circle cx="605.4" cy="252.4" r="4" class="point-min"/>
-<circle cx="654.8" cy="252.4" r="4" class="point-min"/>
-<circle cx="704.2" cy="252.4" r="4" class="point-min"/>
-<circle cx="810.0" cy="365.3" r="4" class="point-min"/>
-<circle cx="100.0" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="154.0" cy="271.2" r="4.5" class="point-max"/>
-<circle cx="372.7" cy="290.0" r="4.5" class="point-max"/>
-<circle cx="415.0" cy="290.0" r="4.5" class="point-max"/>
-<circle cx="464.4" cy="271.2" r="4.5" class="point-max"/>
-<circle cx="513.8" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="549.0" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="605.4" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="654.8" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="704.2" cy="214.7" r="4.5" class="point-max"/>
-<circle cx="810.0" cy="327.6" r="4.5" class="point-max"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">1,635</text>
+<polygon points="100.0,229.0 147.8,274.8 147.8,244.3 100.0,198.6" class="range"/>
+<polygon points="341.5,290.0 379.0,290.0 422.7,290.0 466.4,229.0 497.7,229.0 547.6,229.0 591.4,229.0 635.1,229.0 635.1,198.6 591.4,198.6 547.6,198.6 497.7,198.6 466.4,198.6 422.7,244.3 379.0,259.5 341.5,259.5" class="range"/>
+<path d="M 100.0 229.0 L 147.8 274.8" class="minimum"/>
+<path d="M 341.5 290.0 L 379.0 290.0 L 422.7 290.0 L 466.4 229.0 L 497.7 229.0 L 547.6 229.0 L 591.4 229.0 L 635.1 229.0" class="minimum"/>
+<path d="M 100.0 198.6 L 147.8 244.3" class="maximum"/>
+<path d="M 341.5 259.5 L 379.0 259.5 L 422.7 244.3 L 466.4 198.6 L 497.7 198.6 L 547.6 198.6 L 591.4 198.6 L 635.1 198.6" class="maximum"/>
+<circle cx="100.0" cy="229.0" r="4" class="point-min"/>
+<circle cx="147.8" cy="274.8" r="4" class="point-min"/>
+<circle cx="341.5" cy="290.0" r="4" class="point-min"/>
+<circle cx="379.0" cy="290.0" r="4" class="point-min"/>
+<circle cx="422.7" cy="290.0" r="4" class="point-min"/>
+<circle cx="466.4" cy="229.0" r="4" class="point-min"/>
+<circle cx="497.7" cy="229.0" r="4" class="point-min"/>
+<circle cx="547.6" cy="229.0" r="4" class="point-min"/>
+<circle cx="591.4" cy="229.0" r="4" class="point-min"/>
+<circle cx="635.1" cy="229.0" r="4" class="point-min"/>
+<circle cx="728.8" cy="320.5" r="4" class="point-min"/>
+<circle cx="810.0" cy="381.4" r="4" class="point-min"/>
+<circle cx="100.0" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="147.8" cy="244.3" r="4.5" class="point-max"/>
+<circle cx="341.5" cy="259.5" r="4.5" class="point-max"/>
+<circle cx="379.0" cy="259.5" r="4.5" class="point-max"/>
+<circle cx="422.7" cy="244.3" r="4.5" class="point-max"/>
+<circle cx="466.4" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="497.7" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="547.6" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="591.4" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="635.1" cy="198.6" r="4.5" class="point-max"/>
+<circle cx="728.8" cy="290.0" r="4.5" class="point-max"/>
+<circle cx="810.0" cy="351.0" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="154.0" y="484" text-anchor="middle" class="axis">8 Jul</text>
-<text x="372.7" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="415.0" y="484" text-anchor="middle" class="axis">14 Aug</text>
-<text x="464.4" y="484" text-anchor="middle" class="axis">21 Aug</text>
-<text x="513.8" y="484" text-anchor="middle" class="axis">28 Aug</text>
-<text x="549.0" y="484" text-anchor="middle" class="axis">2 Sep</text>
-<text x="605.4" y="484" text-anchor="middle" class="axis">10 Sep</text>
-<text x="654.8" y="484" text-anchor="middle" class="axis">17 Sep</text>
-<text x="704.2" y="484" text-anchor="middle" class="axis">24 Sep</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">9 Oct</text>
-<text x="825.0" y="331.6" class="direct-label maximum-label">Maximum · 1,740</text>
-<text x="825.0" y="369.3" class="direct-label minimum-label">Minimum · 1,720</text>
+<text x="341.5" y="484" text-anchor="middle" class="axis">8 Aug</text>
+<text x="422.7" y="484" text-anchor="middle" class="axis">21 Aug</text>
+<text x="497.7" y="484" text-anchor="middle" class="axis">2 Sep</text>
+<text x="591.4" y="484" text-anchor="middle" class="axis">17 Sep</text>
+<text x="728.8" y="484" text-anchor="middle" class="axis">9 Oct</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">22 Oct</text>
+<text x="825.0" y="355.0" class="direct-label maximum-label">Maximum · 1,700</text>
+<text x="825.0" y="385.4" class="direct-label minimum-label">Minimum · 1,680</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 9 Oct 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 22 Oct 2026</text>
 </svg>
