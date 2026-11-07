@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Onion (Monywa Lat Thant) prices — Bayint Naung market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Onion (Monywa Lat Thant) prices in Bayint Naung, Yangon, from 8 Aug to 2 Nov 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Onion (Monywa Lat Thant) prices in Bayint Naung, Yangon, from 8 Aug to 6 Nov 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,33 +23,33 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Onion (Monywa Lat Thant) prices — Bayint Naung market</text>
-<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 7 weekly observations · 8 Aug–2 Nov 2026</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 viss · 7 weekly observations · 8 Aug–6 Nov 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
-<text x="85" y="134.0" text-anchor="end" class="axis">12,744</text>
+<text x="85" y="134.0" text-anchor="end" class="axis">13,304</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
-<text x="85" y="214.0" text-anchor="end" class="axis">10,822</text>
+<text x="85" y="214.0" text-anchor="end" class="axis">11,227</text>
 <line x1="100" y1="290.0" x2="810" y2="290.0" class="grid"/>
-<text x="85" y="294.0" text-anchor="end" class="axis">8,900</text>
+<text x="85" y="294.0" text-anchor="end" class="axis">9,150</text>
 <line x1="100" y1="370.0" x2="810" y2="370.0" class="grid"/>
-<text x="85" y="374.0" text-anchor="end" class="axis">6,978</text>
+<text x="85" y="374.0" text-anchor="end" class="axis">7,073</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
-<text x="85" y="454.0" text-anchor="end" class="axis">5,056</text>
-<path d="M 100.0 398.2 L 149.5 406.5 L 207.3 419.0" class="maximum"/>
-<circle cx="100.0" cy="398.2" r="4.5" class="point-max"/>
-<circle cx="149.5" cy="406.5" r="4.5" class="point-max"/>
-<circle cx="207.3" cy="419.0" r="4.5" class="point-max"/>
-<circle cx="306.4" cy="410.7" r="4.5" class="point-max"/>
-<circle cx="405.5" cy="402.4" r="4.5" class="point-max"/>
-<circle cx="719.2" cy="256.7" r="4.5" class="point-max"/>
+<text x="85" y="454.0" text-anchor="end" class="axis">4,996</text>
+<path d="M 100.0 399.8 L 147.3 407.5 L 202.6 419.0" class="maximum"/>
+<circle cx="100.0" cy="399.8" r="4.5" class="point-max"/>
+<circle cx="147.3" cy="407.5" r="4.5" class="point-max"/>
+<circle cx="202.6" cy="419.0" r="4.5" class="point-max"/>
+<circle cx="297.2" cy="411.3" r="4.5" class="point-max"/>
+<circle cx="391.9" cy="403.6" r="4.5" class="point-max"/>
+<circle cx="691.7" cy="268.8" r="4.5" class="point-max"/>
 <circle cx="810.0" cy="161.0" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="149.5" y="484" text-anchor="middle" class="axis">14 Aug</text>
-<text x="207.3" y="484" text-anchor="middle" class="axis">21 Aug</text>
-<text x="306.4" y="484" text-anchor="middle" class="axis">2 Sep</text>
-<text x="405.5" y="484" text-anchor="middle" class="axis">14 Sep</text>
-<text x="719.2" y="484" text-anchor="middle" class="axis">22 Oct</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">2 Nov</text>
-<text x="825.0" y="165.0" class="direct-label maximum-label">Maximum · 12,000</text>
+<text x="147.3" y="484" text-anchor="middle" class="axis">14 Aug</text>
+<text x="202.6" y="484" text-anchor="middle" class="axis">21 Aug</text>
+<text x="297.2" y="484" text-anchor="middle" class="axis">2 Sep</text>
+<text x="391.9" y="484" text-anchor="middle" class="axis">14 Sep</text>
+<text x="691.7" y="484" text-anchor="middle" class="axis">22 Oct</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">6 Nov</text>
+<text x="825.0" y="165.0" class="direct-label maximum-label">Maximum · 12,500</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 2 Nov 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Nov 2026</text>
 </svg>
