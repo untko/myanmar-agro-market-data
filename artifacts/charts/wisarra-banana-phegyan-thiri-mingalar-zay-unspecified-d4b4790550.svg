@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="960" height="540" role="img" aria-labelledby="chart-title chart-desc">
 <title>Banana (PheGyan) prices — Thiri Mingalar Zay market</title>
-<desc id="chart-desc">Available minimum, maximum, and modal Banana (PheGyan) prices in Thiri Mingalar Zay, Yangon, from 30 Jun to 6 Nov 2026. Source wisarra; market-chain level unspecified.</desc>
+<desc id="chart-desc">Available minimum, maximum, and modal Banana (PheGyan) prices in Thiri Mingalar Zay, Yangon, from 30 Jun to 9 Nov 2026. Source wisarra; market-chain level unspecified.</desc>
 <style>
 text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17212B; }
 .chart-title { font-size: 24px; font-weight: 650; }
@@ -23,7 +23,7 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 </style>
 <rect width="960" height="540" fill="#FFFFFF"/>
 <text id="chart-title" x="100" y="48" class="chart-title">Banana (PheGyan) prices — Thiri Mingalar Zay market</text>
-<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 pc · 14 weekly observations · 30 Jun–6 Nov 2026</text>
+<text x="100" y="76" class="subtitle">Yangon · wisarra · tier unspecified · MMK per 1 pc · 15 weekly observations · 30 Jun–9 Nov 2026</text>
 <line x1="100" y1="130.0" x2="810" y2="130.0" class="grid"/>
 <text x="85" y="134.0" text-anchor="end" class="axis">7,480</text>
 <line x1="100" y1="210.0" x2="810" y2="210.0" class="grid"/>
@@ -34,53 +34,55 @@ text { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-s
 <text x="85" y="374.0" text-anchor="end" class="axis">3,760</text>
 <line x1="100" y1="450.0" x2="810" y2="450.0" class="grid"/>
 <text x="85" y="454.0" text-anchor="end" class="axis">2,520</text>
-<polygon points="100.0,322.3 142.3,354.5 142.3,225.5 100.0,161.0" class="range"/>
-<polygon points="313.3,290.0 346.4,290.0 385.1,290.0 423.7,290.0 451.3,290.0 495.4,290.0 534.1,290.0 572.7,290.0 572.7,161.0 534.1,161.0 495.4,161.0 451.3,161.0 423.7,161.0 385.1,161.0 346.4,161.0 313.3,161.0" class="range"/>
-<polygon points="727.2,419.0 765.9,290.0 810.0,290.0 810.0,161.0 765.9,161.0 727.2,386.8" class="range"/>
-<path d="M 100.0 322.3 L 142.3 354.5" class="minimum"/>
-<path d="M 313.3 290.0 L 346.4 290.0 L 385.1 290.0 L 423.7 290.0 L 451.3 290.0 L 495.4 290.0 L 534.1 290.0 L 572.7 290.0" class="minimum"/>
-<path d="M 727.2 419.0 L 765.9 290.0 L 810.0 290.0" class="minimum"/>
-<path d="M 100.0 161.0 L 142.3 225.5" class="maximum"/>
-<path d="M 313.3 161.0 L 346.4 161.0 L 385.1 161.0 L 423.7 161.0 L 451.3 161.0 L 495.4 161.0 L 534.1 161.0 L 572.7 161.0" class="maximum"/>
-<path d="M 727.2 386.8 L 765.9 161.0 L 810.0 161.0" class="maximum"/>
+<polygon points="100.0,322.3 141.3,354.5 141.3,225.5 100.0,161.0" class="range"/>
+<polygon points="308.5,290.0 340.8,290.0 378.6,290.0 416.3,290.0 443.3,290.0 486.4,290.0 524.2,290.0 561.9,290.0 561.9,161.0 524.2,161.0 486.4,161.0 443.3,161.0 416.3,161.0 378.6,161.0 340.8,161.0 308.5,161.0" class="range"/>
+<polygon points="712.9,419.0 750.7,290.0 793.8,290.0 810.0,290.0 810.0,161.0 793.8,161.0 750.7,161.0 712.9,386.8" class="range"/>
+<path d="M 100.0 322.3 L 141.3 354.5" class="minimum"/>
+<path d="M 308.5 290.0 L 340.8 290.0 L 378.6 290.0 L 416.3 290.0 L 443.3 290.0 L 486.4 290.0 L 524.2 290.0 L 561.9 290.0" class="minimum"/>
+<path d="M 712.9 419.0 L 750.7 290.0 L 793.8 290.0 L 810.0 290.0" class="minimum"/>
+<path d="M 100.0 161.0 L 141.3 225.5" class="maximum"/>
+<path d="M 308.5 161.0 L 340.8 161.0 L 378.6 161.0 L 416.3 161.0 L 443.3 161.0 L 486.4 161.0 L 524.2 161.0 L 561.9 161.0" class="maximum"/>
+<path d="M 712.9 386.8 L 750.7 161.0 L 793.8 161.0 L 810.0 161.0" class="maximum"/>
 <circle cx="100.0" cy="322.3" r="4" class="point-min"/>
-<circle cx="142.3" cy="354.5" r="4" class="point-min"/>
-<circle cx="313.3" cy="290.0" r="4" class="point-min"/>
-<circle cx="346.4" cy="290.0" r="4" class="point-min"/>
-<circle cx="385.1" cy="290.0" r="4" class="point-min"/>
-<circle cx="423.7" cy="290.0" r="4" class="point-min"/>
-<circle cx="451.3" cy="290.0" r="4" class="point-min"/>
-<circle cx="495.4" cy="290.0" r="4" class="point-min"/>
-<circle cx="534.1" cy="290.0" r="4" class="point-min"/>
-<circle cx="572.7" cy="290.0" r="4" class="point-min"/>
-<circle cx="655.5" cy="290.0" r="4" class="point-min"/>
-<circle cx="727.2" cy="419.0" r="4" class="point-min"/>
-<circle cx="765.9" cy="290.0" r="4" class="point-min"/>
+<circle cx="141.3" cy="354.5" r="4" class="point-min"/>
+<circle cx="308.5" cy="290.0" r="4" class="point-min"/>
+<circle cx="340.8" cy="290.0" r="4" class="point-min"/>
+<circle cx="378.6" cy="290.0" r="4" class="point-min"/>
+<circle cx="416.3" cy="290.0" r="4" class="point-min"/>
+<circle cx="443.3" cy="290.0" r="4" class="point-min"/>
+<circle cx="486.4" cy="290.0" r="4" class="point-min"/>
+<circle cx="524.2" cy="290.0" r="4" class="point-min"/>
+<circle cx="561.9" cy="290.0" r="4" class="point-min"/>
+<circle cx="642.8" cy="290.0" r="4" class="point-min"/>
+<circle cx="712.9" cy="419.0" r="4" class="point-min"/>
+<circle cx="750.7" cy="290.0" r="4" class="point-min"/>
+<circle cx="793.8" cy="290.0" r="4" class="point-min"/>
 <circle cx="810.0" cy="290.0" r="4" class="point-min"/>
 <circle cx="100.0" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="142.3" cy="225.5" r="4.5" class="point-max"/>
-<circle cx="313.3" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="346.4" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="385.1" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="423.7" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="451.3" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="495.4" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="534.1" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="572.7" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="655.5" cy="161.0" r="4.5" class="point-max"/>
-<circle cx="727.2" cy="386.8" r="4.5" class="point-max"/>
-<circle cx="765.9" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="141.3" cy="225.5" r="4.5" class="point-max"/>
+<circle cx="308.5" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="340.8" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="378.6" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="416.3" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="443.3" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="486.4" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="524.2" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="561.9" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="642.8" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="712.9" cy="386.8" r="4.5" class="point-max"/>
+<circle cx="750.7" cy="161.0" r="4.5" class="point-max"/>
+<circle cx="793.8" cy="161.0" r="4.5" class="point-max"/>
 <circle cx="810.0" cy="161.0" r="4.5" class="point-max"/>
 <text x="100.0" y="484" text-anchor="middle" class="axis">30 Jun</text>
-<text x="313.3" y="484" text-anchor="middle" class="axis">8 Aug</text>
-<text x="385.1" y="484" text-anchor="middle" class="axis">21 Aug</text>
-<text x="451.3" y="484" text-anchor="middle" class="axis">2 Sep</text>
-<text x="534.1" y="484" text-anchor="middle" class="axis">17 Sep</text>
-<text x="655.5" y="484" text-anchor="middle" class="axis">9 Oct</text>
-<text x="765.9" y="484" text-anchor="middle" class="axis">29 Oct</text>
-<text x="810.0" y="484" text-anchor="middle" class="axis">6 Nov</text>
+<text x="308.5" y="484" text-anchor="middle" class="axis">8 Aug</text>
+<text x="378.6" y="484" text-anchor="middle" class="axis">21 Aug</text>
+<text x="443.3" y="484" text-anchor="middle" class="axis">2 Sep</text>
+<text x="524.2" y="484" text-anchor="middle" class="axis">17 Sep</text>
+<text x="642.8" y="484" text-anchor="middle" class="axis">9 Oct</text>
+<text x="750.7" y="484" text-anchor="middle" class="axis">29 Oct</text>
+<text x="810.0" y="484" text-anchor="middle" class="axis">9 Nov</text>
 <text x="825.0" y="165.0" class="direct-label maximum-label">Maximum · 7,000</text>
 <text x="825.0" y="294.0" class="direct-label minimum-label">Minimum · 5,000</text>
 <text x="28" y="290.0" text-anchor="middle" class="axis" transform="rotate(-90 28 290.0)">Price (MMK)</text>
-<text x="100" y="512" class="source">Source: wisarra.com · Last observation 6 Nov 2026</text>
+<text x="100" y="512" class="source">Source: wisarra.com · Last observation 9 Nov 2026</text>
 </svg>
